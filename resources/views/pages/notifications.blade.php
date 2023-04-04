@@ -1,0 +1,63 @@
+@section('title', 'Notifications')
+
+<x-layout>
+    <div class="margin-bottom-md">
+        <h1 class="text-xl font-bold">Notifications</h1>
+    </div>
+    <div class="bg radius-md shadow-xs">
+        <div class="padding-xl">
+            <div class="tbl">
+                <table class="tbl__table text-sm border-bottom border-2" aria-label="Table Example">
+                    <thead class="tbl__header border-bottom border-2">
+                        <tr class="tbl__row">
+                            <th class="tbl__cell text-left" scope="col">
+                                <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Company</span>
+                            </th>
+
+                            <th class="tbl__cell text-left" scope="col">
+                                <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Category</span>
+                            </th>
+
+                            <th class="tbl__cell text-left" scope="col">
+                                <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Status</span>
+                            </th>
+
+                            <th class="tbl__cell text-left" scope="col">
+                                <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Expiry date</span>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="tbl__body">
+                        @foreach ($expiringContracts as $expiringContract)
+                            <tr class="tbl__row">
+                                <td class="tbl__cell" role="cell">
+                                    <div class="flex items-center">
+                                        <div class="line-height-xs">
+                                            <p class="margin-bottom-xxxxs">{{ $expiringContract->company->name }}</p>
+                                            <p class="color-contrast-medium">{{ $expiringContract->company->contact }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="tbl__cell" role="cell">{{ $expiringContract->category->name }}</td>
+
+                                <td class="tbl__cell" role="cell">{{ $expiringContract->status }}</td>
+
+                                <td class="tbl__cell" role="cell">
+                                    <span
+                                        class="inline-block text-xs bg-error bg-opacity-20% color-error-darker radius-full padding-y-xxxs padding-x-xs ws-nowrap">
+                                        {{ Carbon\Carbon::parse($expiringContract->expiry_date)->diffForHumans() }}
+                                    </span>
+                                </td>
+
+                                <td class="tbl__cell text-right" role="cell">{{ $expiringContract->title }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</x-layout>
