@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\VesselCreate;
+use App\Http\Requests\VesselEdit;
 use App\Models\Vessel;
 use Illuminate\Http\Request;
 
@@ -33,9 +35,14 @@ class VesselController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(VesselCreate $request)
     {
-        //
+        $vessel = new Vessel;
+        $data = $request->validated();
+        $vessel->fill($data);
+        $vessel->save();
+        $request->session()->flash('success', 'Vessel created successfully.');
+        return redirect()->route('vesselDatatable');
     }
 
     /**
@@ -46,7 +53,8 @@ class VesselController extends Controller
      */
     public function show(Vessel $vessel)
     {
-        //
+        $vessel->load('certificates');
+        return view('vessel.show',compact('vessel'));
     }
 
     /**
@@ -57,7 +65,7 @@ class VesselController extends Controller
      */
     public function edit(Vessel $vessel)
     {
-        //
+        return view('vessel.edit', compact('vessel'));
     }
 
     /**
@@ -67,9 +75,12 @@ class VesselController extends Controller
      * @param  \App\Models\Vessel  $vessel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Vessel $vessel)
+    public function update(VesselEdit $request, Vessel $vessel)
     {
-        //
+        $data = $request->validated();
+        $vessel->update($data);
+        $request->session()->flash('success', 'Vessel updated successfully.');
+        return redirect()->route('vesselDatatable');
     }
 
     /**

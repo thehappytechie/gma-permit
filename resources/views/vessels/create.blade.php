@@ -6,10 +6,10 @@
     </div>
 
     <div class="bg radius-md shadow-xs">
-        <form action="{{ route('department.store') }}" method="post">
+        <form action="{{ route('vessels.store') }}" method="post">
             @csrf
             <div class="grid gap-lg max-width-sm padding-lg">
-                <a href="{{ route('departmentDatatable') }}">&larr; Go to vessels</a>
+                <a href="{{ route('vesselDatatable') }}">&larr; Go to vessels</a>
                 <small class="color-contrast-medium">
                     <x-required-label></x-required-label>indicates a required field
                 </small>

@@ -31,6 +31,8 @@ use App\Http\Controllers\Datatables\LocationDatatableController;
 use App\Http\Controllers\Datatables\DepartmentDatatableController;
 use App\Http\Controllers\Datatables\PermissionDatatableController;
 use App\Http\Controllers\Datatables\ContractReportDatatableController;
+use App\Http\Controllers\Datatables\VesselDatatableController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -164,6 +166,10 @@ Route::controller(TicketDatatableController::class)->group(function () {
     Route::get('tickets', 'ticketDatatable')
         ->name('ticketDatatable');
 });
+
+
+Route::get('vessels', [VesselDatatableController::class, 'vesselDatatable'])->name('vesselDatatable');
+
 
 Route::get('company/all', [CompanyDatatableController::class, 'companyDatatable'])->name('companyDatatable');
 Route::get('company/contracts', [CompanyDatatableController::class, 'companyContractDatatable'])->name('companyContractDatatable');
