@@ -33,6 +33,10 @@ use App\Http\Controllers\Datatables\DepartmentDatatableController;
 use App\Http\Controllers\Datatables\PermissionDatatableController;
 use App\Http\Controllers\Datatables\CertificateDatatableController;
 use App\Http\Controllers\Datatables\ContractReportDatatableController;
+use App\Http\Controllers\Datatables\PermitDatatableController;
+use App\Http\Controllers\Datatables\PermitUnitDatatableController;
+use App\Http\Controllers\PermitController;
+use App\Http\Controllers\PermitUnitController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,8 +78,9 @@ Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.hi
         'department' => DepartmentController::class,
         'ticket' => TicketController::class,
         'report' => ReportController::class,
+        'permit' => PermitController::class,
         'permissions' => PermissionsController::class,
-
+        'permit-unit' => PermitUnitController::class,
         'vessels' => VesselController::class,
         'company' => CompanyController::class,
         'certificate' => CertificateController::class,
@@ -166,10 +171,12 @@ Route::controller(TicketDatatableController::class)->group(function () {
 
 
 Route::get('vessels', [VesselDatatableController::class, 'vesselDatatable'])->name('vesselDatatable');
+Route::get('permit', [PermitDatatableController::class, 'permitDatatable'])->name('permitDatatable');
 
+Route::get('permit-unit', [PermitUnitDatatableController::class, 'permitUnitDatatable'])->name('permitUnitDatatable');
 
-Route::get('company.index', [CompanyDatatableController::class, 'companyDatatable'])->name('companyDatatable');
-Route::get('certificate.index', [CertificateDatatableController::class, 'certificateDatatable'])->name('certificateDatatable');
+Route::get('company', [CompanyDatatableController::class, 'companyDatatable'])->name('companyDatatable');
+Route::get('certificate', [CertificateDatatableController::class, 'certificateDatatable'])->name('certificateDatatable');
 
 Route::get('company/contracts', [CompanyDatatableController::class, 'companyContractDatatable'])->name('companyContractDatatable');
 Route::get('category/all', [CategoryDatatableController::class, 'categoryDatatable'])->name('categoryDatatable');

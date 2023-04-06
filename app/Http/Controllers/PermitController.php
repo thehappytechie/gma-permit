@@ -24,7 +24,7 @@ class PermitController extends Controller
      */
     public function create()
     {
-        //
+        return view('permit.create');
     }
 
     /**
@@ -35,7 +35,12 @@ class PermitController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $permit = new Permit();
+        $data = $request->validated();
+        $permit->fill($data);
+        $permit->save();
+        $request->session()->flash('success', 'Permit created successfully.');
+        return redirect()->route('permitDatatable');
     }
 
     /**

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PermitUnitCreate;
+use App\Http\Requests\PermitUnitEdit;
 use App\Models\PermitUnit;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,7 @@ class PermitUnitController extends Controller
      */
     public function index()
     {
-        //
+        return view('permit-unit.index');
     }
 
     /**
@@ -24,7 +26,7 @@ class PermitUnitController extends Controller
      */
     public function create()
     {
-        //
+        return view('permit-unit.create');
     }
 
     /**
@@ -33,9 +35,14 @@ class PermitUnitController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PermitUnitCreate $request)
     {
-        //
+        $permitUnit = new PermitUnit();
+        $data = $request->validated();
+        $permitUnit->fill($data);
+        $permitUnit->save();
+        $request->session()->flash('success', 'Permit Unit created successfully.');
+        return redirect()->route('permitUnitDatatable');
     }
 
     /**
@@ -57,7 +64,7 @@ class PermitUnitController extends Controller
      */
     public function edit(PermitUnit $permitUnit)
     {
-        //
+        return view('permit-unit.edit', compact('permitUnit'));
     }
 
     /**
@@ -67,9 +74,12 @@ class PermitUnitController extends Controller
      * @param  \App\Models\PermitUnit  $permitUnit
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PermitUnit $permitUnit)
+    public function update(PermitUnitEdit $request, PermitUnit $permitUnit)
     {
-        //
+        $data = $request->validated();
+        $permitUnit->update($data);
+        $request->session()->flash('success', 'Permit Unit updated successfully.');
+        return redirect()->route('permitUnitDatatable');
     }
 
     /**

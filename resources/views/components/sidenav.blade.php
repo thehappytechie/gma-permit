@@ -12,7 +12,7 @@
     </ul>
     <ul class="sidenav__list margin-y-sm">
         <li class="sidenav__item">
-            <a href="{{ route('company.index') }}" class="sidenav__link">
+            <a href="{{ route('companyDatatable') }}" class="sidenav__link">
                 <svg class="icon sidenav__icon" aria-hidden="true" viewBox="0 0 16 16">
                     <path
                         d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5V8.694ZM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15Z" />
@@ -25,7 +25,7 @@
     </ul>
     <ul class="sidenav__list margin-y-sm">
         <li class="sidenav__item">
-            <a href="{{ route('certificate.index') }}" class="sidenav__link">
+            <a href="{{ route('certificateDatatable') }}" class="sidenav__link">
                 <svg class="icon sidenav__icon" aria-hidden="true" viewBox="0 0 16 16">
                     <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"/>
                     <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
@@ -54,7 +54,7 @@
                     <path
                         d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
                 </svg>
-                <span class="sidenav__text text-sm@md">Contracts </span>
+                <span class="sidenav__text text-sm@md">Permits </span>
             </a>
             <button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus"
                 aria-label="Toggle sub navigation">
@@ -65,7 +65,7 @@
             <ul class="sidenav__list">
                 <li class="sidenav__item">
                     <a href="{{ route('contractDatatable') }}" class="sidenav__link">
-                        <span class="sidenav__text text-sm@md">All contracts</span>
+                        <span class="sidenav__text text-sm@md">All permits</span>
                     </a>
                 </li>
             </ul>
@@ -78,8 +78,8 @@
             </ul>
             <ul class="sidenav__list">
                 <li class="sidenav__item">
-                    <a href="{{ route('categoryDatatable') }}" class="sidenav__link">
-                        <span class="sidenav__text text-sm@md">Categories</span>
+                    <a href="{{ route('permitUnitDatatable') }}" class="sidenav__link">
+                        <span class="sidenav__text text-sm@md">Permit units</span>
                     </a>
                 </li>
             </ul>
