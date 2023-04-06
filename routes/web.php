@@ -11,7 +11,6 @@ use App\Http\Controllers\VesselController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DatatableController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\PermissionsController;
@@ -32,6 +31,7 @@ use App\Http\Controllers\Datatables\ContractDatatableController;
 use App\Http\Controllers\Datatables\LocationDatatableController;
 use App\Http\Controllers\Datatables\DepartmentDatatableController;
 use App\Http\Controllers\Datatables\PermissionDatatableController;
+use App\Http\Controllers\Datatables\CertificateDatatableController;
 use App\Http\Controllers\Datatables\ContractReportDatatableController;
 
 /*
@@ -78,7 +78,7 @@ Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.hi
 
         'vessels' => VesselController::class,
         'company' => CompanyController::class,
-        'certificates' => CertificateController::class,
+        'certificate' => CertificateController::class,
     ]);
     Route::resource('profile', UserProfileController::class)->only(['edit', 'update'])->middleware('profile.owner');;
     Route::resource('brand-setting', BrandSettingController::class)->only(['edit', 'update']);
@@ -169,6 +169,8 @@ Route::get('vessels', [VesselDatatableController::class, 'vesselDatatable'])->na
 
 
 Route::get('company.index', [CompanyDatatableController::class, 'companyDatatable'])->name('companyDatatable');
+Route::get('certificate.index', [CertificateDatatableController::class, 'certificateDatatable'])->name('certificateDatatable');
+
 Route::get('company/contracts', [CompanyDatatableController::class, 'companyContractDatatable'])->name('companyContractDatatable');
 Route::get('category/all', [CategoryDatatableController::class, 'categoryDatatable'])->name('categoryDatatable');
 Route::get('contract/reports', [ContractReportDatatableController::class, 'contractReportDatatable'])->name('contractReportDatatable');

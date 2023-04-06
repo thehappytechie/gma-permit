@@ -17,7 +17,7 @@ class CompanyDatatableController extends Controller
             $companies = Company::select(['id', 'name', 'email', 'contact']);
             return DataTables::of($companies)
                 ->addColumn('action', function ($company) {
-                    return '<a class="btn btn--subtle btn--sm" href="' .
+                    return '<a class="btn btn--subtle btn--sm" href="company/' .
                         $company->id .
                         '/edit" title="View">
                     <svg width="12" height="12" fill="currentColor"

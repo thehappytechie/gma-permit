@@ -10,7 +10,7 @@
             @csrf
             @method('put')
             <div class="grid gap-lg max-width-sm padding-lg">
-                <a href="{{ route('companyDatatable') }}">&larr; Go to companies</a>
+                <a href="{{ route('company.index') }}">&larr; Go to companies</a>
                 <small class="color-contrast-medium">
                     <x-required-label></x-required-label>indicates a required field
                 </small>

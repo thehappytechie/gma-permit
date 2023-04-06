@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Vessel;
 use App\Models\Certificate;
 use Illuminate\Http\Request;
+use App\Http\Requests\CertificateEdit;
+use App\Http\Requests\CertificateCreate;
 
 class CertificateController extends Controller
 {
@@ -14,7 +17,7 @@ class CertificateController extends Controller
      */
     public function index()
     {
-        //
+        return view('certificate.index');
     }
 
     /**
@@ -24,7 +27,8 @@ class CertificateController extends Controller
      */
     public function create()
     {
-        //
+        $vessels = Vessel::get(['id', 'name']);
+        return view('certificate.create', compact('vessels'));
     }
 
     /**
@@ -33,9 +37,14 @@ class CertificateController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CertificateCreate $request)
     {
-        //
+        $certificate = new Certificate();
+        $data = $request->validated();
+        $certificate->fill($data);
+        $certificate->save();
+        $request->session()->flash('success', 'Certificate created successfully.');
+        return redirect()->route('certificateDatatable');
     }
 
     /**
@@ -67,9 +76,12 @@ class CertificateController extends Controller
      * @param  \App\Models\Certificate  $certificate
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Certificate $certificate)
+    public function update(CertificateEdit $request, Certificate $certificate)
     {
-        //
+        $data = $request->validated();
+        $certificate->update($data);
+        $request->session()->flash('success', 'Certificate updated successfully.');
+        return redirect()->route('certificateDatatable');
     }
 
     /**

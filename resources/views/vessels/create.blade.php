@@ -24,12 +24,18 @@
                     @enderror
                 </div>
                 <div class="col-6@md">
-                    <label class="form-label margin-bottom-xxs" for="vessel_type">
-                    Vessel type
+                    <label class="form-label margin-bottom-xxs" for="autocomplete-input-id">
+                        <x-required-label>
+                        </x-required-label>Agent name
                     </label>
-                    <input class="form-control width-100% @error('vessel_type') is-error @enderror" type="text"
-                        name="vessel_type" id="vessel_type" value="{{ old('vessel_type') }}">
-                    @error('vessel_type')
+                    <select name="agent_id" class="js-choice @error('vessel_id') is-error @enderror" required>
+                        <option value="" disabled selected>Please select</option>
+                        @foreach ($vessels as $vessel)
+                            <option value="{{ $vessel->id }}" {{ old('vessel_id') == $vessel->id ? 'selected' : '' }}>
+                                {{ $vessel->name }}</option>
+                        @endforeach
+                    </select>
+                    @error('vessel_id')
                         <x-validation-error>{{ $message }}</x-validation-error>
                     @enderror
                 </div>
@@ -45,7 +51,7 @@
                 </div>
                 <div class="col-6@md">
                     <label class="form-label margin-bottom-xxs" for="registry_port">
-                       Registry port
+                        Registry port
                     </label>
                     <input class="form-control width-100% @error('registry_port') is-error @enderror" type="text"
                         name="registry_port" id="registry_port" value="{{ old('registry_port') }}">
@@ -55,7 +61,7 @@
                 </div>
                 <div class="col-6@md">
                     <label class="form-label margin-bottom-xxs" for="gross_tonnage">
-                      Gross tonnage
+                        Gross tonnage
                     </label>
                     <input class="form-control width-100% @error('gross_tonnage') is-error @enderror" type="text"
                         name="gross_tonnage" id="gross_tonnage" value="{{ old('gross_tonnage') }}">
@@ -65,7 +71,7 @@
                 </div>
                 <div class="col-6@md">
                     <label class="form-label margin-bottom-xxs" for="call_sign">
-                      Call sign
+                        Call sign
                     </label>
                     <input class="form-control width-100% @error('call_sign') is-error @enderror" type="text"
                         name="call_sign" id="call_sign" value="{{ old('call_sign') }}">
@@ -75,7 +81,7 @@
                 </div>
                 <div class="col-6@md">
                     <label class="form-label margin-bottom-xxs" for="owner_details">
-                       Owner details
+                        Owner details
                     </label>
                     <input class="form-control width-100% @error('owner_details') is-error @enderror" type="text"
                         name="owner_details" id="owner_details" value="{{ old('owner_details') }}">
@@ -91,5 +97,11 @@
             </div>
         </form>
     </div>
+
+    <script src="{{ asset('js/choices.min.js') }}"></script>
+
+    <script>
+        const choices = new Choices('.js-choice');
+    </script>
 
 </x-layout>

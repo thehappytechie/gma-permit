@@ -16,6 +16,11 @@
                 </a>
                 <ul class="dropdown__menu js-dropdown__menu" aria-label="dropdown">
                     <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
+                        <a class="dropdown__item" href="{{ route('certificate.create') }}">
+                            Certificate
+                        </a>
+                    </li>
+                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
                         <a class="dropdown__item" href="{{ route('company.create') }}">
                             Company
                         </a>
