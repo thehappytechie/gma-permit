@@ -13,7 +13,7 @@ class CertificateCreate extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class CertificateCreate extends FormRequest
     public function rules()
     {
         return [
-            //
+            'vessel_id' =>  ["required", "exists:vessels,id"],
+            'name' =>  ["required", "string"],
+            'issue_date' =>  ["required", "date"],
+            'expiry_date' => ["required", "date"],
         ];
     }
 }

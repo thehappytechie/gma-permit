@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CompanyCreate;
+use App\Http\Requests\CompanyEdit;
 use App\Models\Company;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,7 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
+        return view('company.index');
     }
 
     /**
@@ -24,7 +26,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        //
+        return view('company.create');
     }
 
     /**
@@ -33,9 +35,14 @@ class CompanyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CompanyCreate $request)
     {
-        //
+        $company = new Company();
+        $data = $request->validated();
+        $company->fill($data);
+        $company->save();
+        $request->session()->flash('success', 'Company created successfully.');
+        return redirect()->route('companyDatatable');
     }
 
     /**
@@ -46,7 +53,8 @@ class CompanyController extends Controller
      */
     public function show(Company $company)
     {
-        //
+        $company->load('permits');
+        return view('company.show',compact('company'));
     }
 
     /**
@@ -57,7 +65,7 @@ class CompanyController extends Controller
      */
     public function edit(Company $company)
     {
-        //
+        return view('company.edit', compact('company'));
     }
 
     /**
@@ -67,9 +75,12 @@ class CompanyController extends Controller
      * @param  \App\Models\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Company $company)
+    public function update(CompanyEdit $request, Company $company)
     {
-        //
+        $data = $request->validated();
+        $company->update($data);
+        $request->session()->flash('success', 'Company updated successfully.');
+        return redirect()->route('companyDatatable');
     }
 
     /**

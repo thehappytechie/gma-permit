@@ -27,13 +27,14 @@ class CompanyEdit extends FormRequest
     {
         return [
             'name' =>  ["required", "string", Rule::unique(Company::class)->ignore(request()->company)],
-            'email' =>  ["string", "email", Rule::unique(Company::class)->ignore(request()->company)],
-            'contact' =>  ["numeric", "nullable"],
+            'email' =>  ["string", "email", Rule::unique(Company::class)->ignore(request()->company), 'nullable'],
+            'contact' =>  ["string", "numeric", Rule::unique(Company::class), "nullable"],
             'address' =>  ["string", "nullable"],
             'registry_port' =>  ["string", "nullable"],
             'gross_tonnage' => ["numeric", "nullable"],
             'call_sign' => ["string", "nullable"],
             'vessel_number' => ["numeric", "nullable"],
+            'imo_number' => ["string", "nullable"],
         ];
     }
 }

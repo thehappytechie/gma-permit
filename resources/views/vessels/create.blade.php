@@ -85,7 +85,7 @@
                 </div>
                 <div class="border-top border-contrast-lower text-right">
                     <div class="margin-top-sm">
-                        <button class="btn btn--primary">Create department</button>
+                        <button class="btn btn--primary">Create vessel</button>
                     </div>
                 </div>
             </div>

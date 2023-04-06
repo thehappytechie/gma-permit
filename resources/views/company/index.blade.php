@@ -4,7 +4,7 @@
     <div class="margin-bottom-md">
         <h1 class="text-xl font-bold">Companies</h1>
         <div class="flex justify-end">
-            <a href="{{ route('companyCreate') }}" class="btn btn--primary text-sm">Add Company</a>
+            <a href="{{ route('company.create') }}" class="btn btn--primary text-sm">Add Company</a>
         </div>
     </div>
 
@@ -27,11 +27,6 @@
                             <th>
                                 <div class="flex items-center">
                                     <span>Email</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="flex items-center">
-                                    <span>Country</span>
                                 </div>
                             </th>
                             <th>
@@ -103,10 +98,6 @@
                 {
                     data: "email",
                     name: "email"
-                },
-                {
-                    data: "country",
-                    name: "country"
                 },
                 {
                     data: "action",

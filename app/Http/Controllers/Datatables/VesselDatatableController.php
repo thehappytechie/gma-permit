@@ -12,11 +12,11 @@ class VesselDatatableController extends Controller
     public function vesselDatatable(Request $request)
     {
         if ($request->ajax()) {
-            $departments = Vessel::select('vessels.*');
-            return DataTables::of($departments)
-                ->addColumn('action', function ($department) {
-                    return '<a class="btn btn--subtle btn--sm" href="department/' .
-                        $department->id .
+            $vessels = Vessel::select('vessels.*');
+            return DataTables::of($vessels)
+                ->addColumn('action', function ($vessel) {
+                    return '<a class="btn btn--subtle btn--sm" href="vessels/' .
+                        $vessel->id .
                         '/edit" title="Edit">
                         <svg width="12" height="12" fill="currentColor"
                         viewBox="0 0 16 16">

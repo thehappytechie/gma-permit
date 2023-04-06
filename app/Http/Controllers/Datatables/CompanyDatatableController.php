@@ -14,12 +14,12 @@ class CompanyDatatableController extends Controller
     public function companyDatatable(Request $request)
     {
         if ($request->ajax()) {
-            $companies = Company::select(['hash_id', 'name', 'email', 'contact', 'country']);
+            $companies = Company::select(['id', 'name', 'email', 'contact']);
             return DataTables::of($companies)
                 ->addColumn('action', function ($company) {
                     return '<a class="btn btn--subtle btn--sm" href="' .
-                        $company->hash_id .
-                        '/show" title="View">
+                        $company->id .
+                        '/edit" title="View">
                     <svg width="12" height="12" fill="currentColor"
                     viewBox="0 0 16 16">
                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
@@ -28,10 +28,10 @@ class CompanyDatatableController extends Controller
                     </a>';
                 })
                 ->editColumn('name', function (Company $company) {
-                    return '<a href="' . $company->hash_id . '/show">' . $company->name . '</a>';
+                    return '<a href="' . $company->id . '/edit">' . $company->name . '</a>';
                 })
                 ->rawColumns(['name', 'action'])
-                ->editColumn('hash_id', 'ID: {{ $hash_id }}')
+                ->editColumn('id', 'ID: {{ $id }}')
                 ->make(true);
         }
         return view('company.index');
@@ -51,7 +51,7 @@ class CompanyDatatableController extends Controller
                     return Carbon::parse($contract->expiry_date)->diffForHumans();
                 })
                 ->rawColumns(['title'])
-                ->editColumn('hash_id', 'ID: {{ $hash_id }}')
+                ->editColumn('id', 'ID: {{ $id }}')
                 ->make(true);
         }
         return view('company.contracts');

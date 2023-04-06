@@ -65,7 +65,7 @@ class VesselController extends Controller
      */
     public function edit(Vessel $vessel)
     {
-        return view('vessel.edit', compact('vessel'));
+        return view('vessels.edit', compact('vessel'));
     }
 
     /**

@@ -16,18 +16,18 @@
                 </a>
                 <ul class="dropdown__menu js-dropdown__menu" aria-label="dropdown">
                     <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
-                        <a class="dropdown__item" href="{{ route('categoryCreate') }}">
-                            Category
-                        </a>
-                    </li>
-                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
-                        <a class="dropdown__item" href="{{ route('companyCreate') }}">
+                        <a class="dropdown__item" href="{{ route('company.create') }}">
                             Company
                         </a>
                     </li>
                     <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
                         <a class="dropdown__item" href="{{ route('contractCreate') }}">
                             Contract
+                        </a>
+                    </li>
+                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
+                        <a class="dropdown__item" href="{{ route('vessels.create') }}">
+                            Vessel
                         </a>
                     </li>
                 </ul>

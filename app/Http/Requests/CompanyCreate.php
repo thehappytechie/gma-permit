@@ -28,12 +28,13 @@ class CompanyCreate extends FormRequest
         return [
             'name' =>  ["required", "string", Rule::unique(Company::class)],
             'email' =>  ["string", "email", Rule::unique(Company::class), "nullable"],
-            'contact' =>  ["string", "numeric", "nullable"],
+            'contact' =>  ["string", "numeric", Rule::unique(Company::class), "nullable"],
             'address' =>  ["string", "nullable"],
             'registry_port' =>  ["string", "nullable"],
             'gross_tonnage' => ["numeric", "nullable"],
             'call_sign' => ["string", "nullable"],
             'vessel_number' => ["string", "nullable"],
+            'imo_number' => ["string", "nullable"],
         ];
     }
 }

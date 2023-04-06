@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\VesselController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DatatableController;
@@ -24,6 +25,7 @@ use App\Http\Controllers\ForcePasswordChangeController;
 use App\Http\Controllers\Datatables\RoleDatatableController;
 use App\Http\Controllers\Datatables\UserDatatableController;
 use App\Http\Controllers\Datatables\AuditDatatableController;
+use App\Http\Controllers\Datatables\VesselDatatableController;
 use App\Http\Controllers\Datatables\CompanyDatatableController;
 use App\Http\Controllers\Datatables\CategoryDatatableController;
 use App\Http\Controllers\Datatables\ContractDatatableController;
@@ -31,7 +33,6 @@ use App\Http\Controllers\Datatables\LocationDatatableController;
 use App\Http\Controllers\Datatables\DepartmentDatatableController;
 use App\Http\Controllers\Datatables\PermissionDatatableController;
 use App\Http\Controllers\Datatables\ContractReportDatatableController;
-use App\Http\Controllers\Datatables\VesselDatatableController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,6 +77,7 @@ Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.hi
         'permissions' => PermissionsController::class,
 
         'vessels' => VesselController::class,
+        'company' => CompanyController::class,
         'certificates' => CertificateController::class,
     ]);
     Route::resource('profile', UserProfileController::class)->only(['edit', 'update'])->middleware('profile.owner');;
@@ -88,13 +90,8 @@ Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.hi
 |--------------------------------------------------------------------------
 */
     Route::get('upload-report', \App\Http\Livewire\UploadReport::class)->name('upload-report');
-    Route::get('company/create', \App\Http\Livewire\Company\Create::class)->name('companyCreate');
-    Route::get('company/{company}/edit', \App\Http\Livewire\Company\Edit::class)->name('companyEdit');
-    Route::get('company/{company}/show', \App\Http\Livewire\Company\Show::class)->name('companyShow');
     Route::get('contract/create', \App\Http\Livewire\Contract\Create::class)->name('contractCreate');
     Route::get('contract/{contract}/edit', \App\Http\Livewire\Contract\Edit::class)->name('contractEdit');
-    Route::get('category/create', \App\Http\Livewire\Category\Create::class)->name('categoryCreate');
-    Route::get('category/{category}/edit', \App\Http\Livewire\Category\Edit::class)->name('categoryEdit');
 
     /*
 |--------------------------------------------------------------------------
@@ -171,7 +168,7 @@ Route::controller(TicketDatatableController::class)->group(function () {
 Route::get('vessels', [VesselDatatableController::class, 'vesselDatatable'])->name('vesselDatatable');
 
 
-Route::get('company/all', [CompanyDatatableController::class, 'companyDatatable'])->name('companyDatatable');
+Route::get('company.index', [CompanyDatatableController::class, 'companyDatatable'])->name('companyDatatable');
 Route::get('company/contracts', [CompanyDatatableController::class, 'companyContractDatatable'])->name('companyContractDatatable');
 Route::get('category/all', [CategoryDatatableController::class, 'categoryDatatable'])->name('categoryDatatable');
 Route::get('contract/reports', [ContractReportDatatableController::class, 'contractReportDatatable'])->name('contractReportDatatable');
