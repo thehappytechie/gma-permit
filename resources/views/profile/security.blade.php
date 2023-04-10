@@ -118,13 +118,13 @@
                     <form action="{{ url('user/two-factor-authentication') }}" method="POST" class="mt-2">
                         @csrf
                         <div class="border-top border-contrast-lower padding-md text-right">
-                            <button type="submit" class="btn btn--primary">Enable</button>
+                            <button type="submit" class="btn btn--primary btn--md">Enable</button>
                         </div>
                     </form>
                 </div>
             @else
                 <div class="border-top border-contrast-lower padding-md text-right">
-                    <button type="submit" class="btn btn--accent">Disable</button>
+                    <button type="submit" class="btn btn--accent btn--md">Disable</button>
                 </div>
             @endif
             </form>

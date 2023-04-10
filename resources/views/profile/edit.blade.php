@@ -21,7 +21,7 @@
                 @csrf
                 @method('PUT')
                 <div class="padding-lg">
-                    <fieldset class="margin-bottom-xl">
+                    <fieldset class="margin-bottom-md">
                         <legend class="margin-bottom-md font-medium text-md">Profile Information</legend>
                         <div class="margin-bottom-sm">
                             <div class="grid gap-xxs">
@@ -136,7 +136,7 @@
                     </fieldset>
                     <div class="border-top border-contrast-lower text-right">
                         <div class="margin-top-sm">
-                            <button class="btn btn--primary">Save</button>
+                            <button class="btn btn--primary btn--md">Save</button>
                         </div>
                     </div>
                 </div>

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PermitCreate;
 use App\Models\Permit;
+use App\Models\Company;
+use App\Models\PermitUnit;
 use Illuminate\Http\Request;
 
 class PermitController extends Controller
@@ -24,7 +27,9 @@ class PermitController extends Controller
      */
     public function create()
     {
-        return view('permit.create');
+        $permitUnits = PermitUnit::get(['id', 'name']);
+        $companies = Company::get(['id', 'name']);
+        return view('permit.create', compact('companies', 'permitUnits'));
     }
 
     /**
@@ -33,7 +38,7 @@ class PermitController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PermitCreate $request)
     {
         $permit = new Permit();
         $data = $request->validated();

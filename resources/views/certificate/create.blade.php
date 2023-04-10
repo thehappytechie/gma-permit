@@ -9,7 +9,7 @@
         <form action="{{ route('certificate.store') }}" method="post">
             @csrf
             <div class="grid gap-lg max-width-sm padding-lg">
-                <a href="{{ route('certificate.index') }}">&larr; Go to certificates</a>
+                <a href="{{ route('certificateDatatable') }}">&larr; Go to certificates</a>
                 <small class="color-contrast-medium">
                     <x-required-label></x-required-label>indicates a required field
                 </small>

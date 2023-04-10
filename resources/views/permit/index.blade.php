@@ -82,12 +82,17 @@
                         <tr class="int-table__row">
                             <th>
                                 <div class="flex items-center">
-                                    <span>Certificate name</span>
+                                    <span>Company name</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
                                     <span>Vessel name</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="flex items-center">
+                                    <span>Permit number</span>
                                 </div>
                             </th>
                             <th>
@@ -98,6 +103,11 @@
                             <th>
                                 <div class="flex items-center">
                                     <span>Expiry date</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="flex items-center">
+                                    <span>Status</span>
                                 </div>
                             </th>
                             <th>
@@ -160,7 +170,7 @@
             autoFill: true,
             responsive: true,
             ajax: {
-                url: '{{ route('certificateDatatable') }}',
+                url: '{{ route('permitDatatable') }}',
                 type: 'GET',
                 data: function(d) {
                     d.issueFrom = $('input[name=issueFrom]').val();
@@ -170,19 +180,28 @@
                 }
             },
             columns: [{
-                    data: "name",
-                    name: "name"
+                    data: "company.name",
+                    name: "company.name"
                 },
                 {
-                    data: "vessel.name",
-                    name: "vessel.name"
-                }, {
+                    data: "vessel_name",
+                    name: "vessel_name"
+                },
+                {
+                    data: "permit_number",
+                    name: "permit_number"
+                },
+                 {
                     data: "issue_date",
                     name: "issue_date"
                 },
                 {
                     data: "expiry_date",
                     name: "expiry_date"
+                },
+                {
+                    data: "status",
+                    name: "status"
                 },
                 {
                     data: "action",

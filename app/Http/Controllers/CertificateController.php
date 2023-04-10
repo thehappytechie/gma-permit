@@ -66,7 +66,8 @@ class CertificateController extends Controller
      */
     public function edit(Certificate $certificate)
     {
-        //
+        $vessels = Vessel::orderBy('name', 'asc')->get(['id', 'name']);
+        return view('certificate.edit', compact('certificate', 'vessels'));
     }
 
     /**
