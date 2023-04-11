@@ -28,7 +28,7 @@
                                     d="M8 .95 14.61 4h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.379l.5 2A.5.5 0 0 1 15.5 17H.5a.5.5 0 0 1-.485-.621l.5-2A.5.5 0 0 1 1 14V7H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 4h.89L8 .95zM3.776 4h8.447L8 2.05 3.776 4zM2 7v7h1V7H2zm2 0v7h2.5V7H4zm3.5 0v7h1V7h-1zm2 0v7H12V7H9.5zM13 7v7h1V7h-1zm2-1V5H1v1h14zm-.39 9H1.39l-.25 1h13.72l-.25-1z" />
                             </svg>
                         </div>
-                        <a href="{{ route('contractReportDatatable') }}" class="small-box-footer">More Info
+                        <a href="#" class="small-box-footer">More Info
                             &#8594;</a>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                                     d="M4.5 12.5A.5.5 0 0 1 5 12h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 10h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm1.639-3.708 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V8.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V8s1.54-1.274 1.639-1.208zM6.25 6a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z" />
                             </svg>
                         </div>
-                        <a href="{{ route('contractReportDatatable') }}" class="small-box-footer">More Info
+                        <a href="#" class="small-box-footer">More Info
                             &#8594;</a>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                                     d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
                             </svg>
                         </div>
-                        <a href="{{ route('contractReportDatatable') }}" class="small-box-footer">More Info &#8594;</a>
+                        <a href="#" class="small-box-footer">More Info &#8594;</a>
                     </div>
                 </div>
                 <div class="col-6@sm col-3@md">
@@ -84,7 +84,7 @@
                                     d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
                             </svg>
                         </div>
-                        <a href="{{ route('contractReportDatatable') }}" class="small-box-footer">More Info &#8594;</a>
+                        <a href="#" class="small-box-footer">More Info &#8594;</a>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
             <div class="padding-md">
                 <div class="margin-bottom-md">
                     <div class="flex items-baseline justify-between">
-                        <p><a class="text-sm" href="{{ route('contractDatatable') }}">View all &rarr;</a></p>
+                        <p><a class="text-sm" href="#">View all &rarr;</a></p>
                     </div>
                 </div>
 

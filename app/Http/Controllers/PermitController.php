@@ -67,7 +67,9 @@ class PermitController extends Controller
      */
     public function edit(Permit $permit)
     {
-        //
+        $permitUnits = PermitUnit::get(['id', 'name']);
+        $companies = Company::get(['id', 'name']);
+        return view('permit.edit', compact(['permit', 'companies', 'permitUnits']));
     }
 
     /**

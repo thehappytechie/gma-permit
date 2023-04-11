@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CompanyCreate;
-use App\Http\Requests\CompanyEdit;
+use App\Models\Permit;
 use App\Models\Company;
 use Illuminate\Http\Request;
+use App\Http\Requests\CompanyEdit;
+use App\Http\Requests\CompanyCreate;
 
 class CompanyController extends Controller
 {
@@ -54,7 +55,7 @@ class CompanyController extends Controller
     public function show(Company $company)
     {
         $company->load('permits');
-        return view('company.show',compact('company'));
+        return view('company.show', compact('company'));
     }
 
     /**
@@ -65,7 +66,8 @@ class CompanyController extends Controller
      */
     public function edit(Company $company)
     {
-        return view('company.edit', compact('company'));
+        $permits = Permit::where('company_id', '=', $company->id)->get();
+        return view('company.edit', compact('company', 'permits'));
     }
 
     /**

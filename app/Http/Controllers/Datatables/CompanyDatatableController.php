@@ -28,32 +28,12 @@ class CompanyDatatableController extends Controller
                     </a>';
                 })
                 ->editColumn('name', function (Company $company) {
-                    return '<a href="' . $company->id . '/edit">' . $company->name . '</a>';
+                    return '<a href="/' . $company->id . '/edit">' . $company->name . '</a>';
                 })
                 ->rawColumns(['name', 'action'])
                 ->editColumn('id', 'ID: {{ $id }}')
                 ->make(true);
         }
         return view('company.index');
-    }
-
-    public function companyContractDatatable(Request $request)
-    {
-        if ($request->ajax()) {
-            $contracts = Contract::with('company')->where('company_id', '=', 1)->get();
-            return DataTables::of($contracts)
-                ->editColumn('title', function (Contract $contract) {
-                    return ' ' . $contract->title . ' </br>
-                    <p class="color-contrast-medium margin-top-xxs badge badge--contrast-higher text-sm">' . $contract->category->name . '</p>
-                    ';
-                })
-                ->editColumn('expiry_date', function (Contract $contract) {
-                    return Carbon::parse($contract->expiry_date)->diffForHumans();
-                })
-                ->rawColumns(['title'])
-                ->editColumn('id', 'ID: {{ $id }}')
-                ->make(true);
-        }
-        return view('company.contracts');
     }
 }

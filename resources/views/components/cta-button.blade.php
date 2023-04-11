@@ -26,18 +26,18 @@
                         </a>
                     </li>
                     <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
-                        <a class="dropdown__item" href="{{ route('contractCreate') }}">
-                            Contract
+                        <a class="dropdown__item" href="{{ route('permit.create') }}">
+                            Permit
+                        </a>
+                    </li>
+                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
+                        <a class="dropdown__item" href="{{ route('permit-unit.create') }}">
+                            Permit Unit
                         </a>
                     </li>
                     <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
                         <a class="dropdown__item" href="{{ route('vessels.create') }}">
                             Vessel
-                        </a>
-                    </li>
-                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
-                        <a class="dropdown__item" href="{{ route('permit.create') }}">
-                            Permit
                         </a>
                     </li>
                 </ul>

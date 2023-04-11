@@ -71,6 +71,20 @@
             </ul>
             <ul class="sidenav__list">
                 <li class="sidenav__item">
+                    <a href="{{ route('operatingPermitDatatable') }}" class="sidenav__link">
+                        <span class="sidenav__text text-sm@md">Operating permits</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="sidenav__list">
+                <li class="sidenav__item">
+                    <a href="{{ route('safetyPermitDatatable') }}" class="sidenav__link">
+                        <span class="sidenav__text text-sm@md">Safety permits</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="sidenav__list">
+                <li class="sidenav__item">
                     <a href="#" class="sidenav__link">
                         <span class="sidenav__text text-sm@md">Reports</span>
                     </a>

@@ -60,8 +60,12 @@ Route::controller(PageController::class)->group(function () {
         ->name('terms');
 });
 
+/*
+|--------------------------------------------------------------------------
+| Routes Middleware
+|--------------------------------------------------------------------------
+*/
 Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.history', 'disable.login'])->group(function () {
-
 
     /*
 |--------------------------------------------------------------------------
@@ -85,7 +89,6 @@ Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.hi
     ]);
     Route::resource('profile', UserProfileController::class)->only(['edit', 'update'])->middleware('profile.owner');;
     Route::resource('brand-setting', BrandSettingController::class)->only(['edit', 'update']);
-
 
     /*
 |--------------------------------------------------------------------------
@@ -120,7 +123,6 @@ Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.hi
             ->name('users.restore.all');
     });
 
-
     /*
 |--------------------------------------------------------------------------
 | Single Action Controllers
@@ -137,7 +139,6 @@ Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.hi
         ->withoutMiddleware(['force.password.change']);
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('signout')->withoutMiddleware(['force.password.change']);
 });
-
 
 /*
 |--------------------------------------------------------------------------
@@ -158,19 +159,22 @@ Route::controller(TicketDatatableController::class)->group(function () {
         ->name('ticketDatatable');
 });
 
+Route::controller(PermitDatatableController::class)->group(function () {
+    Route::get('permit', 'permitDatatable')
+        ->name('permitDatatable');
+    Route::get('operating-permits', 'operatingPermitDatatable')
+        ->name('operatingPermitDatatable');
+    Route::get('safety-permits', 'safetyPermitDatatable')
+        ->name('safetyPermitDatatable');
+});
 
 Route::get('vessels', [VesselDatatableController::class, 'vesselDatatable'])->name('vesselDatatable');
-Route::get('permit', [PermitDatatableController::class, 'permitDatatable'])->name('permitDatatable');
-
 Route::get('permit-unit', [PermitUnitDatatableController::class, 'permitUnitDatatable'])->name('permitUnitDatatable');
-
 Route::get('company', [CompanyDatatableController::class, 'companyDatatable'])->name('companyDatatable');
 Route::get('certificate', [CertificateDatatableController::class, 'certificateDatatable'])->name('certificateDatatable');
-
 Route::get('category/all', [CategoryDatatableController::class, 'categoryDatatable'])->name('categoryDatatable');
 Route::get('locations', [LocationDatatableController::class, 'locationDatatable'])->name('locationDatatable');
 Route::get('roles', [RoleDatatableController::class, 'roleDatatable'])->name('roleDatatable');
 Route::get('departments', [DepartmentDatatableController::class, 'departmentDatatable'])->name('departmentDatatable');
-Route::get('', [DatatableController::class, 'dashboardReportDatatable'])->name('dashboardReportDatatable');
 Route::get('permissions', [PermissionDatatableController::class, 'permissionDatatable'])->name('permissionDatatable');
 Route::get('admin/audits', [AuditDatatableController::class, 'audit'])->name('auditDatatable');
