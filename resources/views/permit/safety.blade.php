@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Permits</h1>
+        <h1 class="text-xl font-bold">Safety Permits</h1>
         <div class="flex justify-end">
             <a href="{{ route('permit.create') }}" class="btn btn--primary text-sm">Add Permit</a>
         </div>
@@ -80,7 +80,6 @@
                 <table class="datatable int-table__table" aria-label="Datatable">
                     <thead class="int-table__header">
                         <tr class="int-table__row">
-                            <th></th>
                             <th>
                                 <div class="flex items-center">
                                     <span>Company name</span>
@@ -111,6 +110,11 @@
                                     <span>Status</span>
                                 </div>
                             </th>
+                            <th>
+                                <div class="flex items-center">
+                                    <span>Action</span>
+                                </div>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -128,18 +132,6 @@
     $(function() {
         let oTable = $(".datatable").DataTable({
             dom: "Bfrtip",
-            columnDefs: [{
-                orderable: false,
-                className: 'select-checkbox',
-                targets: 0
-            }],
-            select: {
-                style: 'multi',
-                selector: 'td:first-child'
-            },
-            order: [
-                [1, 'asc']
-            ],
             lengthMenu: [
                 [10, 25, 50, -1],
                 ["10 rows", "25 rows", "50 rows", "Show all"],
@@ -164,12 +156,6 @@
                     },
                 },
                 {
-                    text: 'Reload table',
-                    action: function() {
-                        oTable.ajax.reload();
-                    }
-                },
-                {
                     extend: "colvis",
                     text: "Columns",
                 },
@@ -179,6 +165,7 @@
                 },
             ],
             processing: true,
+            select: true,
             mark: true,
             autoFill: true,
             responsive: true,
@@ -193,11 +180,6 @@
                 }
             },
             columns: [{
-                    data: "checkbox",
-                    name: "checkbox",
-                    orderable: false,
-                    searchable: false
-                }, {
                     data: "company.name",
                     name: "company.name"
                 },
@@ -209,7 +191,7 @@
                     data: "permit_number",
                     name: "permit_number"
                 },
-                {
+                 {
                     data: "issue_date",
                     name: "issue_date"
                 },
@@ -220,6 +202,12 @@
                 {
                     data: "status",
                     name: "status"
+                },
+                {
+                    data: "action",
+                    name: "action",
+                    orderable: false,
+                    searchable: false
                 },
             ],
         });

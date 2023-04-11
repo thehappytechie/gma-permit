@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Contract;
+use App\Models\Permit;
 use OwenIt\Auditing\Models\Audit;
 use Illuminate\Support\Facades\DB;
 
@@ -24,7 +25,7 @@ class DashboardController extends Controller
             ->selectRaw("count(case when status = 'negotiating' then 1 end) as negotiating")
             ->first();
 
-        $contractChart = Contract::with('company')->selectRaw("company_id, COUNT(*) as company_id_count")
+        $permitChart = Contract::with('company')->selectRaw("company_id, COUNT(*) as company_id_count")
             ->groupBy('company_id')
             ->inRandomOrder()
             ->limit(10)
@@ -35,9 +36,9 @@ class DashboardController extends Controller
             ->limit(8)
             ->get();
 
-        $expiringContracts = Contract::with('company')
+        $expiringPermits = Permit::with('company')
             ->where('expiry_date', '>=', date('Y-m-d'))
             ->get();
-        return view('pages.dashboard', compact(['contracts', 'expiringContracts', 'audits', 'contractChart']));
+        return view('pages.dashboard', compact(['contracts', 'expiringPermits', 'audits', 'permitChart']));
     }
 }

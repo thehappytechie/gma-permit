@@ -27,12 +27,10 @@ use App\Http\Controllers\Datatables\AuditDatatableController;
 use App\Http\Controllers\Datatables\VesselDatatableController;
 use App\Http\Controllers\Datatables\CompanyDatatableController;
 use App\Http\Controllers\Datatables\CategoryDatatableController;
-use App\Http\Controllers\Datatables\ContractDatatableController;
 use App\Http\Controllers\Datatables\LocationDatatableController;
 use App\Http\Controllers\Datatables\DepartmentDatatableController;
 use App\Http\Controllers\Datatables\PermissionDatatableController;
 use App\Http\Controllers\Datatables\CertificateDatatableController;
-use App\Http\Controllers\Datatables\ContractReportDatatableController;
 use App\Http\Controllers\Datatables\PermitDatatableController;
 use App\Http\Controllers\Datatables\PermitUnitDatatableController;
 use App\Http\Controllers\PermitController;
@@ -95,8 +93,6 @@ Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.hi
 |--------------------------------------------------------------------------
 */
     Route::get('upload-report', \App\Http\Livewire\UploadReport::class)->name('upload-report');
-    Route::get('contract/create', \App\Http\Livewire\Contract\Create::class)->name('contractCreate');
-    Route::get('contract/{contract}/edit', \App\Http\Livewire\Contract\Edit::class)->name('contractEdit');
 
     /*
 |--------------------------------------------------------------------------
@@ -155,13 +151,6 @@ Route::controller(UserDatatableController::class)->group(function () {
         ->name('trashedUserDatatable');
 });
 
-Route::controller(ContractDatatableController::class)->group(function () {
-    Route::get('contract/all', 'contractDatatable')
-        ->name('contractDatatable');
-    Route::get('category/edit', 'contractEditDatatable')
-        ->name('contractEditDatatable');
-});
-
 Route::controller(TicketDatatableController::class)->group(function () {
     Route::get('tickets/logged', 'loggedTicket')
         ->name('loggedTicket');
@@ -178,9 +167,7 @@ Route::get('permit-unit', [PermitUnitDatatableController::class, 'permitUnitData
 Route::get('company', [CompanyDatatableController::class, 'companyDatatable'])->name('companyDatatable');
 Route::get('certificate', [CertificateDatatableController::class, 'certificateDatatable'])->name('certificateDatatable');
 
-Route::get('company/contracts', [CompanyDatatableController::class, 'companyContractDatatable'])->name('companyContractDatatable');
 Route::get('category/all', [CategoryDatatableController::class, 'categoryDatatable'])->name('categoryDatatable');
-Route::get('contract/reports', [ContractReportDatatableController::class, 'contractReportDatatable'])->name('contractReportDatatable');
 Route::get('locations', [LocationDatatableController::class, 'locationDatatable'])->name('locationDatatable');
 Route::get('roles', [RoleDatatableController::class, 'roleDatatable'])->name('roleDatatable');
 Route::get('departments', [DepartmentDatatableController::class, 'departmentDatatable'])->name('departmentDatatable');

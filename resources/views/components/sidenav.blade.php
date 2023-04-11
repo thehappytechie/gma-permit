@@ -64,14 +64,14 @@
             </button>
             <ul class="sidenav__list">
                 <li class="sidenav__item">
-                    <a href="{{ route('contractDatatable') }}" class="sidenav__link">
+                    <a href="{{ route('permitDatatable') }}" class="sidenav__link">
                         <span class="sidenav__text text-sm@md">All permits</span>
                     </a>
                 </li>
             </ul>
             <ul class="sidenav__list">
                 <li class="sidenav__item">
-                    <a href="{{ route('contractReportDatatable') }}" class="sidenav__link">
+                    <a href="#" class="sidenav__link">
                         <span class="sidenav__text text-sm@md">Reports</span>
                     </a>
                 </li>

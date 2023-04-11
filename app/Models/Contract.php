@@ -5,13 +5,10 @@ namespace App\Models;
 use App\Http\Traits\UsesHashIds;
 use Illuminate\Database\Eloquent\Model;
 use OwenIt\Auditing\Contracts\Auditable;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Contract extends Model implements HasMedia, Auditable 
+class Contract extends Model implements  Auditable
 {
-    use InteractsWithMedia;
     use UsesHashIds;
     use HasFactory;
     use \OwenIt\Auditing\Auditable;

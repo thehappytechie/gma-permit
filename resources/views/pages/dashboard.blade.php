@@ -15,7 +15,7 @@
         </div>
         <div class="alert-card bg radius-md padding-md shadow-xs col-12 js-alert-card">
             <div class="grid grid-gap-md padding-x-md padding-y-md">
-                <div class="col-6@sm col-2@md">
+                <div class="col-6@sm col-3@md">
                     <div class="small-box bg-teal padding-top-sm">
                         <div class="inner">
                             <h3>{{ $contracts->active }}</h3>
@@ -32,7 +32,7 @@
                             &#8594;</a>
                     </div>
                 </div>
-                <div class="col-6@sm col-2@md">
+                <div class="col-6@sm col-3@md">
                     <div class="small-box bg-maroon padding-top-sm">
                         <div class="inner">
                             <h3>{{ $contracts->archived }}</h3>
@@ -51,7 +51,7 @@
                             &#8594;</a>
                     </div>
                 </div>
-                <div class="col-6@sm col-2@md">
+                <div class="col-6@sm col-3@md">
                     <div class="small-box bg-orange padding-top-sm">
                         <div class="inner">
                             <h3>{{ $contracts->draft }}</h3>
@@ -69,7 +69,7 @@
                         <a href="{{ route('contractReportDatatable') }}" class="small-box-footer">More Info &#8594;</a>
                     </div>
                 </div>
-                <div class="col-6@sm col-2@md">
+                <div class="col-6@sm col-3@md">
                     <div class="small-box bg-purple padding-top-sm">
                         <div class="inner">
                             <h3>{{ $contracts->negotiating }}</h3>
@@ -87,54 +87,18 @@
                         <a href="{{ route('contractReportDatatable') }}" class="small-box-footer">More Info &#8594;</a>
                     </div>
                 </div>
-                <div class="col-6@sm col-2@md">
-                    <div class="small-box bg-green padding-top-sm">
-                        <div class="inner">
-                            <h3>{{ $contracts->pending }}</h3>
-                            <p>Pending</p>
-                        </div>
-                        <div class="icon" aria-hidden="true">
-                            <svg width="60" height="60" fill="currentColor" class="bi bi-file-earmark-text"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
-                                <path
-                                    d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
-                            </svg>
-                        </div>
-                        <a href="{{ route('contractReportDatatable') }}" class="small-box-footer">More Info &#8594;</a>
-                    </div>
-                </div>
-                <div class="col-6@sm col-2@md">
-                    <div class="small-box bg-yellow padding-top-sm">
-                        <div class="inner">
-                            <h3>{{ $contracts->superseded }}</h3>
-                            <p>Superseded</p>
-                        </div>
-                        <div class="icon" aria-hidden="true">
-                            <svg width="60" height="60" fill="currentColor" class="bi bi-file-earmark-text"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
-                                <path
-                                    d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
-                            </svg>
-                        </div>
-                        <a href="{{ route('contractReportDatatable') }}" class="small-box-footer">More Info &#8594;</a>
-                    </div>
-                </div>
             </div>
         </div>
 
         <div class="bg radius-md padding-md shadow-xs col-8@sm col-8@xl">
-            <h3 class="text-center margin-y-md">Company & Contracts</h3>
+            <h3 class="text-center margin-y-md">Company & Permits</h3>
             <div class="padding-x-md padding-y-lg">
                 <canvas id="myChart"></canvas>
             </div>
         </div>
 
         <div class="bg radius-md padding-md shadow-xs col-4@sm col-4@xl">
-            <h3 class="text-center margin-y-md">Expiring Contracts</h3>
+            <h3 class="text-center margin-y-md">Expiring Permits</h3>
             <div class="padding-md">
                 <div class="margin-bottom-md">
                     <div class="flex items-baseline justify-between">
@@ -163,10 +127,10 @@
                         </thead>
 
                         <tbody class="tbl__body">
-                            @foreach ($expiringContracts as $expiringContract)
+                            @foreach ($expiringPermits as $expiringPermit)
                                 <tr class="tbl__row">
                                     <td class="tbl__cell" role="cell">
-                                        <p>{{ ucfirst($expiringContract->title) }}</p>
+                                        <p>{{ ucfirst($expiringPermit->title) }}</p>
                                         <p class="text-xs color-contrast-medium">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
                                                 fill="currentColor" class="margin-top-xs" viewBox="0 0 16 16">
@@ -177,7 +141,7 @@
                                                 <path
                                                     d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
                                             </svg>
-                                            {{ Carbon\Carbon::parse($expiringContract->created_at)->diffForHumans() }}
+                                            {{ Carbon::parse($expiringPermit->created_at)->diffForHumans() }}
                                         </p>
                                     </td>
                                 </tr>
@@ -195,7 +159,7 @@
                     aria-label="Table Example">
                     <thead class="table__header">
                         <tr class="table__row">
-                            <th class="table__cell text-left" scope="col">Contract Title</th>
+                            <th class="table__cell text-left" scope="col">Permit Title</th>
                             <th class="table__cell text-left" scope="col">User</th>
                             <th class="table__cell text-left" scope="col">Expiry</th>
                             <th class="table__cell text-left" scope="col">Status</th>
@@ -270,7 +234,7 @@
             },
             // The data for our dataset
             data: {
-                labels: {!! $contractChart->pluck('company.name')->toJson() !!},
+                labels: {!! $permitChart->pluck('company.name')->toJson() !!},
                 display: false,
                 datasets: [{
                     barPercentage: 0.5,
@@ -282,7 +246,7 @@
                     fill: true,
                     borderWidth: 2,
                     borderColor: '#ffa500',
-                    data: {!! $contractChart->pluck('company_id_count')->toJson() !!}
+                    data: {!! $permitChart->pluck('company_id_count')->toJson() !!}
                 }]
             },
         });
