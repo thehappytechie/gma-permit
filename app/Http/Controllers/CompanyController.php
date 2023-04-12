@@ -66,8 +66,7 @@ class CompanyController extends Controller
      */
     public function edit(Company $company)
     {
-        $permits = Permit::where('company_id', '=', $company->id)->get();
-        return view('company.edit', compact('company', 'permits'));
+        return view('company.edit', compact('company'));
     }
 
     /**
