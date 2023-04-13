@@ -164,6 +164,7 @@ return [
         Propaganistas\LaravelDisposableEmail\DisposableEmailServiceProvider::class,
         OwenIt\Auditing\AuditingServiceProvider::class,
         Monarobase\CountryList\CountryListServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
         /*
          * Package Service Providers...
          */

@@ -12,9 +12,10 @@
                 <a href="{{ route('companyDatatable') }}">&larr; Go to companies</a>
             </div>
             <div class="user-cell margin-y-lg">
-                <div class="user-cell__body margin-y-sm">
+                <div class="user-cell__body margin-y-md margin-x-md">
                     <figure aria-hidden="true">
-                        <img class="user-cell__img" src="https://api.dicebear.com/6.x/shapes/svg?seed={{ $company->name }}"
+                        <img class="user-cell__img"
+                            src="https://api.dicebear.com/6.x/shapes/svg?seed={{ $company->name }}"
                             alt="Company profile image">
                     </figure>
                     <div class="user-cell__content text-component line-height-sm text-space-y-xxs">
@@ -80,7 +81,7 @@
                 </thead>
 
                 <tbody class="tbl__body">
-                    @foreach ($company->permits as $permit)
+                    @forelse ($company->permits as $permit)
                         <tr class="tbl__row text-sm">
                             <td class="tbl__cell" role="cell">
                                 <div class="flex items-center">
@@ -103,7 +104,11 @@
 
                             <td class="tbl__cell text-right" role="cell">{{ $permit->expiry_date }}</td>
                         </tr>
-                    @endforeach
+                    @empty
+                        <tr class="tbl__row text-sm">
+                            <td class="tbl__cell text-center" role="cell">No records found</td>
+                        </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>

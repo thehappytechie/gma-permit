@@ -86,6 +86,7 @@ Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.hi
         'vessels' => VesselController::class,
         'company' => CompanyController::class,
         'certificate' => CertificateController::class,
+
     ]);
     Route::resource('profile', UserProfileController::class)->only(['edit', 'update'])->middleware('profile.owner');;
     Route::resource('brand-setting', BrandSettingController::class)->only(['edit', 'update']);
@@ -122,6 +123,8 @@ Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.hi
         Route::get('restoreAll', 'restoreAll')
             ->name('users.restore.all');
     });
+
+    Route::post('company/import', [CompanyController::class, 'importCompany'])->name('importCompany');
 
     /*
 |--------------------------------------------------------------------------

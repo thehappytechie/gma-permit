@@ -16,8 +16,10 @@ class LocationSeeder extends Seeder
     public function run()
     {
         Location::truncate();
-        Location::create(['name' => 'Accra']);
-        Location::create(['name' => 'Tema']);
-        Location::create(['name' => 'Takoradi']);
+        Location::insert([
+            ['name' => 'Accra'],
+            ['name' => 'Tema'],
+            ['name' => 'Takoradi'],
+        ]);
     }
 }

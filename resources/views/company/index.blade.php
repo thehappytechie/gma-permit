@@ -10,6 +10,23 @@
 
     <div class="grid gap-sm">
         <div class="bg radius-md padding-md shadow-xs col-12">
+            <form action="{{ route('importCompany') }}" method="post" enctype="multipart/form-data">
+                @csrf
+                <p class="margin-y-sm text-sm color-contrast-medium">You can import companies via <strong>excel (.xlsx)</strong> file. The excel file should be formatted with headers that match the ones.</p>
+                <div class="grid gap-lg max-width-sm">
+                    <div class="col-4@md">
+                        <input class="shadow-xs file__upload width-100% @error('file') is-error @enderror" type="file"
+                            name="file" id="file" accept=".xlsx">
+                        @error('file')
+                            <x-validation-error>{{ $message }}</x-validation-error>
+                        @enderror
+                    </div>
+                    <div class="col-4@md">
+                        <button class="btn btn--dark btn--sm">IMPORT</button>
+                    </div>
+                </div>
+                <div class="border-top border-1 margin-y-md"></div>
+            </form>
             <div class="int-table__inner text-sm margin-top-lg">
                 <table class="datatable int-table__table" aria-label="Datatable">
                     <thead class="int-table__header">

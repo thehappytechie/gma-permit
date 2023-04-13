@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Permit;
 use App\Models\Company;
 use Illuminate\Http\Request;
+use App\Imports\CompanyImport;
 use App\Http\Requests\CompanyEdit;
 use App\Http\Requests\CompanyCreate;
+use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\File;
 
 class CompanyController extends Controller
 {
@@ -93,5 +96,18 @@ class CompanyController extends Controller
     public function destroy(Company $company)
     {
         //
+    }
+
+    public function importCompany(Request $request)
+    {
+        $request->validate([
+            'file' => [
+                'required',
+                File::types(['xlsx'])->max(12 * 1024),
+            ],
+        ]);
+        Excel::import(new CompanyImport, request()->file('file'));
+        $request->session()->flash('success', 'Companies imported successfully');
+        return redirect()->route('companyDatatable');
     }
 }

@@ -1,5 +1,5 @@
 <button class="reset user-menu-control" aria-controls="user-menu" aria-label="Toggle user menu">
-    <img src="{{ Avatar::create(Auth::user()->name)->toBase64() }}" alt="Avatar" width="30" />
+    <img src="{{ Avatar::create(Auth::user()->name)->toBase64() ?? '' }}" alt="Avatar" width="30" />
     <svg style="position: relative;bottom:10px" class="icon icon--xxs margin-left-xxs" aria-hidden="true"
         viewBox="0 0 12 12">
         <polyline points="1 4 6 9 11 4" fill="none" stroke="currentColor" stroke-linecap="round"

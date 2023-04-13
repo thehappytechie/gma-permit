@@ -98,6 +98,16 @@
                             </th>
                             <th>
                                 <div class="flex items-center">
+                                    <span>Permit unit</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="flex items-center">
+                                    <span>Permit type</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="flex items-center">
                                     <span>Issue date</span>
                                 </div>
                             </th>
@@ -155,7 +165,7 @@
                 {
                     extend: "pdf",
                     text: "PDF",
-                    title: 'Certificates',
+                    title: 'Permits',
                     orientation: 'landscape',
                     exportOptions: {
                         modifier: {
@@ -208,6 +218,14 @@
                 {
                     data: "permit_number",
                     name: "permit_number"
+                },
+                {
+                    data: "permit_unit.name",
+                    name: "permit_unit.name"
+                },
+                {
+                    data: "permit_type",
+                    name: "permit_type"
                 },
                 {
                     data: "issue_date",
