@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\VesselCreate;
-use App\Http\Requests\VesselEdit;
 use App\Models\Vessel;
 use Illuminate\Http\Request;
+use App\Http\Requests\VesselEdit;
+use App\Http\Requests\VesselCreate;
+use App\Imports\VesselsImport;
+use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Validation\Rules\File;
 
 class VesselController extends Controller
 {
@@ -54,7 +57,7 @@ class VesselController extends Controller
     public function show(Vessel $vessel)
     {
         $vessel->load('certificates');
-        return view('vessel.show',compact('vessel'));
+        return view('vessel.show', compact('vessel'));
     }
 
     /**
@@ -92,5 +95,18 @@ class VesselController extends Controller
     public function destroy(Vessel $vessel)
     {
         //
+    }
+
+    public function importVessel(Request $request)
+    {
+        $request->validate([
+            'file' => [
+                'required',
+                File::types(['csv'])->max(12 * 1024),
+            ],
+        ]);
+        Excel::import(new VesselsImport, request()->file('file'));
+        $request->session()->flash('success', 'Vessels imported successfully');
+        return redirect()->route('vesselDatatable');
     }
 }

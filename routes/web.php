@@ -125,6 +125,7 @@ Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.hi
     });
 
     Route::post('company/import', [CompanyController::class, 'importCompany'])->name('importCompany');
+    Route::post('vessel/import', [VesselController::class, 'importVessel'])->name('importVessel');
 
     /*
 |--------------------------------------------------------------------------

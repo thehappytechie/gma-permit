@@ -8,7 +8,6 @@ use App\Imports\CompanyImport;
 use App\Http\Requests\CompanyEdit;
 use App\Http\Requests\CompanyCreate;
 use Maatwebsite\Excel\Facades\Excel;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules\File;
 
 class CompanyController extends Controller
@@ -103,7 +102,7 @@ class CompanyController extends Controller
         $request->validate([
             'file' => [
                 'required',
-                File::types(['xlsx'])->max(12 * 1024),
+                File::types(['csv'])->max(12 * 1024),
             ],
         ]);
         Excel::import(new CompanyImport, request()->file('file'));
