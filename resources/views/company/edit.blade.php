@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-lg font-bold">Edit - {{ $company->name }}</h1>
+        <h1 class="text-xl font-bold">Edit - {{ $company->name }}</h1>
     </div>
 
     <div class="bg radius-md shadow-xs">

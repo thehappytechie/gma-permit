@@ -1,4 +1,4 @@
-@section('title', 'Create certificate')
+@section('title', 'Edit permit unit')
 
 <x-layout>
     <div class="margin-bottom-md">

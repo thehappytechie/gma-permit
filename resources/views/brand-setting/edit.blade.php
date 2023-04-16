@@ -1,4 +1,4 @@
-@section('title', 'Branding')
+@section('title', 'Edit brand')
 
 <x-layout>
     <div class="margin-bottom-md">

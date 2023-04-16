@@ -94,7 +94,7 @@
                                             @csrf
                                             <div class="flex flex-wrap gap-xs margin-top-md">
                                                 <button type="submit"
-                                                    class="btn btn--dark text-uppercase btn--sm">Regenerate
+                                                    class="btn btn--dark text-uppercase btn--md">Regenerate
                                                     codes</button>
                                             </div>
                                         </form>

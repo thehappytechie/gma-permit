@@ -1,4 +1,4 @@
-@section('title', 'Companies')
+@section('title', 'Permits')
 
 <x-layout>
     <div class="margin-bottom-md">
