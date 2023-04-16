@@ -57,7 +57,7 @@ class VesselController extends Controller
     public function show(Vessel $vessel)
     {
         $vessel->load('certificates');
-        return view('vessel.show', compact('vessel'));
+        return view('vessels.show', compact('vessel'));
     }
 
     /**

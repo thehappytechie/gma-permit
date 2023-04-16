@@ -85,13 +85,6 @@
             </ul>
             <ul class="sidenav__list">
                 <li class="sidenav__item">
-                    <a href="#" class="sidenav__link">
-                        <span class="sidenav__text text-sm@md">Reports</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="sidenav__list">
-                <li class="sidenav__item">
                     <a href="{{ route('permitUnitDatatable') }}" class="sidenav__link">
                         <span class="sidenav__text text-sm@md">Permit units</span>
                     </a>

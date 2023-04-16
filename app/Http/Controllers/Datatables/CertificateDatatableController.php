@@ -31,6 +31,11 @@ class CertificateDatatableController extends Controller
                 ->editColumn('expiry_date', function (Certificate $certificate) {
                     return Carbon::parse($certificate->expiry_date)->format('Y M, d');
                 })
+                ->addColumn('status', function ($certificate) {
+                    if ($certificate->expiry_date <= Carbon::now()) {
+                        return '<span class="badge badge--accent text-xs">expired</span>';
+                    }
+                })
                 ->filter(function ($query) use ($request) {
                     if ($request->issueFrom) {
                         $issueFrom = Carbon::parse($request->get('issueFrom'));
@@ -51,7 +56,7 @@ class CertificateDatatableController extends Controller
                         }
                     }
                 })
-                ->rawColumns(['action'])
+                ->rawColumns(['action','status'])
                 ->make(true);
         }
         return view('certificate.index');

@@ -101,7 +101,7 @@
                     <label class="form-label margin-bottom-xxs" for="gross_tonnage">
                         Gross tonnage
                     </label>
-                    <input class="form-control width-100% @error('gross_tonnage') is-error @enderror" type="text"
+                    <input class="form-control width-100% @error('gross_tonnage') is-error @enderror" type="number"
                         name="gross_tonnage" id="gross_tonnage" value="{{ old('gross_tonnage') }}">
                     @error('gross_tonnage')
                         <x-validation-error>{{ $message }}</x-validation-error>
@@ -111,7 +111,7 @@
                     <label class="form-label margin-bottom-xxs" for="imo_number">
                         IMO number
                     </label>
-                    <input class="form-control width-100% @error('imo_number') is-error @enderror" type="text"
+                    <input class="form-control width-100% @error('imo_number') is-error @enderror" type="number"
                         name="imo_number" id="imo_number" value="{{ old('imo_number') }}">
                     @error('imo_number')
                         issue_date

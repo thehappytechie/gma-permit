@@ -96,7 +96,6 @@ Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.hi
 | Livewire Controllers
 |--------------------------------------------------------------------------
 */
-    Route::get('upload-report', \App\Http\Livewire\UploadReport::class)->name('upload-report');
 
     /*
 |--------------------------------------------------------------------------

@@ -29,7 +29,7 @@
                         Vessel type
                     </label>
                     <input class="form-control width-100% @error('vessel_type') is-error @enderror" type="text"
-                        name="vessel_type" id="vessel_type" value="{{ old('vessel_type') }}">
+                        name="vessel_type" id="vessel_type" value="{{  $vessel->vessel_type }}">
                     @error('vessel_type')
                         <x-validation-error>{{ $message }}</x-validation-error>
                     @enderror
@@ -39,7 +39,7 @@
                         Flag
                     </label>
                     <input class="form-control width-100% @error('flag') is-error @enderror" type="text"
-                        name="flag" id="flag" value="{{ old('flag') }}">
+                        name="flag" id="flag" value="{{ $vessel->flag }}">
                     @error('flag')
                         <x-validation-error>{{ $message }}</x-validation-error>
                     @enderror
@@ -49,7 +49,7 @@
                         Registry port
                     </label>
                     <input class="form-control width-100% @error('registry_port') is-error @enderror" type="text"
-                        name="registry_port" id="registry_port" value="{{ old('registry_port') }}">
+                        name="registry_port" id="registry_port" value="{{ $vessel->registry_port }}">
                     @error('registry_port')
                         <x-validation-error>{{ $message }}</x-validation-error>
                     @enderror
@@ -59,7 +59,7 @@
                         Gross tonnage
                     </label>
                     <input class="form-control width-100% @error('gross_tonnage') is-error @enderror" type="number"
-                        name="gross_tonnage" id="gross_tonnage" value="{{ old('gross_tonnage') }}">
+                        name="gross_tonnage" id="gross_tonnage" value="{{ $vessel->gross_tonnage }}">
                     @error('gross_tonnage')
                         <x-validation-error>{{ $message }}</x-validation-error>
                     @enderror
@@ -69,7 +69,7 @@
                         Call sign
                     </label>
                     <input class="form-control width-100% @error('call_sign') is-error @enderror" type="number"
-                        name="call_sign" id="call_sign" value="{{ old('call_sign') }}">
+                        name="call_sign" id="call_sign" value="{{ $vessel->call_sign }}">
                     @error('call_sign')
                         <x-validation-error>{{ $message }}</x-validation-error>
                     @enderror
@@ -79,14 +79,14 @@
                         Owner details
                     </label>
                     <input class="form-control width-100% @error('owner_details') is-error @enderror" type="text"
-                        name="owner_details" id="owner_details" value="{{ old('owner_details') }}">
+                        name="owner_details" id="owner_details" value="{{ $vessel->owner_details }}">
                     @error('owner_details')
                         <x-validation-error>{{ $message }}</x-validation-error>
                     @enderror
                 </div>
                 <div class="border-top border-contrast-lower text-right">
                     <div class="margin-top-sm">
-                        <button class="btn btn--primary">Update vessel</button>
+                        <button class="btn btn--primary btn--md">Update vessel</button>
                     </div>
                 </div>
             </div>

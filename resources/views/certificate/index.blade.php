@@ -102,6 +102,11 @@
                             </th>
                             <th>
                                 <div class="flex items-center">
+                                    <span>Status</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="flex items-center">
                                     <span>Action</span>
                                 </div>
                             </th>
@@ -183,6 +188,10 @@
                 {
                     data: "expiry_date",
                     name: "expiry_date"
+                },
+                {
+                    data: "status",
+                    name: "status",
                 },
                 {
                     data: "action",

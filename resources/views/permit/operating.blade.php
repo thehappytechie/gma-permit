@@ -111,11 +111,6 @@
                                     <span>Status</span>
                                 </div>
                             </th>
-                            <th>
-                                <div class="flex items-center">
-                                    <span>Action</span>
-                                </div>
-                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -225,12 +220,6 @@
                 {
                     data: "status",
                     name: "status"
-                },
-                {
-                    data: "action",
-                    name: "action",
-                    orderable: false,
-                    searchable: false
                 },
             ],
         });

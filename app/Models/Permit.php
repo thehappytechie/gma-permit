@@ -14,9 +14,11 @@ class Permit extends Model implements  Auditable
     protected $casts = [
         'updated_at' => 'datetime',
         'created_at' => 'datetime',
+        'new_values' => 'array'
     ];
 
     protected $guarded = ['id'];
+
 
     public function company()
     {
@@ -27,4 +29,5 @@ class Permit extends Model implements  Auditable
     {
         return $this->belongsTo(PermitUnit::class, 'permit_unit_id');
     }
+
 }

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\Contract;
 use App\Models\Permit;
 use OwenIt\Auditing\Models\Audit;
 use Illuminate\Support\Facades\DB;
@@ -30,7 +29,7 @@ class DashboardController extends Controller
             ->limit(10)
             ->get();
 
-        $audits = Audit::whereIn('auditable_type', ['App\Models\Contract'])
+        $audits = Audit::whereIn('auditable_type', ['App\Models\Permit'])
             ->whereIn('event', ['created'])
             ->limit(8)
             ->get();

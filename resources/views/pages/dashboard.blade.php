@@ -90,7 +90,7 @@
             </div>
         </div>
 
-        <div class="bg radius-md padding-md shadow-xs col-8@sm col-8@xl">
+        <div class="bg radius-md padding-md shadow-xs col-6@sm col-6@xl">
             <h3 class="text-center margin-y-md">Company & Permits</h3>
             <div class="padding-x-md padding-y-lg">
                 <canvas id="myChart"></canvas>
@@ -111,12 +111,12 @@
                             <th class="table__cell text-left" scope="col">Added</th>
                         </tr>
                     </thead>
-                    <tbody class="table__body">
+                    {{-- <tbody class="table__body">
                         @foreach ($audits as $audit)
                             <tr class="table__row">
                                 <td class="table__cell" role="cell">
                                     <span class="table__label" aria-hidden="true">Contract title:</span>
-                                    {{ $audit->new_values['title'] }}
+                                    {{ $audit->new_values['email'] }}
                                 </td>
                                 <td class="table__cell" role="cell">
                                     <span class="table__label" aria-hidden="true">User:</span>
@@ -137,7 +137,7 @@
                                 </td>
                             </tr>
                         @endforeach
-                    </tbody>
+                    </tbody> --}}
                 </table>
             </div>
         </div>
