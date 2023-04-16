@@ -26,7 +26,7 @@
                 <div class="col-6@md">
                     <label class="form-label margin-bottom-xxs" for="autocomplete-input-id">
                         <x-required-label>
-                        </x-required-label>Agent name
+                        </x-required-label>Certificate name
                     </label>
                     <select name="vessel_id" class="js-choice @error('vessel_id') is-error @enderror" required>
                         <option value="" disabled selected>Please select</option>

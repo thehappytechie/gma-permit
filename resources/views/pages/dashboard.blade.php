@@ -18,8 +18,8 @@
                 <div class="col-6@sm col-3@md">
                     <div class="small-box bg-teal padding-top-sm">
                         <div class="inner">
-                            <h3>{{ $contracts->active }}</h3>
-                            <p>Active</p>
+                            <h3>{{ $permits->total }}</h3>
+                            <p>Permits</p>
                         </div>
                         <div class="icon" aria-hidden="true">
                             <svg width="60" height="60" fill="currentColor" class="bi bi-bank"
@@ -35,8 +35,8 @@
                 <div class="col-6@sm col-3@md">
                     <div class="small-box bg-maroon padding-top-sm">
                         <div class="inner">
-                            <h3>{{ $contracts->archived }}</h3>
-                            <p>Archived</p>
+                            <h3>{{ $certificates->total }}</h3>
+                            <p>Certificates</p>
                         </div>
                         <div class="icon" aria-hidden="true">
                             <svg width="60" height="60" fill="currentColor" class="bi bi-file-earmark-richtext"
@@ -54,8 +54,8 @@
                 <div class="col-6@sm col-3@md">
                     <div class="small-box bg-orange padding-top-sm">
                         <div class="inner">
-                            <h3>{{ $contracts->draft }}</h3>
-                            <p>Draft</p>
+                            <h3>{{ $permits->safety }}</h3>
+                            <p>Safety Permits</p>
                         </div>
                         <div class="icon" aria-hidden="true">
                             <svg width="60" height="60" fill="currentColor" class="bi bi-file-earmark-excel"
@@ -72,8 +72,8 @@
                 <div class="col-6@sm col-3@md">
                     <div class="small-box bg-purple padding-top-sm">
                         <div class="inner">
-                            <h3>{{ $contracts->negotiating }}</h3>
-                            <p>Negotiating</p>
+                            <h3>{{ $permits->operating }}</h3>
+                            <p>Operating Permits</p>
                         </div>
                         <div class="icon" aria-hidden="true">
                             <svg width="60" height="60" fill="currentColor" class="bi bi-file-earmark-text"
@@ -94,61 +94,6 @@
             <h3 class="text-center margin-y-md">Company & Permits</h3>
             <div class="padding-x-md padding-y-lg">
                 <canvas id="myChart"></canvas>
-            </div>
-        </div>
-
-        <div class="bg radius-md padding-md shadow-xs col-4@sm col-4@xl">
-            <h3 class="text-center margin-y-md">Expiring Permits</h3>
-            <div class="padding-md">
-                <div class="margin-bottom-md">
-                    <div class="flex items-baseline justify-between">
-                        <p><a class="text-sm" href="#">View all &rarr;</a></p>
-                    </div>
-                </div>
-
-                <div class="tbl text-sm">
-                    <table class="tbl__table" aria-label="Table Example">
-                        <thead class="tbl__header sr-only">
-                            <tr class="tbl__row">
-                                <th class="tbl__cell text-left" scope="col">
-                                    <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Label</span>
-                                </th>
-
-                                <th class="tbl__cell text-left" scope="col">
-                                    <span
-                                        class="text-xs text-uppercase letter-spacing-lg font-semibold">Category</span>
-                                </th>
-
-                                <th class="tbl__cell text-right" scope="col">
-                                    <span
-                                        class="text-xs text-uppercase letter-spacing-lg font-semibold">Progress</span>
-                                </th>
-                            </tr>
-                        </thead>
-
-                        <tbody class="tbl__body">
-                            @foreach ($expiringPermits as $expiringPermit)
-                                <tr class="tbl__row">
-                                    <td class="tbl__cell" role="cell">
-                                        <p>{{ ucfirst($expiringPermit->title) }}</p>
-                                        <p class="text-xs color-contrast-medium">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
-                                                fill="currentColor" class="margin-top-xs" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
-                                                <path
-                                                    d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
-                                                <path
-                                                    d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
-                                            </svg>
-                                            {{ Carbon::parse($expiringPermit->created_at)->diffForHumans() }}
-                                        </p>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
             </div>
         </div>
 
@@ -241,7 +186,7 @@
                     barThickness: 6,
                     maxBarThickness: 8,
                     minBarLength: 2,
-                    label: 'total contracts',
+                    label: ' total permits',
                     backgroundColor: '#fff6e7',
                     fill: true,
                     borderWidth: 2,

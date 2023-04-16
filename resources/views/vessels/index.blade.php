@@ -21,7 +21,7 @@
                 <div class="grid gap-lg max-width-sm">
                     <div class="col-4@md">
                         <input class="shadow-xs file__upload width-100% @error('file') is-error @enderror"
-                            type="file" name="file" id="file" accept=".csv">
+                            type="file" name="file" id="file" accept=".csv" required>
                         @error('file')
                             <x-validation-error>{{ $message }}</x-validation-error>
                         @enderror

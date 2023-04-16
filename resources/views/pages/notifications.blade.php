@@ -15,7 +15,7 @@
                             </th>
 
                             <th class="tbl__cell text-left" scope="col">
-                                <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Category</span>
+                                <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Permit</span>
                             </th>
 
                             <th class="tbl__cell text-left" scope="col">
@@ -29,30 +29,30 @@
                     </thead>
 
                     <tbody class="tbl__body">
-                        @foreach ($expiringContracts as $expiringContract)
+                        @foreach ($expiringPermits as $expiringPermit)
                             <tr class="tbl__row">
                                 <td class="tbl__cell" role="cell">
                                     <div class="flex items-center">
                                         <div class="line-height-xs">
-                                            <p class="margin-bottom-xxxxs">{{ $expiringContract->company->name }}</p>
-                                            <p class="color-contrast-medium">{{ $expiringContract->company->contact }}
+                                            <p class="margin-bottom-xxxxs">{{ $expiringPermit->company->name }}</p>
+                                            <p class="color-contrast-medium">{{ $expiringPermit->company->contact }}
                                             </p>
                                         </div>
                                     </div>
                                 </td>
 
-                                <td class="tbl__cell" role="cell">{{ $expiringContract->category->name }}</td>
+                                <td class="tbl__cell" role="cell">{{ $expiringPermit->permitUnit->name }}</td>
 
-                                <td class="tbl__cell" role="cell">{{ $expiringContract->status }}</td>
+                                <td class="tbl__cell" role="cell">{{ $expiringPermit->status }}</td>
 
                                 <td class="tbl__cell" role="cell">
                                     <span
                                         class="inline-block text-xs bg-error bg-opacity-20% color-error-darker radius-full padding-y-xxxs padding-x-xs ws-nowrap">
-                                        {{ Carbon\Carbon::parse($expiringContract->expiry_date)->diffForHumans() }}
+                                        {{ Carbon\Carbon::parse($expiringPermit->expiry_date)->diffForHumans() }}
                                     </span>
                                 </td>
 
-                                <td class="tbl__cell text-right" role="cell">{{ $expiringContract->title }}</td>
+                                <td class="tbl__cell text-right" role="cell">{{ $expiringPermit->title }}</td>
                             </tr>
                         @endforeach
                     </tbody>

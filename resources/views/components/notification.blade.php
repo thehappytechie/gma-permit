@@ -19,7 +19,7 @@
             <a class="notif__link flex padding-sm" href="{{ route('notification') }}">
                 <div class="flex-grow margin-right-xs">
                     <div>
-                        <p>You have <em class="color-primary">{{ $expiringContracts }} new notifications</em></p>
+                        <p>You have <em class="color-primary">{{ $expiringPermits }} notifications</em></p>
                     </div>
                 </div>
                 <div class="notif__dot margin-left-auto" aria-hidden="true"></div>

@@ -24,22 +24,6 @@
                     @enderror
                 </div>
                 <div class="col-6@md">
-                    <label class="form-label margin-bottom-xxs" for="autocomplete-input-id">
-                        <x-required-label>
-                        </x-required-label>Agent name
-                    </label>
-                    <select name="agent_id" class="js-choice @error('vessel_id') is-error @enderror" required>
-                        <option value="" disabled selected>Please select</option>
-                        @foreach ($vessels as $vessel)
-                            <option value="{{ $vessel->id }}" {{ old('vessel_id') == $vessel->id ? 'selected' : '' }}>
-                                {{ $vessel->name }}</option>
-                        @endforeach
-                    </select>
-                    @error('vessel_id')
-                        <x-validation-error>{{ $message }}</x-validation-error>
-                    @enderror
-                </div>
-                <div class="col-6@md">
                     <label class="form-label margin-bottom-xxs" for="flag">
                         Flag
                     </label>
@@ -76,6 +60,16 @@
                     <input class="form-control width-100% @error('call_sign') is-error @enderror" type="text"
                         name="call_sign" id="call_sign" value="{{ old('call_sign') }}">
                     @error('call_sign')
+                        <x-validation-error>{{ $message }}</x-validation-error>
+                    @enderror
+                </div>
+                <div class="col-6@md">
+                    <label class="form-label margin-bottom-xxs" for="vessel_type">
+                        Vessel type
+                    </label>
+                    <input class="form-control width-100% @error('vessel_type') is-error @enderror" type="text"
+                        name="vessel_type" id="vessel_type" value="{{ old('vessel_type') }}">
+                    @error('vessel_type')
                         <x-validation-error>{{ $message }}</x-validation-error>
                     @enderror
                 </div>

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\PermitUnitCreate;
-use App\Http\Requests\PermitUnitEdit;
 use App\Models\PermitUnit;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\PermitUnitEdit;
+use App\Http\Requests\PermitUnitCreate;
+use App\Imports\PermitUnitsImport;
+use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Validation\Rules\File;
 class PermitUnitController extends Controller
 {
     /**
@@ -91,5 +93,18 @@ class PermitUnitController extends Controller
     public function destroy(PermitUnit $permitUnit)
     {
         //
+    }
+
+    public function importPermitUnit(Request $request)
+    {
+        $request->validate([
+            'file' => [
+                'required',
+                File::types(['csv'])->max(12 * 1024),
+            ],
+        ]);
+        Excel::import(new PermitUnitsImport, request()->file('file'));
+        $request->session()->flash('success', 'Permit Unit imported successfully');
+        return redirect()->route('permitUnitDatatable');
     }
 }
