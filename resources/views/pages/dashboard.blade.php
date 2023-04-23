@@ -96,52 +96,14 @@
                 <canvas id="myChart"></canvas>
             </div>
         </div>
-
-        <div class="bg radius padding-md">
-            <h3 class="text-center margin-y-md">Recent Activity</h3>
-            <div class="margin-x-md margin-y-sm margin-auto">
-                <table class="table table--expanded@xs position-relative z-index-1 width-100% js-table text-sm"
-                    aria-label="Table Example">
-                    <thead class="table__header">
-                        <tr class="table__row">
-                            <th class="table__cell text-left" scope="col">Permit Title</th>
-                            <th class="table__cell text-left" scope="col">User</th>
-                            <th class="table__cell text-left" scope="col">Expiry</th>
-                            <th class="table__cell text-left" scope="col">Status</th>
-                            <th class="table__cell text-left" scope="col">Added</th>
-                        </tr>
-                    </thead>
-                    {{-- <tbody class="table__body">
-                        @foreach ($audits as $audit)
-                            <tr class="table__row">
-                                <td class="table__cell" role="cell">
-                                    <span class="table__label" aria-hidden="true">Contract title:</span>
-                                    {{ $audit->new_values['email'] }}
-                                </td>
-                                <td class="table__cell" role="cell">
-                                    <span class="table__label" aria-hidden="true">User:</span>
-                                    {{ $audit->user->name }}
-                                </td>
-                                <td class="table__cell" role="cell">
-                                    <span class="table__label" aria-hidden="true">Expiry:</span>
-                                    {{ Carbon\Carbon::parse($audit->new_values['expiry_date'])->toFormattedDateString() }}
-                                </td>
-                                <td class="table__cell" role="cell">
-                                    <span class="table__label" aria-hidden="true">Status:</span>
-                                    <span class="badge badge--primary-light text-xs">
-                                        {{ $audit->new_values['status'] }} </span>
-                                </td>
-                                <td class="table__cell text-left" role="cell">
-                                    <span class="table__label" aria-hidden="true">Added
-                                        :</span>{{ $audit->created_at->diffForHumans() }}
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody> --}}
-                </table>
+        <div class="bg radius-md padding-md shadow-xs col-6@sm col-6@xl">
+            <h3 class="text-center margin-y-md">Vessels & Certificates</h3>
+            <div class="padding-x-md padding-y-lg">
+                <canvas id="myChart2"></canvas>
             </div>
         </div>
     </div>
+
 </x-layout>
 
 <script src="{{ asset('js/chart.min.js') }}"></script>
@@ -192,6 +154,58 @@
                     borderWidth: 2,
                     borderColor: '#ffa500',
                     data: {!! $permitChart->pluck('company_id_count')->toJson() !!}
+                }]
+            },
+        });
+    })
+</script>
+
+<script>
+    window.addEventListener('load', function() {
+        Chart.defaults.font.family = "Inter";
+        Chart.defaults.scale.ticks.display = false;
+        Chart.defaults.plugins.legend.display = false;
+        var ctx = document.getElementById('myChart2').getContext('2d');
+        var chart = new Chart(ctx, {
+            responsive: true,
+            maintainAspectRatio: false,
+            type: 'line',
+            options: {
+                legend: {
+                    display: false // remove legend
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false // remove grid
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            display: false // remove grid lines
+                        },
+                        ticks: {
+                            display: true // remove y-axis numbers
+                        }
+                    },
+                }
+            },
+            // The data for our dataset
+            data: {
+                labels: {!! $certificateChart->pluck('vessel.name')->toJson() !!},
+                display: false,
+                datasets: [{
+                    barPercentage: 0.5,
+                    barThickness: 6,
+                    maxBarThickness: 8,
+                    minBarLength: 2,
+                    label: ' total certificates',
+                    backgroundColor: '#fff6e7',
+                    fill: true,
+                    borderWidth: 2,
+                    borderColor: '#ffa500',
+                    data: {!! $certificateChart->pluck('vessel_id_count')->toJson() !!}
                 }]
             },
         });

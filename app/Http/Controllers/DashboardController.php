@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Certificate;
 use App\Models\Permit;
 use OwenIt\Auditing\Models\Audit;
 use Illuminate\Support\Facades\DB;
@@ -29,6 +29,12 @@ class DashboardController extends Controller
             ->limit(10)
             ->get();
 
+        $certificateChart = Certificate::with('vessel')->selectRaw("vessel_id, COUNT(*) as vessel_id_count")
+            ->groupBy('vessel_id')
+            ->inRandomOrder()
+            ->limit(10)
+            ->get();
+
         $audits = Audit::whereIn('auditable_type', ['App\Models\Permit'])
             ->whereIn('event', ['created'])
             ->limit(8)
@@ -37,6 +43,6 @@ class DashboardController extends Controller
         $expiringPermits = Permit::with('company')
             ->where('expiry_date', '>=', date('Y-m-d'))
             ->get();
-        return view('pages.dashboard', compact(['permits', 'expiringPermits', 'audits', 'permitChart', 'certificates']));
+        return view('pages.dashboard', compact(['permits', 'expiringPermits', 'audits', 'permitChart', 'certificates', 'certificateChart']));
     }
 }
