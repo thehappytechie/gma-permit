@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Logs</h1>
+        <h2 class="text-xl font-semibold">Logs</h2>
     </div>
     <div class="grid gap-sm">
         <div class="bg radius-md padding-md shadow-xs col-12">

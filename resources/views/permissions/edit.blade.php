@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Edit Permission</h1>
+        <h2 class="text-xl font-semibold">Edit Permission</h2>
     </div>
 
     <div class="bg radius-md shadow-xs">

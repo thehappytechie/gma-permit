@@ -3,7 +3,7 @@
             <div class="dropdown__wrapper">
                 <a class="dropdown__trigger inline-flex items-center js-dropdown__trigger" href="#0">
                     <span class="btn btn--info btn--sm">
-                        <strong class="text-sm">Add
+                        <strong class="text-base">Add
                             <span>
                                 <svg style="position: relative;top:1px" class="icon icon--xxs margin-left-xxs"
                                     aria-hidden="true" viewBox="0 0 12 12">
@@ -15,27 +15,27 @@
                     </span>
                 </a>
                 <ul class="dropdown__menu js-dropdown__menu" aria-label="dropdown">
-                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
+                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-base">
                         <a class="dropdown__item" href="{{ route('certificate.create') }}">
                             Certificate
                         </a>
                     </li>
-                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
+                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-base">
                         <a class="dropdown__item" href="{{ route('company.create') }}">
                             Company
                         </a>
                     </li>
-                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
+                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-base">
                         <a class="dropdown__item" href="{{ route('permit.create') }}">
                             Permit
                         </a>
                     </li>
-                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
+                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-base">
                         <a class="dropdown__item" href="{{ route('permit-unit.create') }}">
                             Permit Unit
                         </a>
                     </li>
-                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-sm">
+                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper text-base">
                         <a class="dropdown__item" href="{{ route('vessels.create') }}">
                             Vessel
                         </a>

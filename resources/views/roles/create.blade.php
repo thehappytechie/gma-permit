@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Add Role</h1>
+        <h2 class="text-xl font-semibold">Add Role</h2>
     </div>
 
     <div class="bg radius-md shadow-xs">

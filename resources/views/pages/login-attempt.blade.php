@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Login Attempts</h1>
+        <h2 class="text-xl font-semibold">Login Attempts</h2>
     </div>
     <div class="grid gap-sm">
         <div class="bg radius-md padding-md shadow-xs col-12">

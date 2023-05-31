@@ -3,7 +3,7 @@
 <x-layout>
 
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">All Uploaded Reports</h1>
+        <h2 class="text-xl font-semibold">All Uploaded Reports</h2>
     </div>
 
     <div class="grid gap-sm">

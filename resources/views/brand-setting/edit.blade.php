@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Branding</h2>
+        <h2 class="text-xl font-semibold">Branding</h2>
     </div>
 
     <div class="bg radius-md shadow-xs">

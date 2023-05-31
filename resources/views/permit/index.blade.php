@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Permits</h1>
+        <h2 class="text-xl font-semibold">Permits</h2>
         <div class="flex justify-end">
             <a href="{{ route('permit.create') }}" class="btn btn--primary text-sm">Add Permit</a>
         </div>

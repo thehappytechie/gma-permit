@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Certificates</h1>
+        <h2 class="text-xl font-semibold">Certificates</h2>
         <div class="flex justify-end">
             <a href="{{ route('certificate.create') }}" class="btn btn--primary text-sm">Add Certificate</a>
         </div>

@@ -3,13 +3,11 @@
 <x-layout>
 
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Users</h1>
+        <h2 class="text-xl font-semibold">Users</h2>
         <div class="flex justify-end">
             <a href="{{ route('users.create') }}" class="btn btn--primary text-sm">Add new user</a>
         </div>
     </div>
-
-
 
     <div class="grid gap-sm">
         <div class="bg radius-md padding-md shadow-xs col-12">

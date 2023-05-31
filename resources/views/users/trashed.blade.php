@@ -3,7 +3,7 @@
 <x-layout>
 
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Trashed Users</h1>
+        <h2 class="text-xl font-semibold">Trashed Users</h2>
         <div class="flex justify-end">
             <span class="padding-right-md padding-top-xs text-sm"> <a href="#" class="color-accent">Delete all</a></span>
             <a href="{{ route('users.restore.all') }}" class="btn btn--primary text-sm">Restore all</a>

@@ -7,7 +7,6 @@
     "require": {
         "php": "^8.0",
         "andreiio/blade-remix-icon": "^1.1",
-        "anhskohbo/no-captcha": "^3.4",
         "blade-ui-kit/blade-icons": "^1.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",

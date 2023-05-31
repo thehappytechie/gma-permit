@@ -3,7 +3,7 @@
 <x-layout>
 
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Dashboard</h1>
+        <h2 class="text-xl font-semibold">Dashboard</h2>
     </div>
     <div class="grid gap-sm">
         <div class="alert-card bg radius-md padding-md shadow-xs col-12 js-alert-card">

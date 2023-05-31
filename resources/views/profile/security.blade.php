@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Account Management</h1>
+        <h2 class="text-xl font-semibold">Account Management</h2>
     </div>
     <div class="margin-bottom-md">
         <nav class="s-tabs">
@@ -94,7 +94,7 @@
                                             @csrf
                                             <div class="flex flex-wrap gap-xs margin-top-md">
                                                 <button type="submit"
-                                                    class="btn btn--dark text-uppercase btn--md">Regenerate
+                                                    class="btn btn--subtle text-uppercase btn--sm">Regenerate
                                                     codes</button>
                                             </div>
                                         </form>

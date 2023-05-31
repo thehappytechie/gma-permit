@@ -3,7 +3,7 @@
 <x-layout>
 
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Edit - {{ $location->name }}</h1>
+        <h2 class="text-xl font-semibold">Edit - {{ $location->name }}</h2>
     </div>
     <div class="bg radius-md shadow-xs">
         <form action="{{ route('location.update', $location->id) }}" method="post">

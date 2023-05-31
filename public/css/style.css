@@ -1106,14 +1106,14 @@ svg {
 body {
     font-size: var(--text-base-size, 1em);
     font-family: var(--font-primary, sans-serif);
-    color: var(--color-contrast-high, #313135);
+    color: var(--color-contrast-high, #555555);
 }
 h1,
 h2,
 h3,
 h4 {
-    font-family: "Inter", sans-serif;
-    color: var(--color-contrast-higher, #1c1c21);
+    font-family: "Mulish", sans-serif;
+    color: var(--color-contrast-higher, #555555);
     line-height: var(--heading-line-height, 1.2);
 }
 h1 {
@@ -1374,7 +1374,7 @@ u {
     border-radius: var(--form-control-radius, 0.25em);
 }
 .form-legend {
-    color: var(--color-contrast-higher, #1c1c21);
+    color: var(--color-contrast-higher, #333333);
     line-height: var(--heading-line-height, 1.2);
     font-size: var(--text-md, 1.2em);
     margin-bottom: var(--space-xxs);
@@ -7842,7 +7842,7 @@ html:not(.js) .no-js\:is-hidden {
     --radius: 0.4em;
 }
 :root {
-    --font-primary: "Inter", sans-serif;
+    --font-primary: 'Mulish', sans-serif;
     --text-base-size: 1rem;
     --text-scale-ratio: 1.2;
     --text-unit: var(--text-base-size);
@@ -19174,7 +19174,7 @@ html:not(.js) .radial-bar__area {
         --radius: 0.4em;
     }
     :root {
-        --font-primary: Inter, sans-serif;
+        --font-primary: 'Mulish', sans-serif;
         --text-base-size: 1rem;
         --text-scale-ratio: 1.2;
         --text-unit: var(--text-base-size);

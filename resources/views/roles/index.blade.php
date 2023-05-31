@@ -3,7 +3,7 @@
 <x-layout>
 
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Roles</h1>
+        <h2 class="text-xl font-semibold">Roles</h2>
     </div>
     <div class="margin-bottom-md">
         <div class="flex justify-end">

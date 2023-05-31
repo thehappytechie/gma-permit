@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Companies</h1>
+        <h2 class="text-xl font-semibold">Companies</h2>
         <div class="flex justify-end">
             <a href="{{ route('company.create') }}" class="btn btn--primary text-sm">Add Company</a>
         </div>

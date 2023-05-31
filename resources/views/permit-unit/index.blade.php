@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Permit Units</h1>
+        <h2 class="text-xl font-semibold">Permit Units</h2>
         <div class="flex justify-end">
             <a href="{{ route('permit-unit.create') }}" class="btn btn--primary text-sm">Add Permit Unit</a>
         </div>

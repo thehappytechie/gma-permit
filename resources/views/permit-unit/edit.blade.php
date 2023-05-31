@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Edit - {{ $permitUnit->name }}</h1>
+        <h2 class="text-xl font-semibold">Edit - {{ $permitUnit->name }}</h2>
     </div>
 
     <div class="bg radius-md shadow-xs">

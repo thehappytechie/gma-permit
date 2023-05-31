@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold capitalize">{{ $company->name }}</h1>
+        <h2 class="text-xl font-semibold">{{ $company->name }}</h2>
     </div>
 
     <div class="bg radius-md shadow-xs">

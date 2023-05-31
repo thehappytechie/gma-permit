@@ -2,8 +2,8 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Edit - {{ $ticket->title }} <span
-                class="text-md font-medium color-contrast-medium">#{{ $ticket->user->name }}</span></h1>
+        <h2 class="text-xl font-semibold">>Edit - {{ $ticket->title }} <span
+                class="text-md font-medium color-contrast-medium">#{{ $ticket->user->name }}</span></h2>
     </div>
     <div class="bg radius-md shadow-xs">
         <form action="{{ route('ticket.update', $ticket->hash_id) }}" method="post">
