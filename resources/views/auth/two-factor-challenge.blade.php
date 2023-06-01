@@ -5,7 +5,7 @@
     <div class="min-height-100vh">
         <div class="bg radius-md shadow-sm padding-lg max-width-xx">
             <div class="text-center margin-bottom-md">
-                <h1 class="text-xl font-bold">Two-Factor Challenge</h1>
+                <h1 class="text-xl font-semibold">Two-Factor Challenge</h1>
             </div>
             <div class="switch-card bg radius-md padding-md border inner-glow shadow-xxs js-switch-card">
                 <div class="text-component">
@@ -22,7 +22,7 @@
                             <x-validation-error>{{ $message }}</x-validation-error>
                         @enderror
                         <div class="margin-bottom-lg">
-                            <button type="submit" class="btn btn--primary width-100%">Confirm
+                            <button type="submit" class="btn btn--primary font-medium width-100%">Confirm
                                 code</button>
                         </div>
                     </form>
@@ -40,7 +40,7 @@
                             <x-validation-error>{{ $message }}</x-validation-error>
                         @enderror
                         <div class="margin-bottom-sm">
-                            <button type="submit" class="btn btn--primary width-100%">Confirm
+                            <button type="submit" class="btn btn--primary font-medium width-100%">Confirm
                                 code</button>
                         </div>
                     </form>

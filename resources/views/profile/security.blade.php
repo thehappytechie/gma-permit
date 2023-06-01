@@ -53,7 +53,7 @@
                             @if (!auth()->user()->two_factor_secret)
                             @else
                                 First, you’ll need a 2FA authenticator app on your phone.
-                                <strong> If you don’t have one, we recommend</strong> <a
+                                <strong class="font-semibold"> If you don’t have one, we recommend</strong> <a
                                     href="https://authenticator.2stable.com/" target="_blank"
                                     rel="noopener noreferrer">2Stable</a>
                                 <br><br>
@@ -94,7 +94,7 @@
                                             @csrf
                                             <div class="flex flex-wrap gap-xs margin-top-md">
                                                 <button type="submit"
-                                                    class="btn btn--subtle text-uppercase btn--sm">Regenerate
+                                                    class="btn btn--subtle text-uppercase btn--sm font-medium">Regenerate
                                                     codes</button>
                                             </div>
                                         </form>
@@ -118,13 +118,13 @@
                     <form action="{{ url('user/two-factor-authentication') }}" method="POST" class="mt-2">
                         @csrf
                         <div class="border-top border-contrast-lower padding-md text-right">
-                            <button type="submit" class="btn btn--primary btn--md">Enable</button>
+                            <button type="submit" class="btn btn--primary btn--md font-medium">Enable</button>
                         </div>
                     </form>
                 </div>
             @else
                 <div class="border-top border-contrast-lower padding-md text-right">
-                    <button type="submit" class="btn btn--accent btn--md">Disable</button>
+                    <button type="submit" class="btn btn--accent btn--md font-medium">Disable</button>
                 </div>
             @endif
             </form>

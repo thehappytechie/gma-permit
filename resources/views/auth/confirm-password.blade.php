@@ -6,7 +6,7 @@
         class="bg radius-md shadow-sm padding-lg max-width-xx">
         @csrf
         <div class="text-center margin-bottom-md">
-            <h1 class="text-xl font-bold">Confirm access</h1>
+            <h1 class="text-xl font-semibold">Confirm access</h1>
         </div>
         <div class="margin-bottom-sm">
             <label class="form-label margin-bottom-xs" for="password">Password</label>
@@ -17,7 +17,7 @@
             <x-validation-error>{{ $message }}</x-validation-error>
         @enderror
         <div class="margin-bottom-lg">
-            <button type="submit" class="btn btn--primary btn--md width-100%">Confirm password</button>
+            <button type="submit" class="btn btn--primary btn--md font-medium width-100%">Confirm password</button>
         </div>
 
         <div class="text-center">

@@ -7,7 +7,7 @@
     <form action="{{ route('register') }}" method="POST" class="bg radius-md shadow-sm padding-lg" autocomplete="on">
         @csrf
         <div class="text-center margin-bottom-md">
-            <h1 class="text-xl font-bold">Create account</h1>
+            <h1 class="text-xl font-semibold">Create account</h1>
         </div>
         <div class="margin-bottom-sm">
             <label class="form-label margin-bottom-xxs" for="name">Full name</label>
@@ -62,7 +62,7 @@
             </p>
         </div>
         <div class="margin-bottom-lg">
-            <button type="submit" class="btn btn--primary btn--md width-100%">Register</button>
+            <button type="submit" class="btn btn--primary font-medium btn--md width-100%">Register</button>
         </div>
         <div class="text-center">
             <p class="text-sm color-contrast-medium">Already have an account? <a href="{{ route('login') }}">Log in</a>

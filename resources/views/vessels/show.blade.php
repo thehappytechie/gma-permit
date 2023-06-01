@@ -23,11 +23,11 @@
                             <div class="col-2@md">
                             </div>
                             <div class="col-5@md">
-                                <p class="color-contrast-high text-sm"><strong>VESSEL NAME</strong></p>
+                                <p class="color-contrast-high text-sm font-medium">VESSEL NAME</p>
                                 <p class="color-contrast-medium">{{ $vessel->name }}</p>
                             </div>
                             <div class="col-5@md">
-                                <p class="color-contrast-high text-sm"><strong>GROSS TONNAGE</strong></p>
+                                <p class="color-contrast-high text-sm font-medium">GROSS TONNAGE</p>
                                 <p class="color-contrast-medium">{{ $vessel->gross_tonnage }}</p>
                             </div>
                         </div>
@@ -35,34 +35,33 @@
                             <div class="col-2@md">
                             </div>
                             <div class="col-5@md">
-                                <p class="color-contrast-high text-sm"><strong>FLAG</strong></p>
+                                <p class="color-contrast-high text-sm font-medium">FLAG</p>
                                 <p class="color-contrast-medium">{{ $vessel->flag }}</p>
                             </div>
                             <div class="col-5@md">
-                                <p class="color-contrast-high text-sm"><strong>PORT OF REGISTRY</strong></p>
+                                <p class="color-contrast-high text-sm font-medium">PORT OF REGISTRY</p>
                                 <p class="color-contrast-medium">{{ $vessel->registry_port }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="user-cell__cta">
-                    <a href="{{ route('vessels.edit', $vessel->id) }}" class="btn btn--primary btn--sm">Edit
-                        vessel</a>
+                    <a href="{{ route('vessels.edit', $vessel->id) }}" class="btn btn--primary btn--sm font-medium">Edit</a>
                 </div>
             </div>
-            <h2 class="text-md font-bold padding-top-sm">CERTFICATE HISTORY</h2>
+            <h2 class="text-md font-semibold padding-top-sm">CERTFICATE HISTORY</h2>
             <table class="tbl__table text-unit-em text-sm border-bottom border-2" aria-label="Table Example">
                 <thead class="tbl__header border-bottom border-2">
                     <tr class="tbl__row">
                         <th class="tbl__cell text-left" scope="col">
-                            <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Certificate
+                            <span class="text-xs letter-spacing-lg font-semibold">Certificate
                                 name</span>
                         </th>
                         <th class="tbl__cell text-left" scope="col">
-                            <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Issue date</span>
+                            <span class="text-xs letter-spacing-lg font-semibold">Issue date</span>
                         </th>
                         <th class="tbl__cell text-right" scope="col">
-                            <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Expiry date</span>
+                            <span class="text-xs letter-spacing-lg font-semibold">Expiry date</span>
                         </th>
                     </tr>
                 </thead>

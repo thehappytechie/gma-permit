@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Ato Augustine">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon.ico') }}">
-    <link href="{{ asset('css/font/inter.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font/montserrat.css') }}" rel="stylesheet">
     <link id="codyframe" rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/components.css') }}">
     <link rel="stylesheet" href="{{ asset('css/pace-theme-default.min.css') }}">
@@ -32,7 +32,7 @@
         </div>
         <div class="grid gap-sm">
             <p class="color-contrast-medium">Last updated: January 1, 2022</p>
-            <p class="text-md font-bold">1. <b>Introduction</b></p>
+            <p class="text-md font-semibold">1. <b>Introduction</b></p>
             <p>Welcome to <b>Ghana Maritime Authority</b> (“Company”, “we”, “our”, “us”)!</p>
             <p>These Terms of Service (“Terms”, “Terms of Service”) govern your use of our website located at
                 <a href="mailto:info@ghanamaritime.org">info@ghanamaritime.org</a> (together or individually “Service”)
@@ -50,7 +50,7 @@
                 Terms apply to all visitors,
                 users and others who wish to access or use Service.
             </p>
-            <p class="text-md font-bold">2. <b>Communications</b></p>
+            <p class="text-md font-semibold">2. <b>Communications</b></p>
             <p>
                 By using our Service, you agree to subscribe to newsletters, marketing or promotional materials and
                 other information we may send. However, you may opt out of receiving any, or all, of these
@@ -58,7 +58,7 @@
                 unsubscribe link or by emailing at <a href="mailto:info@ghanamaritime.org">info@ghanamaritime.org</a>
             </p>
 
-            <p class="text-md font-bold">3. <b>Contests, Sweepstakes and Promotions</b></p>
+            <p class="text-md font-semibold">3. <b>Contests, Sweepstakes and Promotions</b></p>
             <p>
                 Any contests, sweepstakes or other promotions (collectively, “Promotions”) made available through
                 Service may be governed by rules that are separate from these Terms of Service. If you participate in
@@ -68,14 +68,14 @@
                 Terms of Service, Promotion rules will apply.
             </p>
 
-            <p class="text-md font-bold">4. <b>Content</b></p>
+            <p class="text-md font-semibold">4. <b>Content</b></p>
             <p>
                 Content found on or through this Service are the property of Ghana Maritime Authority or used with
                 permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said
                 Content, whether in whole or in
                 part, for commercial purposes or for personal gain, without express advance written permission from us.
             </p>
-            <p class="text-md font-bold">5. <b>Prohibited Uses</b></p>
+            <p class="text-md font-semibold">5. <b>Prohibited Uses</b></p>
             <p>You may use Service only for lawful purposes and in accordance with Terms. You agree not to use Service:
             </p>
             <ul>
@@ -116,9 +116,9 @@
                 <li>8. Take any action that may damage or falsify Company rating.</li>
                 <li>9. Otherwise attempt to interfere with the proper working of Service.</li>
             </ul>
-            <p class="text-md font-bold">6. <b>Analytics</b></p>
+            <p class="text-md font-semibold">6. <b>Analytics</b></p>
             <p>We may use third-party Service Providers to monitor and analyze the use of our Service.</p>
-            <p class="text-md font-bold">7. <b>No Use By Minors</b></p>
+            <p class="text-md font-semibold">7. <b>No Use By Minors</b></p>
             <p>
                 Service is intended only for access and use by individuals at least eighteen (18) years old. By
                 accessing or using Service, you warrant and represent that you are at least eighteen (18) years of age
@@ -127,7 +127,7 @@
                 of Terms. If you are not at least eighteen (18) years old, you are prohibited from both the access and
                 usage of Service.
             </p>
-            <p class="text-md font-bold">8. <b>Accounts</b></p>
+            <p class="text-md font-semibold">8. <b>Accounts</b></p>
             <p>
                 When you create an account with us, you guarantee that you are above the age of 18, and that the
                 information you provide us is accurate, complete, and current at all times. Inaccurate, incomplete, or
@@ -151,7 +151,7 @@
             </p>
             <p>We reserve the right to refuse service, terminate accounts, remove or edit content, or cancel orders in
                 our sole discretion.</p>
-            <p class="text-md font-bold">9. <b>Intellectual Property</b></p>
+            <p class="text-md font-semibold">9. <b>Intellectual Property</b></p>
             <p>
                 Service and its original content (excluding Content provided by users), features and functionality are
                 and will remain the exclusive property of Ghana Maritime Authority and its licensors. Service is
@@ -159,7 +159,7 @@
                 trademark, and other laws of and foreign countries. Our trademarks may not be used in connection with
                 any product or service without the prior written consent of Ghana Maritime Authority.
             </p>
-            <p class="text-md font-bold">10. <b>Copyright Policy</b></p>
+            <p class="text-md font-semibold">10. <b>Copyright Policy</b></p>
             <p>
                 We respect the intellectual property rights of others. It is our policy to respond to any claim that
                 Content posted on Service infringes on the copyright or other intellectual property rights
@@ -177,7 +177,7 @@
             <p>You may be held accountable for damages (including costs and attorneys’ fees) for misrepresentation or
                 bad-faith claims on the infringement of any Content found on and/or through Service on your copyright.
             </p>
-            <p class="text-md font-bold">11. <b>Error Reporting and Feedback</b></p>
+            <p class="text-md font-semibold">11. <b>Error Reporting and Feedback</b></p>
             <p>
                 You may provide us either directly at <a href="mailto:info@ghanamaritime.org">info@ghanamaritime.org</a>
                 or via third party sites and tools with
@@ -200,7 +200,7 @@
                 sub-licensable, unlimited and perpetual right to use (including copy, modify, create derivative works,
                 publish, distribute and commercialize) Feedback in any manner and for any purpose.</p>
             </p>
-            <p class="text-md font-bold">12. <b>Links To Other Web Sites</b></p>
+            <p class="text-md font-semibold">12. <b>Links To Other Web Sites</b></p>
             <p>Our Service may contain links to third party web sites or services that are not owned or controlled by
                 Ghana Maritime Authority</p>
             <p>
@@ -215,7 +215,7 @@
             </p>
             <p>WE STRONGLY ADVISE YOU TO READ THE TERMS OF SERVICE AND PRIVACY POLICIES OF ANY THIRD PARTY WEB SITES OR
                 SERVICES THAT YOU VISIT.</p>
-            <p class="text-md font-bold">13. <b>Disclaimer Of Warranty</b></p>
+            <p class="text-md font-semibold">13. <b>Disclaimer Of Warranty</b></p>
             <p>
                 THESE SERVICES ARE PROVIDED BY COMPANY ON AN “AS IS” AND “AS AVAILABLE” BASIS. COMPANY MAKES NO
                 REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THEIR SERVICES, OR
@@ -240,7 +240,7 @@
                 PARTICULAR PURPOSE.</p>
             <p>THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
             </p>
-            <p class="text-md font-bold">14. <b>Limitation Of Liability</b></p>
+            <p class="text-md font-semibold">14. <b>Limitation Of Liability</b></p>
             <p>
                 EXCEPT AS PROHIBITED BY LAW, YOU WILL HOLD US AND OUR OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS
                 HARMLESS FOR ANY INDIRECT, PUNITIVE, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGE, HOWEVER IT ARISES
@@ -259,7 +259,7 @@
                 LIMITATION OR EXCLUSION
                 MAY NOT APPLY TO YOU.
             </p>
-            <p class="text-md font-bold">15. <b>Termination</b></p>
+            <p class="text-md font-semibold">15. <b>Termination</b></p>
             <p>
                 We may terminate or suspend your account and bar access to Service immediately, without prior notice or
                 liability, under our sole discretion, for any reason whatsoever and without limitation, including but
@@ -270,7 +270,7 @@
             <p>All provisions of Terms which by their nature should survive termination shall survive termination,
                 including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of
                 liability.</p>
-            <p class="text-md font-bold">16. <b>Governing Law</b></p>
+            <p class="text-md font-semibold">16. <b>Governing Law</b></p>
             <p>These Terms shall be governed and construed in accordance with the laws of Ghana Maritime Authority,
                 which governing law applies to agreement without regard to its conflict of law provisions.</p>
             <p>
@@ -280,7 +280,7 @@
                 will remain in effect. These Terms constitute the entire agreement between us regarding our Service and
                 supersede and replace any prior agreements we might have had between us regarding Service.
             </p>
-            <p class="text-md font-bold">17. <b>Changes To Service</b></p>
+            <p class="text-md font-semibold">17. <b>Changes To Service</b></p>
             <p>
                 We reserve the right to withdraw or amend our Service, and any service or material we provide via
                 Service, in our sole discretion without notice. We will not be liable if for any reason all or any part
@@ -288,7 +288,7 @@
                 any time or for any period. From time to time, we may restrict access to some parts of Service, or the
                 entire Service, to users, including registered users.
             </p>
-            <p class="text-md font-bold">18. <b>Amendments To Terms</b></p>
+            <p class="text-md font-semibold">18. <b>Amendments To Terms</b></p>
             <p>We may amend Terms at any time by posting the amended terms on this site. It is your responsibility to
                 review these Terms periodically.</p>
             <p>Your continued use of the Platform following the posting of revised Terms means that you accept and agree
@@ -297,7 +297,7 @@
             <p>By continuing to access or use our Service after any revisions become effective, you agree to be bound by
                 the revised terms. If you do not agree to the new terms, you are no longer authorized to use Service.
             </p>
-            <p class="text-md font-bold">19. <b>Waiver And Severability</b></p>
+            <p class="text-md font-semibold">19. <b>Waiver And Severability</b></p>
             <p>
                 No waiver by Company of any term or condition set forth in Terms shall be deemed a further or continuing
                 waiver of such term or condition or a waiver of any other term or condition, and any failure of Company
@@ -310,10 +310,10 @@
                 extent such that the
                 remaining provisions of Terms will continue in full force and effect.
             </p>
-            <p class="text-md font-bold">20. <b>Acknowledgement</b></p>
+            <p class="text-md font-semibold">20. <b>Acknowledgement</b></p>
             <p>BY USING SERVICE OR OTHER SERVICES PROVIDED BY US, YOU ACKNOWLEDGE THAT YOU HAVE READ THESE TERMS OF
                 SERVICE AND AGREE TO BE BOUND BY THEM.</p>
-            <p class="text-md font-bold">21. <b>Contact Us</b></p>
+            <p class="text-md font-semibold">21. <b>Contact Us</b></p>
             <p>
                 Please send your feedback, comments, requests for technical support by email:
                 <a href="mailto:info@ghanamaritime.org">info@ghanamaritime.org</a>

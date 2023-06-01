@@ -86,7 +86,7 @@
                 </div>
                 <div class="border-top border-contrast-lower text-right">
                     <div class="margin-top-sm">
-                        <button class="btn btn--primary btn--md">Update vessel</button>
+                        <button class="btn btn--primary btn--md font-medium">Update vessel</button>
                     </div>
                 </div>
             </div>

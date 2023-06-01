@@ -10,7 +10,7 @@
 <div id="notifications-popover" class="popover notif-popover bg radius-md shadow-md js-popover" role="dialog">
     <header class="bg-light bg-opacity-90% backdrop-blur-10 padding-sm shadow-xs position-sticky top-0 z-index-2">
         <div class="flex justify-between items-baseline">
-            <h1 class="text-base font-medium">Notifications</h1>
+            <p class="text-base font-medium">Notifications</p>
             <a class="text-sm" href="{{ route('notification') }}">View all</a>
         </div>
     </header>

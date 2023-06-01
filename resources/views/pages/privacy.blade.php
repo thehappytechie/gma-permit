@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Ato Augustine" />
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon.ico') }}" />
-    <link href="{{ asset('css/font/inter.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/font/montserrat.css') }}" rel="stylesheet">
     <link id="codyframe" rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/components.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/pace-theme-default.min.css') }}" />
@@ -40,14 +40,14 @@
             </p>
             <p>We do not store sensitive personal information, such as mailing addresses, account passwords, etc. in the
                 Cookies We use.</p>
-            <h2 class="font-bold text-lg margin-top-sm">Interpretation and Definitions</h2>
-            <h2 class="font-bold text-md">Interpretation</h2>
+            <h2 class="font-semibold text-lg margin-top-sm">Interpretation and Definitions</h2>
+            <h2 class="font-semibold text-md">Interpretation</h2>
             <p>
                 The words of which the initial letter is capitalized have meanings defined under the following
                 conditions. The following definitions shall have the same meaning regardless of whether they appear in
                 singular or in plural.
             </p>
-            <h2 class="font-bold text-md">Definitions</h2>
+            <h2 class="font-semibold text-md">Definitions</h2>
             <p>For the purposes of this Cookies Policy:</p>
             <ul>
                 <li>
@@ -64,8 +64,8 @@
                 <li><strong>You</strong> means the individual accessing or using the Website, or a company, or any legal
                     entity on behalf of which such individual is accessing or using the Website, as applicable.</li>
             </ul>
-            <h2 class="font-bold text-lg margin-top-sm">The use of the Cookies</h2>
-            <h2 class="font-bold text-md">Type of Cookies We Use</h2>
+            <h2 class="font-semibold text-lg margin-top-sm">The use of the Cookies</h2>
+            <h2 class="font-semibold text-md">Type of Cookies We Use</h2>
             <p>
                 Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on your
                 personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You
@@ -99,7 +99,7 @@
                     </p>
                 </li>
             </ul>
-            <h2 class="font-bold text-lg margin-top-sm">Your Choices Regarding Cookies</h2>
+            <h2 class="font-semibold text-lg margin-top-sm">Your Choices Regarding Cookies</h2>
             <p>
                 If You prefer to avoid the use of Cookies on the Website, first You must disable the use of Cookies in
                 your browser and then delete the Cookies saved in your browser associated with this website. You may use
@@ -145,11 +145,11 @@
                 </li>
             </ul>
             <p>For any other web browser, please visit your web browser's official web pages.</p>
-            <h2 class="font-bold text-lg margin-top-sm">More Information about Cookies</h2>
+            <h2 class="font-semibold text-lg margin-top-sm">More Information about Cookies</h2>
             <p>You can learn more about cookies here: <a
                     href="https://www.cloudflare.com/en-gb/learning/privacy/what-are-cookies/" target="_blank">All About
                     Cookies</a>.</p>
-            <h2 class="font-bold text-lg margin-top-sm">Contact Us</h2>
+            <h2 class="font-semibold text-lg margin-top-sm">Contact Us</h2>
             <p>If you have any questions about this Cookies Policy, You can contact us:</p>
             <ul>
                 <li>By email: info@ghanamaritime.org</li>

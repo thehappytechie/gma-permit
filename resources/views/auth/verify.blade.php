@@ -8,7 +8,7 @@
         class="bg radius-md shadow-sm padding-lg max-width-xx">
         @csrf
         <div class="text-center margin-bottom-md">
-            <h1 class="text-xl font-bold">Verify your email</h1>
+            <h1 class="text-xl font-semibold">Verify your email</h1>
             <p class="text-center text-sm color-contrast-medium max-width-xxxs padding-xs">Please enter the email
                 address you used to create the account to receive your verification code.</p>
         </div>

@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h2 class="text-xl font-semibold">Create company</h2>
+        <h2 class="text-xl font-semibold">Create Company</h2>
     </div>
 
     <div class="bg radius-md shadow-xs">
@@ -105,7 +105,7 @@
                 </div>
                 <div class="border-top border-contrast-lower text-right">
                     <div class="margin-top-sm">
-                        <button class="btn btn--primary btn--md">Create company</button>
+                        <button class="btn btn--primary btn--md font-medium">Create company</button>
                     </div>
                 </div>
             </div>

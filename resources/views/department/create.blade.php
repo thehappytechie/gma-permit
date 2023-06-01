@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Create department</h1>
+        <h2 class="text-xl font-semibold">Create Department</h2>
     </div>
 
     <div class="bg radius-md shadow-xs">
@@ -91,7 +91,7 @@
                 </div>
                 <div class="border-top border-contrast-lower text-right">
                     <div class="margin-top-sm">
-                        <button class="btn btn--primary">Create department</button>
+                        <button class="btn btn--primary btn--md font-medium">Create department</button>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h2 class="text-xl font-semibold">Create certificate</h2>
+        <h2 class="text-xl font-semibold">Create Certificate</h2>
     </div>
 
     <div class="bg radius-md shadow-xs">
@@ -61,7 +61,7 @@
                 </div>
                 <div class="border-top border-contrast-lower text-right">
                     <div class="margin-top-sm">
-                        <button class="btn btn--primary btn--md">Create certificate</button>
+                        <button class="btn btn--primary btn--md font-medium">Create certificate</button>
                     </div>
                 </div>
             </div>

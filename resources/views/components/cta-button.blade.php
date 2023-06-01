@@ -3,12 +3,12 @@
             <div class="dropdown__wrapper">
                 <a class="dropdown__trigger inline-flex items-center js-dropdown__trigger" href="#0">
                     <span class="btn btn--info btn--sm">
-                        <strong class="text-base">Add
+                        <strong class="text-base font-medium">Add
                             <span>
                                 <svg style="position: relative;top:1px" class="icon icon--xxs margin-left-xxs"
                                     aria-hidden="true" viewBox="0 0 12 12">
                                     <polyline points="1 4 6 9 11 4" fill="none" stroke="currentColor"
-                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
                                 </svg>
                             </span>
                         </strong>

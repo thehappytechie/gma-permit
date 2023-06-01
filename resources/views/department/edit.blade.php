@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Edit - {{ $department->name }}</h1>
+        <h2 class="text-xl font-semibold">Edit - {{ $department->name }}</h2>
     </div>
 
     <div class="bg radius-md shadow-xs">
@@ -91,7 +91,7 @@
                 </div>
                 <div class="border-top border-contrast-lower text-right">
                     <div class="margin-top-sm">
-                        <button class="btn btn--primary">Update department</button>
+                        <button class="btn btn--primary btn--md font-medium">Update department</button>
                     </div>
                 </div>
             </div>

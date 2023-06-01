@@ -107,7 +107,7 @@
                 </fieldset>
                 <div class="border-top border-contrast-lower text-right">
                     <div class="margin-top-sm">
-                        <button class="btn btn--primary">Create user</button>
+                        <button class="btn btn--primary btn--md font-medium">Create user</button>
                     </div>
                 </div>
             </div>

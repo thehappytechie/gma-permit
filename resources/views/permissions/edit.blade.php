@@ -22,7 +22,7 @@
                 </div>
                 <div class="border-top border-contrast-lower text-right">
                     <div class="margin-top-sm">
-                        <button class="btn btn--primary">Update permission</button>
+                        <button class="btn btn--primary btn--md font-medium">Update permission</button>
                     </div>
                 </div>
             </div>

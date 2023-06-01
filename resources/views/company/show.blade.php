@@ -23,59 +23,59 @@
                             <div class="col-2@md">
                             </div>
                             <div class="col-5@md">
-                                <p class="color-contrast-high text-sm"><strong>COMPANY NAME</strong></p>
-                                <p class="color-contrast-medium">{{ $company->name }}</p>
+                                <p class="color-contrast-high text-sm font-medium">VESSEL NUMBER</p>
+                                <p class="color-contrast-medium">{{ $company->vessel_number ?? 'No data' }}</p>
                             </div>
                             <div class="col-5@md">
-                                <p class="color-contrast-high text-sm"><strong>GROSS TONNAGE</strong></p>
-                                <p class="color-contrast-medium">{{ $company->gross_tonnage }}</p>
+                                <p class="color-contrast-high text-sm font-medium">GROSS TONNAGE</p>
+                                <p class="color-contrast-medium">{{ $company->gross_tonnage ?? 'No data' }}</p>
                             </div>
                         </div>
-                        <div class="grid col-span-2">
+                        <div class="grid col-span-2 margin-top-sm">
                             <div class="col-2@md">
                             </div>
                             <div class="col-5@md">
-                                <p class="color-contrast-high text-sm"><strong>CONTACT & EMAIL</strong></p>
-                                <p class="color-contrast-medium">{{ $company->email }} <br> {{ $company->contact }}</p>
+                                <p class="color-contrast-high text-sm font-medium">CONTACT & EMAIL</p>
+                                <p class="color-contrast-medium">{{ $company->email ?? 'No data' }} <br> {{ $company->contact }}</p>
                             </div>
                             <div class="col-5@md">
-                                <p class="color-contrast-high text-sm"><strong>CALL SIGN</strong></p>
-                                <p class="color-contrast-medium">{{ $company->call_sign }}</p>
+                                <p class="color-contrast-high text-sm font-medium">CALL SIGN</p>
+                                <p class="color-contrast-medium">{{ $company->call_sign ?? 'No data' }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="user-cell__cta">
                     <a href="{{ route('company.edit', $company->id) }}" class="btn btn--primary btn--sm">Edit
-                        company</a>
+                        </a>
                 </div>
             </div>
-            <h2 class="text-md font-bold padding-top-sm">PERMIT HISTORY</h2>
+            <h2 class="text-md font-semibold padding-top-sm">PERMIT HISTORY</h2>
             <table class="tbl__table text-unit-em text-sm border-bottom border-2" aria-label="Table Example">
                 <thead class="tbl__header border-bottom border-2">
                     <tr class="tbl__row">
                         <th class="tbl__cell text-left" scope="col">
-                            <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Vessel
+                            <span class="text-xs letter-spacing-lg font-semibold">Vessel
                                 name</span>
                         </th>
 
                         <th class="tbl__cell text-left" scope="col">
-                            <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Permit unit</span>
+                            <span class="text-xs letter-spacing-lg font-semibold">Permit unit</span>
                         </th>
 
                         <th class="tbl__cell text-left" scope="col">
-                            <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Gross tonnage</span>
+                            <span class="text-xs letter-spacing-lg font-semibold">Gross tonnage</span>
                         </th>
 
                         <th class="tbl__cell text-left" scope="col">
-                            <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Permit type</span>
+                            <span class="text-xs letter-spacing-lg font-semibold">Permit type</span>
                         </th>
 
                         <th class="tbl__cell text-left" scope="col">
-                            <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Issue date</span>
+                            <span class="text-xs letter-spacing-lg font-semibold">Issue date</span>
                         </th>
                         <th class="tbl__cell text-right" scope="col">
-                            <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Expiry date</span>
+                            <span class="text-xs letter-spacing-lg font-semibold">Expiry date</span>
                         </th>
                     </tr>
                 </thead>

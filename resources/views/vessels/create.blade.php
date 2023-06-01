@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h2 class="text-xl font-semibold">Create vessel</h2>
+        <h2 class="text-xl font-semibold">Create Vessel</h2>
     </div>
 
     <div class="bg radius-md shadow-xs">
@@ -85,17 +85,11 @@
                 </div>
                 <div class="border-top border-contrast-lower text-right">
                     <div class="margin-top-sm">
-                        <button class="btn btn--primary">Create vessel</button>
+                        <button class="btn btn--primary btn--md font-medium">Create vessel</button>
                     </div>
                 </div>
             </div>
         </form>
     </div>
-
-    <script src="{{ asset('js/choices.min.js') }}"></script>
-
-    <script>
-        const choices = new Choices('.js-choice');
-    </script>
 
 </x-layout>

@@ -7,7 +7,7 @@
     <form action="{{ route('login') }}" method="POST" class="bg radius-md shadow-sm padding-lg">
         @csrf
         <div class="text-center margin-bottom-md">
-            <h1 class="text-xl font-bold">Log In</h1>
+            <h1 class="text-xl font-semibold">Log In</h1>
             <p class="color-contrast-medium text-sm">to access your dashboard</p>
         </div>
         <div class="margin-bottom-sm">
@@ -33,7 +33,7 @@
             <label for="remember"><span class="text-sm padding-top-lg color-contrast-medium">Remember me</span></label>
         </div>
         <div class="margin-bottom-lg">
-            <button type="submit" class="btn btn--primary btn--md width-100%">Login</button>
+            <button type="submit" class="btn btn--primary btn--md font-medium width-100%">Login</button>
         </div>
         <div class="text-center">
             <p class="text-sm color-contrast-medium">Don't have an account? <a href="{{ route('register') }}">Register</a></p>

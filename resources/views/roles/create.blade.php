@@ -22,7 +22,7 @@
                 </div>
                 <div class="border-top border-contrast-lower text-right">
                     <div class="margin-top-sm">
-                        <button class="btn btn--primary">Create role</button>
+                        <button class="btn btn--primary btn--md font-medium">Create role</button>
                     </div>
                 </div>
             </div>

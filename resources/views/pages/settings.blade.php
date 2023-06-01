@@ -146,8 +146,8 @@
                 </div>
             </div>
             <div class="margin-y-lg float-right color-contrast-medium text-xs">
-                <p>Laravel: <strong>{{ app()->version() }}</strong> PHP:
-                    <strong> {{ phpversion() }}</strong>
+                <p>Laravel: <strong class="font-medium">{{ app()->version() }}</strong> PHP:
+                    <strong class="font-medium"> {{ phpversion() }}</strong>
                 </p>
             </div>
         </div>

@@ -3,7 +3,7 @@
 <x-layout>
 
     <div class="margin-bottom-md">
-        <h2 class="text-xl font-semibold">Create location</h2>
+        <h2 class="text-xl font-semibold">Create Location</h2>
     </div>
 
     <div class="bg radius-md shadow-xs">
@@ -71,7 +71,7 @@
                 </div>
                 <div class="border-top border-contrast-lower text-right">
                     <div class="margin-top-sm">
-                        <button class="btn btn--primary">Create location</button>
+                        <button class="btn btn--primary btn--md font-medium">Create location</button>
                     </div>
                 </div>
             </div>

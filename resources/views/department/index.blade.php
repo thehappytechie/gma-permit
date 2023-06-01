@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h1 class="text-xl font-bold">Departments</h1>
+        <h2 class="text-xl font-semibold">Departments</h2>
     </div>
     <div class="margin-bottom-md">
         @can('is-admin')
