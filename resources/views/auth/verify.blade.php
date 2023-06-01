@@ -21,7 +21,7 @@
         <x-validation-error>{{ $message }}</x-validation-error>
         @enderror
         <div class="margin-y-md">
-            <button type="submit" class="btn btn--primary btn--md width-100%">Request verification link</button>
+            <button type="submit" class="btn btn--primary btn--md font-medium width-100%">Request verification link</button>
         </div>
     </form>
 

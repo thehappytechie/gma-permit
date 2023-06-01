@@ -42,7 +42,6 @@ class CreateNewUser implements CreatesNewUsers
 
         $user->assignRole('user');
 
-
         return $user;
     }
 }

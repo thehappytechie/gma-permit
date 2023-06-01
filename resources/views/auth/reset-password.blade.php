@@ -39,7 +39,7 @@
                     required>
             </div>
             <div class="margin-bottom-lg">
-                <button type="submit" class="btn btn--primary btn--md width-100%">Change password</button>
+                <button type="submit" class="btn btn--primary btn--md font-medium width-100%">Change password</button>
             </div>
             <div class="text-center">
                 <p class="text-sm"><a href="{{ route('login') }}">&larr; Back to login</a></p>

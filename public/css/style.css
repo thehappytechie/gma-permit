@@ -1381,6 +1381,7 @@ u {
 }
 .form-label {
     display: inline-block;
+    font-weight:500;
 }
 .form__msg-error,
 .form-error-msg {
@@ -12708,6 +12709,7 @@ html:not(.js) .radial-bar__area {
         margin-bottom: var(--space-xxs);
     }
     .form-label {
+        font-weight:500;
         display: inline-block;
     }
     .form__msg-error,

@@ -87,7 +87,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="max-width-md text-divider col-11 color-primary-darker"><span> ACCOUNT MANAGEMENT</span>
+                <div class="max-width-md text-divider col-11 color-primary-darker"><span> LOGIN ACCESS</span>
                 </div>
                 <fieldset class="margin-top-xs">
                     <ul class="flex flex-wrap gap-md">

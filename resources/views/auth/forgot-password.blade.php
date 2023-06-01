@@ -4,18 +4,6 @@
 
     <x-alert />
 
-    @if (session('status'))
-    <script>
-        let notyf = new Notyf ({
-        dismissible:true,
-        duration:0,
-        ripple:true,
-        position:{ x:'right', y:'top'},
-    })
-    notyf.success('{{ session('status') }}')
-    </script>
-    @endif
-
     <form action="{{ route('password.request') }}" method="post" class="bg radius-md shadow-sm padding-lg max-width-xx">
         @csrf
         <div class="text-center margin-bottom-md">
