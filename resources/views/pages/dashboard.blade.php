@@ -18,8 +18,8 @@
                 <div class="col-6@sm col-3@md">
                     <div class="small-box bg-teal padding-top-sm">
                         <div class="inner">
-                            <h3 class="font-medium">{{ $permits->total }}</h3>
-                            <p class="font-medium">Permits</p>
+                            <p class="text-base font-medium">{{ $permits->total }}</p>
+                            <p class="text-base font-medium">Permits</p>
                         </div>
                         <div class="icon" aria-hidden="true">
                             <svg width="60" height="60" fill="currentColor" class="bi bi-bank"
@@ -35,8 +35,8 @@
                 <div class="col-6@sm col-3@md">
                     <div class="small-box bg-maroon padding-top-sm">
                         <div class="inner">
-                            <h3 class="font-medium">{{ $certificates->total }}</h3>
-                            <p class="font-medium">Certificates</p>
+                            <p class="text-base font-medium">{{ $certificates->total }}</p>
+                            <p class="text-base font-medium">Certificates</p>
                         </div>
                         <div class="icon" aria-hidden="true">
                             <svg width="60" height="60" fill="currentColor" class="bi bi-file-earmark-richtext"
@@ -53,9 +53,9 @@
                 </div>
                 <div class="col-6@sm col-3@md">
                     <div class="small-box bg-orange padding-top-sm">
-                        <div class="inner">
-                            <h3 class="font-medium">{{ $permits->safety }}</h3>
-                            <p class="font-medium">Safety Permits</p>
+                        <div class="inner ">
+                            <p class="text-base font-medium">{{ $permits->safety }}</p>
+                            <p class="text-base font-medium">Safety Permits</p>
                         </div>
                         <div class="icon" aria-hidden="true">
                             <svg width="60" height="60" fill="currentColor" class="bi bi-file-earmark-excel"
@@ -72,8 +72,8 @@
                 <div class="col-6@sm col-3@md">
                     <div class="small-box bg-purple padding-top-sm">
                         <div class="inner">
-                            <h3 class="font-medium">{{ $permits->operating }}</h3>
-                            <p class="font-medium">Operating Permits</p>
+                            <p class="text-base font-medium">{{ $permits->operating }}</p>
+                            <p class="text-base font-medium">Operating Permits</p>
                         </div>
                         <div class="icon" aria-hidden="true">
                             <svg width="60" height="60" fill="currentColor" class="bi bi-file-earmark-text"

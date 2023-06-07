@@ -35,11 +35,13 @@
                                     <span>Last login</span>
                                 </div>
                             </th>
-                            <th>
-                                <div class="flex items-center">
-                                    <span>Action</span>
-                                </div>
-                            </th>
+                            @hasanyrole('superuser|editor')
+                                <th>
+                                    <div class="flex items-center">
+                                        <span>Action</span>
+                                    </div>
+                                </th>
+                            @endhasanyrole
                         </tr>
                     </thead>
                     <tbody>
@@ -109,12 +111,14 @@
                     data: "last_login_at",
                     name: "users.last_login_at"
                 },
-                {
-                    data: "action",
-                    name: "action",
-                    orderable: false,
-                    searchable: false
-                },
+                @hasanyrole('superuser|editor')
+                    {
+                        data: "action",
+                        name: "action",
+                        orderable: false,
+                        searchable: false
+                    },
+                @endhasanyrole
             ],
         });
     });

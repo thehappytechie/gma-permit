@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\BrandSetting;
-use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['role:superuser']);
+        $this->middleware('role_or_permission:superuser');
     }
 
     public function settings()

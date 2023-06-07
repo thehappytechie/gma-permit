@@ -31,22 +31,6 @@
     </script>
 @endif
 
-@if (session('status'))
-    <script>
-        let notyf = new Notyf({
-            dismissible: true,
-            duration: 0,
-            ripple: true,
-            position: {
-                x: 'right',
-                y: 'top'
-            },
-        })
-        notyf.success('{{ session('status') }}')
-    </script>
-@endif
-
-
 @if (session('status') == 'two-factor-authentication-enabled')
     <script>
         let notyf = new Notyf({
@@ -89,6 +73,21 @@
             },
         })
         notyf.success('Recovery codes have been regenerated.')
+    </script>
+@endif
+
+@if (session('status'))
+    <script>
+        let notyf = new Notyf({
+            dismissible: true,
+            duration: 0,
+            ripple: true,
+            position: {
+                x: 'right',
+                y: 'top'
+            },
+        })
+        notyf.success('{{ session('status') }}')
     </script>
 @endif
 

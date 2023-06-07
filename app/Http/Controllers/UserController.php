@@ -12,7 +12,7 @@ class UserController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['role:superuser']);
+        $this->middleware('role_or_permission:superadmin|admin-access');
     }
 
     /**
@@ -22,6 +22,7 @@ class UserController extends Controller
      */
     public function index()
     {
+        return view('users.index');
     }
 
     /**
@@ -31,6 +32,7 @@ class UserController extends Controller
      */
     public function create()
     {
+
         $permissions = Permission::get(['id', 'name']);
         $roles = Role::all();
         return view('users.create', compact(['roles', 'permissions']));
@@ -42,14 +44,17 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(UserCreate $request)
+    public function store(UserCreate $request, User $user)
     {
+        $user->hasAnyPermission(['edit articles', 'publish articles', 'unpublish articles']);
+
         $user = new User;
         $data = $request->validated();
         $user->fill($data);
+        $user->assignRole($request->roles);
+        $user->role->syncPermissions($request->permissions);
         $user->save();
-        $user->syncPermissions($request->permissions);
-        $user->roles()->attach($request->roles);
+
         $request->session()->flash('success', 'User created successfully.');
         return redirect()->route('userDatatable');
     }

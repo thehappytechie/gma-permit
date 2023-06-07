@@ -10,6 +10,11 @@ use App\Http\Controllers\Controller;
 
 class AuditDatatableController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('role_or_permission:superuser');
+    }
+
     public function audit(Request $request)
     {
         if ($request->ajax()) {

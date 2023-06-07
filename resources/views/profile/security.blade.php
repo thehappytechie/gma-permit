@@ -53,7 +53,7 @@
                             @if (!auth()->user()->two_factor_secret)
                             @else
                                 First, you’ll need a 2FA authenticator app on your phone.
-                                <strong class="font-semibold"> If you don’t have one, we recommend</strong> <a
+                                <strong class="font-medium"> If you don’t have one, we recommend</strong> <a
                                     href="https://authenticator.2stable.com/" target="_blank"
                                     rel="noopener noreferrer">2Stable</a>
                                 <br><br>

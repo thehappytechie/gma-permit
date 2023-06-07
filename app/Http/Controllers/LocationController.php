@@ -12,7 +12,7 @@ class LocationController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['role:superuser']);
+        $this->middleware('role_or_permission:superuser', ['only' => ['create', 'store', 'edit', 'update', 'show',]]);
     }
 
     /**

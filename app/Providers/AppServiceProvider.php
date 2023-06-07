@@ -36,21 +36,5 @@ class AppServiceProvider extends ServiceProvider
         // https://planetscale.com/blog/laravels-safety-mechanisms#mass-assignment-protection
         // As these are concerned with application correctness,
         // leave them enabled all the time.
-        Model::preventAccessingMissingAttributes();
-        Model::preventSilentlyDiscardingAttributes();
-
-        // Since this is a performance concern only, don't halt
-        // production for violations.
-        Model::preventLazyLoading(!$this->app->isProduction());
-
-
-        Health::checks([
-            UsedDiskSpaceCheck::new(),
-            DatabaseCheck::new(),
-            EnvironmentCheck::new(),
-            DebugModeCheck::new(),
-            ScheduleCheck::new(),
-            CacheCheck::new(),
-        ]);
     }
 }

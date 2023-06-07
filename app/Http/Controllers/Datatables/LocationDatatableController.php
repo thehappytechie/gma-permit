@@ -11,7 +11,7 @@ class LocationDatatableController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['role:superuser']);
+        $this->middleware('role_or_permission:superuser');
     }
 
     public function locationDatatable(Request $request)

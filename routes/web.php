@@ -65,7 +65,7 @@ Route::controller(PageController::class)->group(function () {
 | Routes Middleware
 |--------------------------------------------------------------------------
 */
-Route::middleware(['auth', 'verified', 'force.password.change', 'prevent.back.history', 'disable.login'])->group(function () {
+Route::middleware(['auth','web', 'verified', 'force.password.change', 'prevent.back.history', 'disable.login'])->group(function () {
 
     /*
 |--------------------------------------------------------------------------

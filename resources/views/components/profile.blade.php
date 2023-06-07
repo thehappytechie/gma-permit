@@ -10,7 +10,7 @@
 <menu id="user-menu" class="menu js-menu">
     <li role="menuitem">
         <p class="dropdown__item text-base">Signed in as<br>
-            <strong class="text-sm color-contrast-medium">{{ Auth::user()->name }}</strong>
+            <strong class="text-sm font-medium color-contrast-medium">{{ Auth::user()->name }}</strong>
         </p>
     </li>
     <hr class="dropdown__separator" role="separator">

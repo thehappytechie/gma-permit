@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 
 class PermitController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('role_or_permission:superuser|editor', ['only' => ['create', 'store', 'edit', 'update', 'show',]]);
+    }
+
     /**
      * Display a listing of the resource.
      *

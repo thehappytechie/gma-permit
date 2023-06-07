@@ -2,14 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Vessel;
 use App\Models\Certificate;
 use Illuminate\Http\Request;
 use App\Http\Requests\CertificateEdit;
 use App\Http\Requests\CertificateCreate;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class CertificateController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('role_or_permission:superuser|editor', ['only' => ['create', 'store', 'edit', 'update', 'show',]]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +32,7 @@ class CertificateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request, User $user)
     {
         $vessels = Vessel::get(['id', 'name']);
         return view('certificate.create', compact('vessels'));

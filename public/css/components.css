@@ -98,25 +98,6 @@
     color: #fff;
     background: rgba(0, 0, 0, 0.15);
 }
-.small-box h3 {
-    font-size: 30px;
-    font-weight: bold;
-    white-space: nowrap;
-}
-.small-box p {
-    font-size: 17px;
-    font-weight: bold;
-}
-.small-box p > small {
-    display: block;
-    color: #f9f9f9;
-    font-size: 1px;
-    margin-top: 5px;
-}
-.small-box h3,
-.small-box p {
-    z-index: 5px;
-}
 .small-box .icon {
     position: absolute;
     top: -5px;
@@ -1089,15 +1070,7 @@
     color: #fff;
     background: rgba(0, 0, 0, 0.15);
 }
-.small-box h3 {
-    font-size: 30px;
-    font-weight: bold;
-    white-space: nowrap;
-}
-.small-box p {
-    font-size: 17px;
-    font-weight: bold;
-}
+
 .small-box p > small {
     display: block;
     color: #f9f9f9;
