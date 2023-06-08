@@ -14,7 +14,6 @@
                     <form action="{{ url('two-factor-challenge') }}" method="POST">
                         @csrf
                         <div class="margin-bottom-sm">
-                            <label class="form-label margin-bottom-xs" for="code">Authentication code</label>
                             <input class="form-control width-100% @error('code') is-error @enderror" type="text"
                                 name="code" id="code" placeholder="Enter authentication code" required>
                         </div>
@@ -27,11 +26,11 @@
                         </div>
                     </form>
                     <div class="text-divider"><span>OR</span></div>
-                    <p class="text-sm color-contrast-medium margin-top-sm">Please enter one of your emergency recovery codes provided</p>
+                    <p class="text-sm color-contrast-medium margin-top-sm">Please enter one of your emergency recovery
+                        codes provided</p>
                     <form action="{{ url('two-factor-challenge') }}" method="POST">
                         @csrf
                         <div class="margin-bottom-sm">
-                            <label class="form-label margin-bottom-xs" for="recovery_code">Recovery code</label>
                             <input class="form-control width-100%  @error('recovery_code') is-error @enderror"
                                 type="text" name="recovery_code" id="recovery_code" placeholder="Enter recovery code"
                                 required>

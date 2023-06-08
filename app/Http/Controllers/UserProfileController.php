@@ -14,8 +14,8 @@ class UserProfileController extends Controller
 {
     public function edit($id)
     {
-        $departments = Department::get();
-        $locations = Location::get();
+        $departments = Department::orderBy('name', 'asc')->get(['id', 'name']);
+        $locations = Location::orderBy('name', 'asc')->get(['id', 'name']);
         $user = User::findOrFail($id);
         return view('profile.edit', compact(['user', 'locations', 'departments']));
     }

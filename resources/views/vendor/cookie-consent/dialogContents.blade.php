@@ -1,8 +1,8 @@
 <style>
     .pre-header {
         display: block;
-        background-color: #fff;
-        color: #000;
+        background-color: #000;
+        color: #fff;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
@@ -42,7 +42,7 @@
 <div class="pre-header padding-y-xs js-pre-header inner-glow shadow-sm">
     <div class="container max-width-lg position-relative">
         <div class="text-component text-sm padding-right-lg text-center">
-            <p> <span class="text-md font-bold">We use cookies |</span> 🍪 Cookies help us deliver the best
+            <p> <span class="text-md font-medium">We use cookies |</span> 🍪 Cookies help us deliver the best
                 experience on our website. For more information, please see our <a href="{{ route('privacy') }}"
                     target="_blank" class="color-inherit text-underline">Privacy Policy</a></p>
         </div>

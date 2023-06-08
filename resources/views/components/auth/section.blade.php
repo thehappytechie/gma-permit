@@ -13,6 +13,8 @@
 </head>
 
 <body class="bg-contrast-lower">
+    @include('cookie-consent::index')
+
     @if (request()->routeIs('login'))
         <div class="bg-white padding-y-md shadow-xs">
             <div class="container flex justify-center">

@@ -14,7 +14,7 @@
             <label for="email" class="form-label margin-bottom-xxs">Email</label>
             <input class="form-control width-100% @error('email') is-error @enderror" type="email" name="email"
                 id="email" autocomplete="email" required>
-                @error('email')
+            @error('email')
                 <x-validation-error>{{ $message }}</x-validation-error>
             @enderror
         </div>
@@ -36,7 +36,8 @@
             <button type="submit" class="btn btn--primary btn--md font-medium width-100%">Login</button>
         </div>
         <div class="text-center">
-            <p class="text-sm color-contrast-medium">Don't have an account? <a href="{{ route('register') }}">Register</a></p>
+            <p class="text-sm color-contrast-medium">Don't have an account? <a
+                    href="{{ route('register') }}">Register</a></p>
         </div>
     </form>
     <div class="margin-top-xxl">

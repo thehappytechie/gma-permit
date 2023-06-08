@@ -45,94 +45,92 @@
                                 </div>
                                 <div class="col-6@lg">
                                     <input class="form-control width-100% @error('email') is-error @enderror"
-                                        type="email" name="email" id="email" value="{{ $user->email }}" disabled>
+                                        type="email" name="email" id="email" value="{{ $user->email }}"
+                                        disabled>
                                     @error('email')
                                         <x-validation-error>{{ $message }}</x-validation-error>
                                     @enderror
                                 </div>
                             </div>
                         </div>
-                        @canany(['is-admin', 'is-editor'])
-                            <legend class="margin-bottom-md font-medium text-md">Staff Information</legend>
-                            <div class="margin-bottom-sm">
-                                <div class="grid gap-xxs">
-                                    <div class="col-6@lg">
-                                        <label class="inline-block text-sm padding-top-xs@lg"
-                                            for="input-contact">Contact</label>
-                                    </div>
-                                    <div class="col-6@lg">
-                                        <input class="form-control width-100% @error('contact') is-error @enderror"
-                                            type="number" name="contact" id="contact" value="{{ $user->contact }}">
-                                        @error('contact')
-                                            <x-validation-error>{{ $message }}</x-validation-error>
-                                        @enderror
-                                    </div>
+                        <legend class="margin-bottom-md font-medium text-md">Staff Information</legend>
+                        <div class="margin-bottom-sm">
+                            <div class="grid gap-xxs">
+                                <div class="col-6@lg">
+                                    <label class="inline-block text-sm padding-top-xs@lg"
+                                        for="input-contact">Contact</label>
+                                </div>
+                                <div class="col-6@lg">
+                                    <input class="form-control width-100% @error('contact') is-error @enderror"
+                                        type="number" name="contact" id="contact" value="{{ $user->contact }}">
+                                    @error('contact')
+                                        <x-validation-error>{{ $message }}</x-validation-error>
+                                    @enderror
                                 </div>
                             </div>
-                            <div class="margin-bottom-sm">
-                                <div class="grid gap-xxs">
-                                    <div class="col-6@lg">
-                                        <label class="inline-block text-sm padding-top-xs@lg" for="employee_no">Employee
-                                            number</label>
-                                    </div>
-                                    <div class="col-6@lg">
-                                        <input class="form-control width-100%" type="text" name="employee_no"
-                                            id="employee_no" value="{{ $user->employee_no }}">
-                                    </div>
+                        </div>
+                        <div class="margin-bottom-sm">
+                            <div class="grid gap-xxs">
+                                <div class="col-6@lg">
+                                    <label class="inline-block text-sm padding-top-xs@lg" for="employee_no">Employee
+                                        number</label>
+                                </div>
+                                <div class="col-6@lg">
+                                    <input class="form-control width-100%" type="text" name="employee_no"
+                                        id="employee_no" value="{{ $user->employee_no }}">
                                 </div>
                             </div>
-                            <div class="margin-bottom-sm">
-                                <div class="grid gap-xxs">
-                                    <div class="col-6@lg">
-                                        <label class="inline-block text-sm padding-top-xs@lg"
-                                            for="input-department">Department</label>
+                        </div>
+                        <div class="margin-bottom-sm">
+                            <div class="grid gap-xxs">
+                                <div class="col-6@lg">
+                                    <label class="inline-block text-sm padding-top-xs@lg"
+                                        for="input-department">Department</label>
+                                </div>
+                                <div class="col-6@lg">
+                                    <div class="select">
+                                        <select class="form-control select__input" name="department_id">
+                                            @foreach ($departments as $department)
+                                                <option value="{{ $department->id }}"
+                                                    {{ old('department_id', $user->department_id) == $department->id ? 'selected' : '' }}>
+                                                    {{ $department->name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
                                     </div>
-                                    <div class="col-6@lg">
-                                        <div class="select">
-                                            <select class="form-control select__input" name="department_id">
-                                                <option value=""></option>
-                                                @foreach ($departments as $department)
-                                                    <option value="{{ $department->id }}"
-                                                        {{ old('department_id', $user->department_id) == $department->id ? 'selected' : '' }}>
-                                                        {{ $department->name }}
-                                                    </option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <svg class="float-right icon icon--xxs dropdown--icon" aria-hidden="true"
-                                            viewBox="0 0 12 12">
-                                            <polyline points="1 4 6 9 11 4" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                        </svg>
-                                    </div>
+                                    <svg class="float-right icon icon--xxs dropdown--icon" aria-hidden="true"
+                                        viewBox="0 0 12 12">
+                                        <polyline points="1 4 6 9 11 4" fill="none" stroke="currentColor"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                    </svg>
                                 </div>
                             </div>
-                            <div class="margin-bottom-sm">
-                                <div class="grid gap-xxs">
-                                    <div class="col-6@lg">
-                                        <label class="inline-block text-sm padding-top-xs@lg"
-                                            for="input-location">Location</label>
+                        </div>
+                        <div class="margin-bottom-sm">
+                            <div class="grid gap-xxs">
+                                <div class="col-6@lg">
+                                    <label class="inline-block text-sm padding-top-xs@lg"
+                                        for="input-location">Location</label>
+                                </div>
+                                <div class="col-6@lg">
+                                    <div class="select">
+                                        <select class="form-control select__input" name="location_id">
+                                            @foreach ($locations as $location)
+                                                <option value="{{ $location->id }}"
+                                                    {{ old('location_id', $user->location_id) == $location->id ? 'selected' : '' }}>
+                                                    {{ $location->name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
                                     </div>
-                                    <div class="col-6@lg">
-                                        <div class="select">
-                                            <select class="form-control select__input" name="location_id">
-                                                @foreach ($locations as $location)
-                                                    <option value="{{ $location->id }}"
-                                                        {{ old('location_id', $user->location_id) == $location->id ? 'selected' : '' }}>
-                                                        {{ $location->name }}
-                                                    </option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <svg class="float-right icon icon--xxs dropdown--icon" aria-hidden="true"
-                                            viewBox="0 0 12 12">
-                                            <polyline points="1 4 6 9 11 4" fill="none" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                        </svg>
-                                    </div>
+                                    <svg class="float-right icon icon--xxs dropdown--icon" aria-hidden="true"
+                                        viewBox="0 0 12 12">
+                                        <polyline points="1 4 6 9 11 4" fill="none" stroke="currentColor"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                    </svg>
                                 </div>
                             </div>
-                        @endcanany
+                        </div>
                     </fieldset>
                     <div class="border-top border-contrast-lower text-right">
                         <div class="margin-top-sm">

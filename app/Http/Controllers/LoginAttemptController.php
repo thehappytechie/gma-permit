@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\DB;
 
 class LoginAttemptController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('role_or_permission:superuser');
+    }
+
     public function loginAttempt(Request $request)
     {
         if ($request->ajax()) {
