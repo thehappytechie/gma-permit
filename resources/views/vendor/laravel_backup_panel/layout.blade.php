@@ -9,7 +9,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="{{ asset('css/font/inter.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font/montserrat.css') }}" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
@@ -20,11 +20,19 @@
 
 <style>
     body {
-        font-family: "Inter", sans-serif;
+        font-family: "Montserrat", sans-serif;
     }
 </style>
 
 <body>
+
+    <div class="container mt-2">
+        <div class="alert alert-warning" role="alert">
+            <code>You can backup your app by running this artisan command <strong class="font-medium">php artisan
+                    backup:run</strong></code>
+        </div>
+    </div>
+
     <livewire:laravel_backup_panel::app />
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
