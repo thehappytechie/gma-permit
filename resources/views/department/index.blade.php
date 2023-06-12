@@ -12,7 +12,7 @@
         @endcan
     </div>
 
-    <div class="grid gap-sm">
+    <div class="grid gap-sm margin-bottom-xl">
         <div class="bg radius-md padding-md shadow-xs col-12">
             <div class="int-table__inner text-sm">
                 <table class="datatable int-table__table" aria-label="Datatable">

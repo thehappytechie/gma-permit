@@ -5,9 +5,8 @@
         <h2 class="text-xl font-semibold">{{ $company->name }}</h2>
     </div>
 
-    <div class="bg radius-md shadow-xs">
-
-        <div class="tabs-v2 js-tabs padding-lg">
+    <div class="bg radius-md padding-lg shadow-xs col-12">
+        <div class="tabs-v2 js-tabs">
             <div class="margin-bottom-lg">
                 <a href="{{ route('companyDatatable') }}">&larr; Go to companies</a>
             </div>
@@ -36,7 +35,8 @@
                             </div>
                             <div class="col-5@md">
                                 <p class="color-contrast-high text-sm font-medium">CONTACT & EMAIL</p>
-                                <p class="color-contrast-medium">{{ $company->email ?? 'No data' }} <br> {{ $company->contact }}</p>
+                                <p class="color-contrast-medium">{{ $company->email ?? 'No data' }} <br>
+                                    {{ $company->contact }}</p>
                             </div>
                             <div class="col-5@md">
                                 <p class="color-contrast-high text-sm font-medium">CALL SIGN</p>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="user-cell__cta">
                     <a href="{{ route('company.edit', $company->id) }}" class="btn btn--primary btn--sm">Edit
-                        </a>
+                    </a>
                 </div>
             </div>
             <h2 class="text-md font-semibold padding-top-sm">PERMIT HISTORY</h2>

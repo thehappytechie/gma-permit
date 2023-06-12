@@ -5,7 +5,7 @@
     <div class="margin-bottom-md">
         <h2 class="text-xl font-semibold">Locations</h2>
     </div>
-    <div class="margin-bottom-md">
+    <div class="margin-bottom-md margin-bottom-xl">
         @can('is-admin')
             <div class="flex justify-end">
                 <a href="{{ route('location.create') }}" class="btn btn--primary text-sm">Add location</a>
@@ -13,7 +13,7 @@
         @endcan
     </div>
 
-    <div class="grid gap-sm">
+    <div class="grid gap-sm margin-bottom-xl">
         <div class="bg radius-md padding-md shadow-xs col-12">
             <div class="int-table__inner text-sm">
                 <table class="datatable int-table__table" aria-label="Datatable">

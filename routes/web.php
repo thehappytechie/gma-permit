@@ -18,7 +18,6 @@ use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\BrandSettingController;
 use App\Http\Controllers\LoginAttemptController;
 use App\Http\Controllers\NotificationController;
-use App\Http\Controllers\ReportUploadController;
 use App\Http\Controllers\TicketDatatableController;
 use App\Http\Controllers\ForcePasswordChangeController;
 use App\Http\Controllers\Datatables\RoleDatatableController;
@@ -132,7 +131,6 @@ Route::middleware(['auth','web', 'verified', 'force.password.change', 'prevent.b
 | Single Action Controllers
 |--------------------------------------------------------------------------
 */
-    Route::get('report', [ReportUploadController::class, 'reportUploads'])->name('reportUploads');
     Route::get('login-attempt', [LoginAttemptController::class, 'loginAttempt'])->name('loginAttempt');
     Route::get('admin/settings', [AdminController::class, 'settings'])
         ->name('settings');

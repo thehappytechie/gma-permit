@@ -5,11 +5,11 @@
         <h2 class="text-xl font-semibold">Edit - {{ $permit->company->name }}</h2>
     </div>
 
-    <div class="bg radius-md shadow-xs">
+    <div class="bg radius-md padding-lg shadow-xs margin-bottom-xl">
         <form action="{{ route('permit.update', $permit->id) }}" method="post">
             @csrf
             @method('put')
-            <div class="grid gap-lg max-width-sm padding-lg">
+            <div class="grid gap-lg max-width-sm">
                 <a href="{{ route('permitDatatable') }}">&larr; Go to permits</a>
                 <small class="color-contrast-medium">
                     <x-required-label></x-required-label>indicates a required field

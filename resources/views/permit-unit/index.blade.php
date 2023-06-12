@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <div class="grid gap-sm">
+    <div class="grid gap-sm margin-bottom-xl">
         <div class="bg radius-md padding-md shadow-xs col-12">
             <form action="{{ route('importPermitUnit') }}" method="post" enctype="multipart/form-data">
                 @csrf

@@ -27,7 +27,7 @@
 <body>
 
     <div class="container mt-2">
-        <div class="alert alert-warning" role="alert">
+        <div class="alert alert-info" role="alert">
             <code>You can backup your app by running this artisan command <strong class="font-medium">php artisan
                     backup:run</strong></code>
         </div>
