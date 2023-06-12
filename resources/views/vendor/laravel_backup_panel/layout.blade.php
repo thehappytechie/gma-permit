@@ -22,14 +22,17 @@
     body {
         font-family: "Montserrat", sans-serif;
     }
+    strong {
+        font-weight: 600 !important;
+    }
 </style>
 
 <body>
 
     <div class="container mt-2">
         <div class="alert alert-info" role="alert">
-            <code>You can backup your app by running this artisan command <strong class="font-medium">php artisan
-                    backup:run</strong></code>
+            You can backup your app by running this artisan command <strong class="font-bold">php artisan
+                    backup:run</strong>
         </div>
     </div>
 

@@ -1,8 +1,8 @@
 <div class="container mb-5">
     <div class="d-flex align-items-end pt-4">
-        <h5 class="mb-0">
+        <h3 class="mb-0">
             Laravel Backup Panel
-        </h5>
+        </h3>
 
         <button id="create-backup" class="btn btn-primary btn-sm ml-auto px-3">
             Create Backup
