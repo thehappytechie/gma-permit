@@ -5,11 +5,11 @@
         <h2 class="text-xl font-semibold">>Edit - {{ $ticket->title }} <span
                 class="text-md font-medium color-contrast-medium">#{{ $ticket->user->name }}</span></h2>
     </div>
-    <div class="bg radius-md shadow-xs">
+    <div class="bg radius-md padding-lg shadow-xs margin-bottom-xl">
         <form action="{{ route('ticket.update', $ticket->hash_id) }}" method="post">
             @csrf
             @method('put')
-            <div class="grid gap-lg max-width-sm padding-lg">
+            <div class="grid gap-lg max-width-sm">
                 @can('is-admin')
                     <a href="{{ route('ticketDatatable') }}">&larr; Go to tickets</a>
                 @endcan

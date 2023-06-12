@@ -20,22 +20,22 @@
                         <tr class="int-table__row">
                             <th>
                                 <div class="flex items-center">
-                                    <span>Department name</span>
+                                    <span class="font-medium color-contrast-higher">Department name</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Location</span>
+                                    <span class="font-medium color-contrast-higher">Location</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Manager</span>
+                                    <span class="font-medium color-contrast-higher">Manager</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Action</span>
+                                    <span class="font-medium color-contrast-higher">Action</span>
                                 </div>
                             </th>
                         </tr>

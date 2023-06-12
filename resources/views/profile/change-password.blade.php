@@ -16,7 +16,7 @@
         </nav>
     </div>
 
-    <div class="bg radius-md shadow-xs">
+    <div class="bg radius-md shadow-xs col-12">
         <div class="max-width-sm">
             <form action="{{ route('user-password.update') }}" method="POST">
                 @csrf

@@ -4,7 +4,7 @@
     <div class="margin-bottom-md">
         <h2 class="text-xl font-semibold">Audit Log</h2>
     </div>
-    <div class="grid gap-sm">
+    <div class="grid gap-sm margin-bottom-xl">
         <div class="bg radius-md padding-md shadow-xs col-12">
             <a href="{{ route('settings') }}">&larr; Go to settings</a>
             <div class="int-table__inner text-sm margin-top-lg">
@@ -13,27 +13,27 @@
                         <tr class="int-table__row">
                             <th>
                                 <div class="flex items-center">
-                                    <span>Log name</span>
+                                    <span class="font-medium color-contrast-higher">Log name</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>IP address</span>
+                                    <span class="font-medium color-contrast-higher">IP address</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>User</span>
+                                    <span class="font-medium color-contrast-higher">User</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Event</span>
+                                    <span class="font-medium color-contrast-higher">Event</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Date created</span>
+                                    <span class="font-medium color-contrast-higher">Date created</span>
                                 </div>
                             </th>
                         </tr>

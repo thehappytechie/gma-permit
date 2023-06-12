@@ -15,7 +15,7 @@
         </nav>
     </div>
 
-    <div class="bg radius-md shadow-xs">
+    <div class="bg radius-md shadow-xs col-12">
         <div class="max-width-sm">
             <form action="{{ route('profile.update', $user->id) }}" method="post">
                 @csrf

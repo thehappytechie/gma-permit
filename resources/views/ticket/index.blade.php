@@ -17,32 +17,32 @@
                         <tr class="int-table__row">
                             <th>
                                 <div class="flex items-center">
-                                    <span>Title</span>
+                                    <span class="font-medium color-contrast-higher">Title</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Created by</span>
+                                    <span class="font-medium color-contrast-higher">Created by</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Category</span>
+                                    <span class="font-medium color-contrast-higher">Category</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Status</span>
+                                    <span class="font-medium color-contrast-higher">Status</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Created</span>
+                                    <span class="font-medium color-contrast-higher">Created</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Action</span>
+                                    <span class="font-medium color-contrast-higher">Action</span>
                                 </div>
                             </th>
                         </tr>

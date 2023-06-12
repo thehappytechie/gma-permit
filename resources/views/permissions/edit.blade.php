@@ -5,10 +5,10 @@
         <h2 class="text-xl font-semibold">Edit Permission</h2>
     </div>
 
-    <div class="bg radius-md shadow-xs">
+    <div class="bg radius-md padding-lg shadow-xs margin-bottom-xl">
         <form action="{{ route('permissions.update', $permission->id) }}" method="post">
             @csrf
-            <div class="grid gap-lg max-width-sm padding-lg">
+            <div class="grid gap-lg max-width-sm">
                 <a href="{{ route('permissionDatatable') }}">&larr; Back to permissions</a>
                 <div class="col-6@md">
                     <label class="form-label margin-bottom-xxs" for="name">

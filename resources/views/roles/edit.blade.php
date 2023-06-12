@@ -5,11 +5,11 @@
         <h2 class="text-xl font-semibold">Edit - {{ ucfirst($role->name) }}</h2>
     </div>
 
-    <div class="bg radius-md shadow-xs">
+    <div class="bg radius-md padding-lg shadow-xs margin-bottom-xl">
         <form action="{{ route('roles.update', $role->id) }}" method="post">
             @csrf
             @method('PUT')
-            <div class="grid gap-lg max-width-sm padding-lg">
+            <div class="grid gap-lg max-width-sm">
                 <a href="{{ route('roleDatatable') }}">&larr; Back to roles</a>
                 <div class="col-6@md">
                     <label class="form-label margin-bottom-xxs" for="name">

@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PermitController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\VesselController;
@@ -12,28 +13,27 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\PermitUnitController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\PermissionsController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\BrandSettingController;
-use App\Http\Controllers\LoginAttemptController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\TicketDatatableController;
 use App\Http\Controllers\ForcePasswordChangeController;
 use App\Http\Controllers\Datatables\RoleDatatableController;
 use App\Http\Controllers\Datatables\UserDatatableController;
 use App\Http\Controllers\Datatables\AuditDatatableController;
+use App\Http\Controllers\Datatables\PermitDatatableController;
 use App\Http\Controllers\Datatables\VesselDatatableController;
 use App\Http\Controllers\Datatables\CompanyDatatableController;
 use App\Http\Controllers\Datatables\CategoryDatatableController;
 use App\Http\Controllers\Datatables\LocationDatatableController;
 use App\Http\Controllers\Datatables\DepartmentDatatableController;
 use App\Http\Controllers\Datatables\PermissionDatatableController;
-use App\Http\Controllers\Datatables\CertificateDatatableController;
-use App\Http\Controllers\Datatables\PermitDatatableController;
 use App\Http\Controllers\Datatables\PermitUnitDatatableController;
-use App\Http\Controllers\PermitController;
-use App\Http\Controllers\PermitUnitController;
+use App\Http\Controllers\Datatables\CertificateDatatableController;
+use App\Http\Controllers\Datatables\LoginAttemptDatatableController;
 
 /*
 |--------------------------------------------------------------------------
@@ -131,7 +131,7 @@ Route::middleware(['auth','web', 'verified', 'force.password.change', 'prevent.b
 | Single Action Controllers
 |--------------------------------------------------------------------------
 */
-    Route::get('login-attempt', [LoginAttemptController::class, 'loginAttempt'])->name('loginAttempt');
+    Route::get('login-attempt', [LoginAttemptDatatableController::class, 'loginAttempt'])->name('loginAttempt');
     Route::get('admin/settings', [AdminController::class, 'settings'])
         ->name('settings');
     Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');

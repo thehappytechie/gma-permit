@@ -17,28 +17,28 @@
                         <tr class="int-table__row">
                             <th>
                                 <div class="flex items-center">
-                                    <span>Name</span>
+                                    <span class="font-medium color-contrast-higher">Name</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Email</span>
+                                    <span class="font-medium color-contrast-higher">Email</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Role</span>
+                                    <span class="font-medium color-contrast-higher">Role</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Last login</span>
+                                    <span class="font-medium color-contrast-higher">Last login</span>
                                 </div>
                             </th>
                             @hasanyrole('superuser|editor')
                                 <th>
                                     <div class="flex items-center">
-                                        <span>Action</span>
+                                        <span class="font-medium color-contrast-higher">Action</span>
                                     </div>
                                 </th>
                             @endhasanyrole

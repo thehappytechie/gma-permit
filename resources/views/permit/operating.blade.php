@@ -83,32 +83,32 @@
                             <th></th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Company name</span>
+                                    <span class="font-medium color-contrast-higher">Company name</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Vessel name</span>
+                                    <span class="font-medium color-contrast-higher">Vessel name</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Permit number</span>
+                                    <span class="font-medium color-contrast-higher">Permit number</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Issue date</span>
+                                    <span class="font-medium color-contrast-higher">Issue date</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Expiry date</span>
+                                    <span class="font-medium color-contrast-higher">Expiry date</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Status</span>
+                                    <span class="font-medium color-contrast-higher">Status</span>
                                 </div>
                             </th>
                         </tr>

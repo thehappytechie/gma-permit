@@ -5,7 +5,7 @@
     <div class="margin-bottom-md">
         <h2 class="text-xl font-semibold">Locations</h2>
     </div>
-    <div class="margin-bottom-md margin-bottom-xl">
+    <div class="margin-bottom-md">
         @can('is-admin')
             <div class="flex justify-end">
                 <a href="{{ route('location.create') }}" class="btn btn--primary text-sm">Add location</a>
@@ -21,12 +21,12 @@
                         <tr class="int-table__row">
                             <th>
                                 <div class="flex items-center">
-                                    <span>Location name</span>
+                                    <span class="font-medium color-contrast-higher">Location name</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Action</span>
+                                    <span class="font-medium color-contrast-higher">Action</span>
                                 </div>
                             </th>
                         </tr>

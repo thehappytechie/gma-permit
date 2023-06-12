@@ -5,8 +5,7 @@
         <h2 class="text-xl font-semibold">{{ $vessel->name }}</h2>
     </div>
 
-    <div class="bg radius-md shadow-xs">
-
+    <div class="bg radius-md padding-lg shadow-xs col-12">
         <div class="tabs-v2 js-tabs padding-lg">
             <div class="margin-bottom-lg">
                 <a href="{{ route('vesselDatatable') }}">&larr; Go to vessels</a>

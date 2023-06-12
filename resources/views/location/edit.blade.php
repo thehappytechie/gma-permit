@@ -5,11 +5,11 @@
     <div class="margin-bottom-md">
         <h2 class="text-xl font-semibold">Edit - {{ $location->name }}</h2>
     </div>
-    <div class="bg radius-md shadow-xs">
+    <div class="bg radius-md padding-lg shadow-xs margin-bottom-xl">
         <form action="{{ route('location.update', $location->id) }}" method="post">
             @csrf
             @method('put')
-            <div class="grid gap-lg max-width-sm padding-lg">
+            <div class="grid gap-lg max-width-sm">
                 <a href="{{ route('locationDatatable') }}">&larr; Go to locations</a>
                 <small class="color-contrast-medium">
                     <x-required-label></x-required-label>indicates a required field

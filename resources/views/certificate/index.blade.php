@@ -82,27 +82,27 @@
                         <tr class="int-table__row">
                             <th>
                                 <div class="flex items-center">
-                                    <span>Certificate name</span>
+                                    <span class="font-medium color-contrast-higher">Certificate name</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Vessel name</span>
+                                    <span class="font-medium color-contrast-higher">Vessel name</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Issue date</span>
+                                    <span class="font-medium color-contrast-higher">Issue date</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Expiry date</span>
+                                    <span class="font-medium color-contrast-higher">Expiry date</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span>Status</span>
+                                    <span class="font-medium color-contrast-higher">Status</span>
                                 </div>
                             </th>
                         </tr>
