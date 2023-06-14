@@ -25,10 +25,11 @@ class CompanyDatatableController extends Controller
                     </svg>
                     </a>';
                 })
+                ->addColumn('checkbox', '')
                 ->editColumn('name', function (Company $company) {
                     return '<a href="/' . $company->id . '/edit">' . $company->name . '</a>';
                 })
-                ->rawColumns(['name', 'action'])
+                ->rawColumns(['name', 'action', 'checkbox'])
                 ->editColumn('id', 'ID: {{ $id }}')
                 ->make(true);
         }

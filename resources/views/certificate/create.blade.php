@@ -8,7 +8,6 @@
     <div class="bg radius-md padding-lg shadow-xs margin-bottom-xl">
         <form action="{{ route('certificate.store') }}" method="post">
             @csrf
-            @method('put')
             <div class="grid gap-lg max-width-sm">
                 <a href="{{ route('certificateDatatable') }}">&larr; Go to certificates</a>
                 <small class="color-contrast-medium">

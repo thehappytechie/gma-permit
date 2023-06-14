@@ -14,6 +14,7 @@ class VesselDatatableController extends Controller
         if ($request->ajax()) {
             $vessels = Vessel::select('vessels.*');
             return DataTables::of($vessels)
+                ->addColumn('checkbox', '')
                 ->addColumn('action', function ($vessel) {
                     return '<a class="btn btn--subtle btn--sm" href="vessels/' . $vessel->id . ' " title="View">
                     <svg width="12" height="12" fill="currentColor"
@@ -23,7 +24,7 @@ class VesselDatatableController extends Controller
                     </svg>
                         </a> ';
                 })
-                ->rawColumns(['action'])
+                ->rawColumns(['action', 'checkbox'])
                 ->make(true);
         }
         return view('vessels.index');

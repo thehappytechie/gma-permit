@@ -14,6 +14,7 @@ class PermitUnitDatatableController extends Controller
         if ($request->ajax()) {
             $permitUnits = PermitUnit::select(['id', 'name']);
             return DataTables::of($permitUnits)
+                ->addColumn('checkbox', '')
                 ->addColumn('action', function ($permitUnit) {
                     return '<a class="btn btn--subtle btn--sm" href="permit-unit/' .
                         $permitUnit->id .
@@ -28,7 +29,7 @@ class PermitUnitDatatableController extends Controller
                 ->editColumn('name', function (PermitUnit $permitUnit) {
                     return '<a href="' . $permitUnit->id . '/edit">' . $permitUnit->name . '</a>';
                 })
-                ->rawColumns(['name', 'action'])
+                ->rawColumns(['name', 'action', 'checkbox'])
                 ->editColumn('id', 'ID: {{ $id }}')
                 ->make(true);
         }

@@ -10,7 +10,7 @@
 
     <div class="grid gap-sm margin-bottom-xl">
         <div class="bg radius-md padding-md shadow-xs col-12">
-            <div class="int-table__inner text-sm margin-top-lg">
+            <div class="int-table__inner text-sm">
                 <div class="grid">
                     <div class="col-6@md">
                         <p class="text-xs font-medium">FILTER BY ISSUE DATE</p>
@@ -157,7 +157,6 @@
             buttons: [{
                     extend: "excel",
                     text: "Excel",
-                    title: 'Certificates',
                     exportOptions: {
                         columns: ":visible",
                     },
@@ -165,7 +164,6 @@
                 {
                     extend: "pdf",
                     text: "PDF",
-                    title: 'Permits',
                     orientation: 'landscape',
                     exportOptions: {
                         modifier: {
@@ -191,7 +189,10 @@
             processing: true,
             mark: true,
             autoFill: true,
+            scrollY: 400,
             responsive: true,
+            fixedHeader: true,
+            serverSide: true,
             ajax: {
                 url: '{{ route('permitDatatable') }}',
                 type: 'GET',

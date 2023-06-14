@@ -26,6 +26,7 @@ class CertificateDatatableController extends Controller
                         return '<span class="badge badge--accent text-xs">expired</span>';
                     }
                 })
+                ->addColumn('checkbox', '')
                 ->filter(function ($query) use ($request) {
                     if ($request->issueFrom) {
                         $issueFrom = Carbon::parse($request->get('issueFrom'));
@@ -46,7 +47,7 @@ class CertificateDatatableController extends Controller
                         }
                     }
                 })
-                ->rawColumns(['status'])
+                ->rawColumns(['status', 'checkbox'])
                 ->make(true);
         }
         return view('certificate.index');

@@ -79,12 +79,13 @@
                     text: "Rows",
                 },
             ],
-
             processing: true,
-            select: true,
             mark: true,
             autoFill: true,
+            scrollY: 400,
             responsive: true,
+            fixedHeader: true,
+            serverSide: true,
             ajax: "{{ route('permissionDatatable') }}",
             columns: [{
                     data: "name",

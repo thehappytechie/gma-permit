@@ -10,7 +10,7 @@
 
     <div class="grid gap-sm margin-bottom-xl">
         <div class="bg radius-md padding-md shadow-xs col-12">
-            <div class="int-table__inner text-sm margin-top-lg">
+            <div class="int-table__inner text-sm">
                 <div class="grid">
                     <div class="col-6@md">
                         <p class="text-xs font-medium">FILTER BY ISSUE DATE</p>
@@ -80,6 +80,7 @@
                 <table class="datatable int-table__table" aria-label="Datatable">
                     <thead class="int-table__header">
                         <tr class="int-table__row">
+                            <th></th>
                             <th>
                                 <div class="flex items-center">
                                     <span class="font-medium color-contrast-higher">Certificate name</span>
@@ -122,6 +123,18 @@
     $(function() {
         let oTable = $(".datatable").DataTable({
             dom: "Bfrtip",
+            columnDefs: [{
+                orderable: false,
+                className: 'select-checkbox',
+                targets: 0
+            }],
+            select: {
+                style: 'multi',
+                selector: 'td:first-child'
+            },
+            order: [
+                [1, 'asc']
+            ],
             lengthMenu: [
                 [10, 25, 50, -1],
                 ["10 rows", "25 rows", "50 rows", "Show all"],
@@ -137,13 +150,19 @@
                 {
                     extend: "pdf",
                     text: "PDF",
-                    title: 'Certificates',
+                    title: 'Permits',
                     orientation: 'landscape',
                     exportOptions: {
                         modifier: {
                             page: "all",
                         },
                     },
+                },
+                {
+                    text: 'Reload table',
+                    action: function() {
+                        oTable.ajax.reload();
+                    }
                 },
                 {
                     extend: "colvis",
@@ -155,10 +174,12 @@
                 },
             ],
             processing: true,
-            select: true,
             mark: true,
             autoFill: true,
+            scrollY: 400,
             responsive: true,
+            fixedHeader: true,
+            serverSide: true,
             ajax: {
                 url: '{{ route('certificateDatatable') }}',
                 type: 'GET',
@@ -170,6 +191,11 @@
                 }
             },
             columns: [{
+                    data: "checkbox",
+                    name: "checkbox",
+                    orderable: false,
+                    searchable: false
+                }, {
                     data: "name",
                     name: "name"
                 },
