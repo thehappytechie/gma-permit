@@ -29,7 +29,8 @@ class LocationDatatableController extends Controller
                         </svg>
                         </a> ';
                 })
-                ->rawColumns(['action'])
+                ->addColumn('checkbox', '')
+                ->rawColumns(['action','checkbox'])
                 ->make(true);
         }
         return view('location.index');

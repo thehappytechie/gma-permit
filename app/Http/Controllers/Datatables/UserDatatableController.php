@@ -49,6 +49,7 @@ class UserDatatableController extends Controller
                         return Carbon::parse($user->last_login_at)->diffForHumans();
                     }
                 })
+                ->addColumn('checkbox', '')
                 ->rawColumns(['name', 'action', 'role'])
                 ->editColumn('id', 'ID: {{ $id }}')
                 ->make(true);

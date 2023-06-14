@@ -15,6 +15,7 @@
                 <table class="datatable int-table__table" aria-label="Datatable">
                     <thead class="int-table__header">
                         <tr class="int-table__row">
+                            <th></th>
                             <th>
                                 <div class="flex items-center">
                                     <span class="font-medium color-contrast-higher">Name</span>
@@ -57,8 +58,20 @@
 
 <script type="text/javascript">
     $(function() {
-        var table = $(".datatable").DataTable({
+        let oTable = $(".datatable").DataTable({
             dom: "Bfrtip",
+            columnDefs: [{
+                orderable: false,
+                className: 'select-checkbox',
+                targets: 0
+            }],
+            select: {
+                style: 'multi',
+                selector: 'td:first-child'
+            },
+            order: [
+                [1, 'asc']
+            ],
             lengthMenu: [
                 [10, 25, 50, -1],
                 ["10 rows", "25 rows", "50 rows", "Show all"],
@@ -81,6 +94,12 @@
                     },
                 },
                 {
+                    text: 'Reload table',
+                    action: function() {
+                        oTable.ajax.reload();
+                    }
+                },
+                {
                     extend: "colvis",
                     text: "Columns",
                 },
@@ -92,12 +111,16 @@
             processing: true,
             mark: true,
             autoFill: true,
-            scrollY: 400,
             responsive: true,
             fixedHeader: true,
             serverSide: true,
             ajax: "{{ route('userDatatable') }}",
             columns: [{
+                    data: "checkbox",
+                    name: "checkbox",
+                    orderable: false,
+                    searchable: false
+                }, {
                     data: "name",
                     name: "users.name"
                 },
@@ -113,7 +136,7 @@
                     data: "last_login_at",
                     name: "users.last_login_at"
                 },
-                @hasanyrole('superuser|editor')
+                @hasanyrole('superuser')
                     {
                         data: "action",
                         name: "action",

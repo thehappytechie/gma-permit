@@ -29,10 +29,11 @@ class DepartmentDatatableController extends Controller
                         </svg>
                         </a> ';
                 })
+                ->addColumn('checkbox', '')
                 ->editColumn('location', function (Department $department) {
                     return $department->location->name ?? '';
                 })
-                ->rawColumns(['action'])
+                ->rawColumns(['action','checkbox'])
                 ->make(true);
         }
         return view('department.index');

@@ -14,17 +14,21 @@
                     <x-required-label></x-required-label>indicates a required field
                 </small>
                 <div class="col-6@md">
-                    <label class="form-label margin-bottom-xxs" for="autocomplete-input-id">
-                        <x-required-label></x-required-label>Company name
-                    </label>
-                    <select name="company_id" class="js-choice @error('company_id') is-error @enderror" required>
-                        <option value="" disabled selected>Please select</option>
-                        @foreach ($companies as $company)
-                            <option value="{{ $company->id }}"
-                                {{ old('company_id') == $company->id ? 'selected' : '' }}>
-                                {{ $company->name }}</option>
-                        @endforeach
-                    </select>
+                    <x-select-dropdown>
+                        <label class="form-label margin-bottom-xxs" for="autocomplete-input-id">
+                            <x-required-label></x-required-label> Company name
+                        </label>
+                        <!-- select -->
+                        <select name="company_id"
+                            class="form-control width-100% js-select-auto__select @error('company_id') is-error @enderror"
+                            required>
+                            <option value="" disabled selected>Please select</option>
+                            @foreach ($companies as $company)
+                                <option value="{{ $company->id }}">
+                                    {{ $company->name }}</option>
+                            @endforeach
+                        </select>
+                    </x-select-dropdown>
                     @error('company_id')
                         <x-validation-error>{{ $message }}</x-validation-error>
                     @enderror
@@ -61,18 +65,21 @@
                     @enderror
                 </div>
                 <div class="col-6@md">
-                    <label class="form-label margin-bottom-xxs" for="autocomplete-input-id">
-                        <x-required-label></x-required-label>Permit unit
-                    </label>
-                    <select name="permit_unit_id" class="js-choice @error('permit_unit_id') is-error @enderror"
-                        required>
-                        <option value="" disabled selected>Please select</option>
-                        @foreach ($permitUnits as $permitUnit)
-                            <option value="{{ $permitUnit->id }}"
-                                {{ old('permit_unit_id') == $permitUnit->id ? 'selected' : '' }}>
-                                {{ $permitUnit->name }}</option>
-                        @endforeach
-                    </select>
+                    <x-select-dropdown>
+                        <label class="form-label margin-bottom-xxs" for="autocomplete-input-id">
+                            <x-required-label></x-required-label> Permit unit
+                        </label>
+                        <!-- select -->
+                        <select name="permit_unit_id"
+                            class="form-control width-100% js-select-auto__select @error('permit_unit_id') is-error @enderror"
+                            required>
+                            <option value="" disabled selected>Please select</option>
+                            @foreach ($permitUnits as $permitUnit)
+                                <option value="{{ $permitUnit->id }}">
+                                    {{ $permitUnit->name }}</option>
+                            @endforeach
+                        </select>
+                    </x-select-dropdown>
                     @error('permit_unit_id')
                         <x-validation-error>{{ $message }}</x-validation-error>
                     @enderror
@@ -157,10 +164,6 @@
         </form>
     </div>
 
-    <script src="{{ asset('js/choices.min.js') }}"></script>
-
-    <script>
-        const choices = new Choices('.js-choice');
-    </script>
+    <script src="{{ asset('js/select-dropdown.js') }}"></script>
 
 </x-layout>

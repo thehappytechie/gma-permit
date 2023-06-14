@@ -32,7 +32,8 @@ class PermissionDatatableController extends Controller
                         </svg>
                         </a> ';
                 })
-                ->rawColumns(['name', 'action'])
+                ->addColumn('checkbox', '')
+                ->rawColumns(['name', 'action', 'checkbox'])
                 ->editColumn('id', 'ID: {{ $id }}')
                 ->make(true);
         }
