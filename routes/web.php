@@ -6,7 +6,6 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PermitController;
-use App\Http\Controllers\ReportController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\VesselController;
 use App\Http\Controllers\CompanyController;
@@ -64,7 +63,7 @@ Route::controller(PageController::class)->group(function () {
 | Routes Middleware
 |--------------------------------------------------------------------------
 */
-Route::middleware(['auth','web', 'verified', 'force.password.change', 'prevent.back.history', 'disable.login'])->group(function () {
+Route::middleware(['auth', 'web', 'verified', 'force.password.change', 'prevent.back.history', 'disable.login'])->group(function () {
 
     /*
 |--------------------------------------------------------------------------

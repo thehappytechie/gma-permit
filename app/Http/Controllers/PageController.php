@@ -35,6 +35,11 @@ class PageController extends Controller
         return view('pages.privacy');
     }
 
+    public function srpaLicenses()
+    {
+        return view('pages.srpa-licenses');
+    }
+
     public function trashed()
     {
         User::onlyTrashed();
