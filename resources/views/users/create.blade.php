@@ -1,6 +1,9 @@
 @section('title', 'Create user')
 
 <x-layout>
+
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
+
     <div class="margin-bottom-md">
         <h2 class="text-xl font-semibold">Add User</h2>
     </div>
@@ -78,7 +81,7 @@
                     <label class="form-label margin-bottom-xxs" for="permissions">Permissions
                     </label>
                     <div class="select">
-                        <select multiple class="js-choice form-control select__input" name="permissions[]">
+                        <select multiple id="select-permission" name="permissions[]">
                             @foreach ($permissions as $permission)
                                 <option value="{{ $permission->id }}">
                                     {{ $permission->name }}
@@ -89,7 +92,7 @@
                 </div>
                 <div class="max-width-md text-divider col-11 color-primary-darker"><span> LOGIN ACCESS</span>
                 </div>
-                <fieldset class="margin-top-xs">
+                <fieldset>
                     <ul class="flex flex-wrap gap-md">
                         <li>
                             <input class="checkbox" type="hidden" name="force_password_change" value="0">
@@ -114,15 +117,9 @@
         </form>
     </div>
 
-    <script src="{{ asset('js/choices.min.js') }}"></script>
-
     <script>
-        const choices = new Choices('.js-choice', {
-            removeItemButton: true,
-            removeItems: true,
-            searchEnabled: true,
-            duplicateItemsAllowed: false,
-            placeholderValue: 'Click to add permissions',
+        new TomSelect("#select-permission", {
+            plugins: ['remove_button'],
         });
     </script>
 

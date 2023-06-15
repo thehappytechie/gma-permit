@@ -34,8 +34,7 @@
                             required>
                             <option value="" disabled selected >Please select</option>
                             @foreach ($vessels as $vessel)
-                                <option value="{{ $vessel->id }}"
-                                    {{ old('vessel_id') == $vessel->id ? 'selected' : '' }}>
+                                <option value="{{ $vessel->id }}">
                                     {{ $vessel->name }}</option>
                             @endforeach
                         </select>

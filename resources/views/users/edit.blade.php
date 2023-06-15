@@ -1,6 +1,9 @@
 @section('title', 'Edit user')
 
 <x-layout>
+
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
+
     <div class="margin-bottom-md">
         <h2 class="text-xl font-semibold">Edit - {{ $user->name }}</h2>
     </div>
@@ -18,7 +21,8 @@
                         <path
                             d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                     </svg>
-                    <h1 id="modal-title-2" class="text-truncate text-md font-medium"> Are you sure you want to permanently delete?
+                    <h1 id="modal-title-2" class="text-truncate text-md font-medium"> Are you sure you want to
+                        permanently delete?
                     </h1>
 
                     <button class="reset modal__close-btn modal__close-btn--inner js-modal__close js-tab-focus">
@@ -121,7 +125,7 @@
                 <div class="col-8@md">
                     <label class="form-label margin-bottom-xxs" for="permissions">Permissions </label>
                     <div class="select">
-                        <select multiple class="js-choice form-control select__input" name="permissions[]">
+                        <select multiple id="select-permission" name="permissions[]">
                             @foreach ($user->permissions as $permission)
                                 <option value="{{ $permission->id }}" {{ $permission->id ? 'selected' : '' }}>
                                     {{ $permission->name }}</option>
@@ -163,15 +167,9 @@
         </form>
     </div>
 
-    <script src="{{ asset('js/choices.min.js') }}"></script>
-
     <script>
-        const choices = new Choices('.js-choice', {
-            removeItemButton: true,
-            removeItems: true,
-            searchEnabled: true,
-            duplicateItemsAllowed: false,
-            placeholderValue: 'Click to edit permissions',
+        new TomSelect("#select-permission", {
+            plugins: ['remove_button'],
         });
     </script>
 

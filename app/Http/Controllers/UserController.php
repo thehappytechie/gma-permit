@@ -46,13 +46,11 @@ class UserController extends Controller
      */
     public function store(UserCreate $request, User $user)
     {
-        $user->hasAnyPermission(['edit articles', 'publish articles', 'unpublish articles']);
-
         $user = new User;
         $data = $request->validated();
         $user->fill($data);
         $user->assignRole($request->roles);
-        $user->role->syncPermissions($request->permissions);
+        $user->syncPermissions($request->permissions);
         $user->save();
 
         $request->session()->flash('success', 'User created successfully.');

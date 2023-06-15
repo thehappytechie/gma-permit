@@ -13,6 +13,7 @@
     <link href="{{ asset('css/filepond.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/choices.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/select-dropdown.css') }}" />
+    <link href="{{ asset('css/tom-select.css') }}" rel="stylesheet">
 
     @livewireStyles
 
