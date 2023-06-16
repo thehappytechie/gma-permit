@@ -22,20 +22,20 @@
             @enderror
             <div class="margin-bottom-sm">
                 <div class="flex justify-between margin-bottom-xxs">
-                    <label class="form-label" for="inputPassword1"><span class="tooltip-trigger js-tooltip-trigger"
-                            title="Ensure your new password is 8 characters, contain one number, and one special character.">Password</span></label>
+                    <label class="form-label" for="password"><span class="tooltip-trigger js-tooltip-trigger"
+                            title="Ensure your password contain 8 characters, 1 uppercase, 1 number & 1 special character">Password</span></label>
                 </div>
                 <input class="form-control width-100% @error('email') is-error @enderror" type="password"
-                    name="password" id="inputPassword" required>
+                    name="password" id="password" required>
             </div>
             @error('password')
             <x-validation-error>{{ $message }}</x-validation-error>
             @enderror
             <div class="margin-bottom-sm">
                 <div class="flex justify-between margin-bottom-xxs">
-                    <label class="form-label" for="inputPassword1">Confirm Password</label>
+                    <label class="form-label" for="password_confirmation">Confirm Password</label>
                 </div>
-                <input class="form-control width-100%" type="password" name="password_confirmation" id="inputPassword"
+                <input class="form-control width-100%" type="password" name="password_confirmation" id="password_confirmation"
                     required>
             </div>
             <div class="margin-bottom-lg">
