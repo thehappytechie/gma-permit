@@ -21,7 +21,7 @@
             <form action="{{ route('user-password.update') }}" method="POST">
                 @csrf
                 @method('PUT')
-                <div class="padding-lg">
+                <div class="padding-lg ">
                     <fieldset class="margin-bottom-xl">
                         <legend class="margin-bottom-md font-medium text-md">Current Password</legend>
                         <div class="margin-bottom-sm">
@@ -79,6 +79,33 @@
                     </fieldset>
 
                     <!-- new password -->
+                    <div class="alert alert--is-visible padding-sm margin-bottom-md text-sm radius-md js-alert"
+                        role="alert">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <svg class="alert__icon icon icon--sm margin-right-xxs" viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <g fill="currentColor">
+                                        <path fill-opacity=".2" d="M12 24a12 12 0 1 0 0-24 12 12 0 1 0 0 24z"></path>
+                                        <path d="M12 9a1 1 0 0 1 1 1l0 9a1 1 0 0 1-2 0l0-9a1 1 0 0 1 1-1z"></path>
+                                        <path d="M12 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 1 0 0 3z"></path>
+                                    </g>
+                                </svg>
+                                <p> Password must contain 8 characters, 1 uppercase, 1 number & 1 special character.</p>
+                            </div>
+                            <button class="reset alert__close-btn margin-left-sm js-alert__close-btn">
+                                <svg class="icon icon--xs" viewBox="0 0 16 16">
+                                    <title>Close alert</title>
+                                    <g fill="currentColor">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" d="M3 3l10 10"></path>
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" d="M13 3L3 13"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                     <fieldset class="margin-bottom-md">
                         <legend class="margin-bottom-md font-medium text-md">New Password</legend>
                         <div class="margin-bottom-sm">
