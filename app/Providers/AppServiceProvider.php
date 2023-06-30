@@ -3,16 +3,15 @@
 namespace App\Providers;
 
 use Spatie\Health\Facades\Health;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
-use Spatie\Activitylog\Models\Activity;
-use DeviceDetector\Parser\Client\Browser;
 use Spatie\Health\Checks\Checks\CacheCheck;
 use Spatie\Health\Checks\Checks\DatabaseCheck;
-use Spatie\Health\Checks\Checks\ScheduleCheck;
 use Spatie\Health\Checks\Checks\DebugModeCheck;
 use Spatie\Health\Checks\Checks\EnvironmentCheck;
+use Spatie\Health\Checks\Checks\OptimizedAppCheck;
 use Spatie\Health\Checks\Checks\UsedDiskSpaceCheck;
-use Illuminate\Database\Eloquent\Model;
+use Spatie\SecurityAdvisoriesHealthCheck\SecurityAdvisoriesCheck;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,8 +22,18 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        Health::checks([
+            UsedDiskSpaceCheck::new(),
+            DatabaseCheck::new(),
+            CacheCheck::new(),
+            OptimizedAppCheck::new(),
+            DebugModeCheck::new(),
+            EnvironmentCheck::new(),
+            SecurityAdvisoriesCheck::new(),
+        ]);
     }
+
+
 
     /**
      * Bootstrap any application services.

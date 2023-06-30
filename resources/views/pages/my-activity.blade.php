@@ -9,11 +9,11 @@
             <div class="margin-y-md margin-x-md">
                 <div class="grid gap-lg margin-right-lg">
                     <a href="{{ route('security') }}">&larr; Account security</a>
-                    <p class="margin-y-sm color-contrast-medium">A history of security-related activity on your account.
+                    <p class="color-contrast-medium">A history of security-related activity on your account.
                         Logging in or
                         out.</p>
                 </div>
-                <div class="tbl padding-top-lg margin-y-lg">
+                <div class="tbl margin-y-lg">
                     <table class="tbl__table text-unit-em text-sm border-bottom border-2" aria-label="table">
                         <thead class="tbl__header border-bottom border-2">
                             <tr class="tbl__row">

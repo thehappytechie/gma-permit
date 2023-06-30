@@ -53,11 +53,11 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#737678"
                                 class="bi bi-archive-fill" viewBox="0 0 16 16">
                                 <path
-                                    d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                                    d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
                             </svg>
                         </p>
-                        <a href="{{ url('telescope') }}" target="_blank" class="margin-y-sm">Telescope</a>
-                        <p class="color-contrast-medium margin-top-sm margin-bottom-md text-sm">Debug assistant</p>
+                        <a href="{{ route('auditDatatable') }}" class="margin-y-sm">User Activity</a>
+                        <p class="color-contrast-medium margin-top-sm margin-bottom-md text-sm">Site wide activity</p>
                     </div>
                 </div>
                 <div class="col-3@lg col-6 border-top border-3 border-contrast-medium shadow-sm radius-xs">
@@ -66,11 +66,12 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#737678"
                                 class="bi bi-archive-fill" viewBox="0 0 16 16">
                                 <path
-                                    d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c.961 0 1.641.633 1.729 1.512h1.295v-.088c-.094-1.518-1.348-2.572-3.03-2.572-2.068 0-3.269 1.377-3.269 3.638v1.073c0 2.267 1.178 3.603 3.27 3.603 1.675 0 2.93-1.02 3.029-2.467v-.093H9.875c-.088.832-.75 1.418-1.729 1.418-1.224 0-1.927-.891-1.927-2.461v-1.06c0-1.583.715-2.503 1.927-2.503Z" />
                             </svg>
                         </p>
-                        <a href="{{ route('auditDatatable') }}" class="margin-y-sm">User Activity</a>
-                        <p class="color-contrast-medium margin-top-sm margin-bottom-md text-sm">Site wide activity</p>
+                        <a href="{{ url('brand-setting/' . $brandSetting->id . '/edit') }}"
+                            class="margin-y-sm">Branding</a>
+                        <p class="color-contrast-medium margin-top-sm margin-bottom-md text-sm">Logo, Site Name</p>
                     </div>
                 </div>
             </div>
@@ -130,25 +131,6 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-3@lg col-6 border-top border-3 border-contrast-medium shadow-sm radius-xs">
-                    <div class="text-center margin-sm">
-                        <p class="margin-y-md">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#737678"
-                                class="bi bi-archive-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c.961 0 1.641.633 1.729 1.512h1.295v-.088c-.094-1.518-1.348-2.572-3.03-2.572-2.068 0-3.269 1.377-3.269 3.638v1.073c0 2.267 1.178 3.603 3.27 3.603 1.675 0 2.93-1.02 3.029-2.467v-.093H9.875c-.088.832-.75 1.418-1.729 1.418-1.224 0-1.927-.891-1.927-2.461v-1.06c0-1.583.715-2.503 1.927-2.503Z" />
-                            </svg>
-                        </p>
-                        <a href="{{ url('brand-setting/' . $brandSetting->id . '/edit') }}"
-                            class="margin-y-sm">Branding</a>
-                        <p class="color-contrast-medium margin-top-sm margin-bottom-md text-sm">Logo, Site Name</p>
-                    </div>
-                </div>
-            </div>
-            <div class="margin-y-lg float-right color-contrast-medium text-xs">
-                <p>Laravel: <strong class="font-medium">{{ app()->version() }}</strong> PHP:
-                    <strong class="font-medium"> {{ phpversion() }}</strong>
-                </p>
             </div>
         </div>
     </div>

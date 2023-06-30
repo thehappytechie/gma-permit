@@ -11,7 +11,8 @@
 
     <div class="grid gap-sm margin-bottom-xl">
         <div class="bg radius-md padding-md shadow-xs col-12">
-            <div class="int-table__inner text-sm">
+            <a href="{{ route('settings') }}">&larr; Go to settings</a>
+            <div class="int-table__inner text-sm margin-top-lg">
                 <table class="datatable int-table__table" aria-label="Datatable">
                     <thead class="int-table__header">
                         <tr class="int-table__row">

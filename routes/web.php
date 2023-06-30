@@ -33,6 +33,7 @@ use App\Http\Controllers\Datatables\PermissionDatatableController;
 use App\Http\Controllers\Datatables\PermitUnitDatatableController;
 use App\Http\Controllers\Datatables\CertificateDatatableController;
 use App\Http\Controllers\Datatables\LoginAttemptDatatableController;
+use Spatie\Health\Http\Controllers\HealthCheckResultsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +65,7 @@ Route::controller(PageController::class)->group(function () {
 |--------------------------------------------------------------------------
 */
 Route::middleware(['auth', 'web', 'verified', 'force.password.change', 'prevent.back.history', 'disable.login'])->group(function () {
+    Route::get('health', HealthCheckResultsController::class);
 
     /*
 |--------------------------------------------------------------------------

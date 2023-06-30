@@ -23,7 +23,7 @@
                 </div>
                 <div class="border-top border-contrast-lower text-right">
                     <div class="margin-top-sm">
-                        <button class="btn btn--primary">Save</button>
+                        <button class="btn btn--primary btn--md">Save</button>
                     </div>
                 </div>
             </div>
