@@ -110,7 +110,7 @@
 
 <script>
     window.addEventListener('load', function() {
-        Chart.defaults.font.family = "Montserrat";
+        Chart.defaults.font.family = "Inter";
         Chart.defaults.scale.ticks.display = false;
         Chart.defaults.plugins.legend.display = false;
         var ctx = document.getElementById('myChart').getContext('2d');
@@ -162,7 +162,7 @@
 
 <script>
     window.addEventListener('load', function() {
-        Chart.defaults.font.family = "Montserrat";
+        Chart.defaults.font.family = "Inter";
         Chart.defaults.scale.ticks.display = false;
         Chart.defaults.plugins.legend.display = false;
         var ctx = document.getElementById('myChart2').getContext('2d');

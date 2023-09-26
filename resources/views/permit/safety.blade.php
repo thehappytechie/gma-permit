@@ -182,7 +182,6 @@
             scrollY: 400,
             responsive: true,
             fixedHeader: true,
-            serverSide: true,
             ajax: {
                 url: '{{ route('safetyPermitDatatable') }}',
                 type: 'GET',
