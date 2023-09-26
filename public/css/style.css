@@ -1112,7 +1112,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     color: var(--color-contrast-higher, #555555);
     line-height: var(--heading-line-height, 1.2);
 }
@@ -7843,7 +7843,7 @@ html:not(.js) .no-js\:is-hidden {
     --radius: 0.4em;
 }
 :root {
-    --font-primary: 'Montserrat', sans-serif;
+    --font-primary: 'Inter', sans-serif;
     --text-base-size: 1rem;
     --text-scale-ratio: 1.2;
     --text-unit: var(--text-base-size);

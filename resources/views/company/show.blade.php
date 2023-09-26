@@ -46,11 +46,11 @@
                     </div>
                 </div>
                 <div class="user-cell__cta">
-                    <a href="{{ route('company.edit', $company->id) }}" class="btn btn--primary btn--sm">Edit
+                    <a href="{{ route('company.edit', $company->id) }}" class="btn btn--primary btn--sm">Edit company
                     </a>
                 </div>
             </div>
-            <h2 class="text-md font-semibold padding-top-sm">PERMIT HISTORY</h2>
+            <h2 class="text-base font-semibold padding-top-sm">PERMIT HISTORY</h2>
             <table class="tbl__table text-unit-em text-sm border-bottom border-2" aria-label="Table Example">
                 <thead class="tbl__header border-bottom border-2">
                     <tr class="tbl__row">

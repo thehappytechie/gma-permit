@@ -17,12 +17,12 @@
                         <form method="get" id="search-form1" class="filter--form__search">
                             @csrf
                             <div class="grid gap-lg max-width-sm margin-y-xs color-contrast-medium">
-                                <div class="col-3@md">
+                                <div class="col-3@md margin-right-xs">
                                     <label class="form-label text-xs" for="date from">from:</label><br>
                                     <input class="form-control width-85%" type="date" name="issueFrom"
                                         id="issueFrom">
                                 </div>
-                                <div class="col-3@md">
+                                <div class="col-3@md margin-right-xs">
                                     <label class="form-label" for="date to">to:</label><br>
                                     <input class="form-control width-85%" type="date" name="issueTo" id="issueTo">
                                 </div>
@@ -49,12 +49,12 @@
                         <form method="get" id="search-form2" class="filter--form__search">
                             @csrf
                             <div class="color-contrast-medium grid gap-lg max-width-sm margin-y-xs">
-                                <div class="col-3@md">
+                                <div class="col-3@md margin-right-xs">
                                     <label class="form-label" for="date from">from:</label><br>
                                     <input class="form-control width-85%" type="date" name="expireFrom"
                                         id="expireFrom">
                                 </div>
-                                <div class="col-3@md">
+                                <div class="col-3@md margin-right-xs">
                                     <label class="form-label" for="date to">to:</label><br>
                                     <input class="form-control width-85%" type="date" name="expireTo" id="expireTo">
                                 </div>

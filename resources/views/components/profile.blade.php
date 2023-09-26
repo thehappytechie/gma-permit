@@ -1,5 +1,5 @@
 <button class="reset user-menu-control" aria-controls="user-menu" aria-label="Toggle user menu" title="Profile">
-    <img src="https://api.dicebear.com/6.x/bottts-neutral/svg?seed={{ Auth::user()->name }}" width="32"
+    <img src="https://api.dicebear.com/6.x/big-ears-neutral/svg?seed={{ Auth::user()->name }}" width="25"
         alt="Company profile image" class="radius-full">
     <svg style="position: relative;bottom:10px" class="font-normal icon icon--xxs margin-left-xxxxs" aria-hidden="true"
         viewBox="0 0 12 12">

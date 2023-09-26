@@ -27,7 +27,7 @@
                             <div class="grid gap-xxs">
                                 <div class="col-6@lg">
                                     <label class="inline-block text-sm padding-top-xs@lg" for="name">
-                                        <x-required-label></x-required-label>Name
+                                        Name <x-required-label></x-required-label>
                                     </label>
                                 </div>
                                 <div class="col-6@lg">
@@ -40,15 +40,14 @@
                             <div class="grid gap-xxs">
                                 <div class="col-6@lg">
                                     <label class="inline-block text-sm padding-top-xs@lg" for="email">
-                                        <x-required-label></x-required-label>Email
+                                        Email <x-required-label></x-required-label>
                                     </label>
                                 </div>
                                 <div class="col-6@lg">
                                     <input class="form-control width-100% @error('email') is-error @enderror"
-                                        type="email" name="email" id="email" value="{{ $user->email }}"
-                                        disabled>
+                                        type="email" name="email" id="email" value="{{ $user->email }}" disabled>
                                     @error('email')
-                                        <x-validation-error>{{ $message }}</x-validation-error>
+                                    <x-validation-error>{{ $message }}</x-validation-error>
                                     @enderror
                                 </div>
                             </div>
@@ -64,7 +63,7 @@
                                     <input class="form-control width-100% @error('contact') is-error @enderror"
                                         type="number" name="contact" id="contact" value="{{ $user->contact }}">
                                     @error('contact')
-                                        <x-validation-error>{{ $message }}</x-validation-error>
+                                    <x-validation-error>{{ $message }}</x-validation-error>
                                     @enderror
                                 </div>
                             </div>
@@ -91,10 +90,10 @@
                                     <div class="select">
                                         <select class="form-control select__input" name="department_id">
                                             @foreach ($departments as $department)
-                                                <option value="{{ $department->id }}"
-                                                    {{ old('department_id', $user->department_id) == $department->id ? 'selected' : '' }}>
-                                                    {{ $department->name }}
-                                                </option>
+                                            <option value="{{ $department->id }}" {{ old('department_id', $user->
+                                                department_id) == $department->id ? 'selected' : '' }}>
+                                                {{ $department->name }}
+                                            </option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -116,10 +115,10 @@
                                     <div class="select">
                                         <select class="form-control select__input" name="location_id">
                                             @foreach ($locations as $location)
-                                                <option value="{{ $location->id }}"
-                                                    {{ old('location_id', $user->location_id) == $location->id ? 'selected' : '' }}>
-                                                    {{ $location->name }}
-                                                </option>
+                                            <option value="{{ $location->id }}" {{ old('location_id', $user->
+                                                location_id) == $location->id ? 'selected' : '' }}>
+                                                {{ $location->name }}
+                                            </option>
                                             @endforeach
                                         </select>
                                     </div>

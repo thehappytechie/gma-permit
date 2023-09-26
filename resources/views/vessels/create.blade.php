@@ -15,7 +15,7 @@
                 </small>
                 <div class="col-12@md">
                     <label class="form-label margin-bottom-xxs" for="name">
-                        <x-required-label></x-required-label> Vessel name
+                         Vessel name <x-required-label></x-required-label>
                     </label>
                     <input class="form-control width-100% @error('name') is-error @enderror" type="text"
                         name="name" id="name" value="{{ old('name') }}" required>
