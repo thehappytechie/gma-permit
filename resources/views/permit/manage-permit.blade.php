@@ -127,7 +127,7 @@
             responsive: true,
             fixedHeader: true,
             ajax: {
-                url: '{{ route('permitDatatable') }}',
+                url: '{{ route('editPermitDatatable') }}',
                 type: 'GET',
                 data: function(d) {
                     d.issueFrom = $('input[name=issueFrom]').val();

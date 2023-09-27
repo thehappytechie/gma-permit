@@ -166,9 +166,9 @@ class PermitDatatableController extends Controller
                 })
                 ->addColumn('checkbox', '')
                 ->editColumn('status', function ($permit) {
-                    if ($permit->expiry_date <= Carbon::now()) {
-                        return '<span class="badge badge--accent text-xs">expired</span>';
-                    }
+                    return '<a class="btn btn--primary btn--sm" href="permit/' . $permit->id . '/edit " title="View">
+                    Edit
+                    </a>';
                 })
                 ->editColumn('issue_date', function (Permit $permit) {
                     return Carbon::parse($permit->issue_date)->format('d M Y');

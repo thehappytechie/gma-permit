@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PermitCreate;
+use App\Http\Requests\PermitEdit;
 use App\Models\Permit;
 use App\Models\Company;
 use App\Models\PermitUnit;
@@ -84,9 +85,12 @@ class PermitController extends Controller
      * @param  \App\Models\Permit  $permit
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Permit $permit)
+    public function update(PermitEdit $request, Permit $permit)
     {
-        //
+        $data = $request->validated();
+        $permit->update($data);
+        $request->session()->flash('success', 'Permit updated successfully.');
+        return redirect()->route('editPermitDatatable');
     }
 
     /**
@@ -97,6 +101,9 @@ class PermitController extends Controller
      */
     public function destroy(Permit $permit)
     {
-        //
+        $permit = Permit::first();
+        $permit->delete();
+        session()->flash('error', 'Permit deleted successfully.');
+        return redirect()->route('editPermitDatatable');
     }
 }
