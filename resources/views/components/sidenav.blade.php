@@ -45,6 +45,11 @@
                         <span class="sidenav__text text-base">All certificates</span>
                     </a>
                 </li>
+                <li class="sidenav__item">
+                    <a href="{{ route('editCertificateDatatable') }}" class="sidenav__link">
+                        <span class="sidenav__text text-base">Manage certificates</span>
+                    </a>
+                </li>
             </ul>
         </li>
     </ul>
@@ -103,6 +108,13 @@
                 <li class="sidenav__item">
                     <a href="{{ route('permitUnitDatatable') }}" class="sidenav__link">
                         <span class="sidenav__text text-base">Permit units</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="sidenav__list">
+                <li class="sidenav__item">
+                    <a href="{{ route('editPermitDatatable') }}" class="sidenav__link">
+                        <span class="sidenav__text text-base">Manage permits</span>
                     </a>
                 </li>
             </ul>

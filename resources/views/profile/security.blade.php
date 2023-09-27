@@ -45,7 +45,7 @@
 
                     @if (!auth()->user()->two_factor_secret)
                         <span class="badge badge--error font-medium text-sm">2FA is Off,
-                            You will need to set this up</span>
+                            You will need to set this up by enabling</span>
                     @endif
 
                     <div class="grid gap-lg">

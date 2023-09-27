@@ -100,6 +100,9 @@ class CertificateController extends Controller
      */
     public function destroy(Certificate $certificate)
     {
-        //
+        $certificate = Certificate::first();
+        $certificate->delete();
+        session()->flash('error', 'Certificate deleted successfully.');
+        return redirect()->route('editCertificateDatatable');
     }
 }
