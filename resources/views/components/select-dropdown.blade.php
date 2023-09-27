@@ -1,8 +1,6 @@
 <div class="autocomplete position-relative select-auto js-select-auto js-autocomplete"
     data-autocomplete-dropdown-visible-class="autocomplete--results-visible">
-
     {{ $slot }}
-
     <!-- input -->
     <div class="select-auto__input-wrapper">
         <input class="form-control js-autocomplete__input js-select-auto__input" type="text"
@@ -10,17 +8,17 @@
 
         <div class="select-auto__input-icon-wrapper">
             <!-- arrow icon -->
-            <svg class="icon" viewBox="0 0 16 16">
+            <svg class="icon" viewBox="0 0 14 14">
                 <title>Open selection</title>
-                <polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round"
+                <polyline points="1 5 8 12 19 19" fill="none" stroke="#000" stroke-linecap="round"
                     stroke-linejoin="round" stroke-width="2" />
             </svg>
 
             <!-- close X icon -->
             <button class="reset select-auto__input-btn js-select-auto__input-btn js-tab-focus">
-                <svg class="icon" viewBox="0 0 16 16">
+                <svg class="icon" viewBox="0 0 19 19">
                     <title>Open selection</title>
-                    <polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round"
+                    <polyline points="1 5 8 12 15 5" fill="none" stroke="#000" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="2" />
                 </svg>
 

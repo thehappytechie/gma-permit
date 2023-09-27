@@ -15,7 +15,7 @@
                 </small>
                 <div class="col-6@md">
                     <label class="form-label margin-bottom-xxs" for="name">
-                        <x-required-label></x-required-label> Department name
+                       Department name  <x-required-label></x-required-label>
                     </label>
                     <input class="form-control width-100% @error('name') is-error @enderror" type="text"
                         name="name" id="name" value="{{ old('name') }}" required>
@@ -26,7 +26,7 @@
                 <div class="col-6@md">
                     <div class="select">
                         <label class="form-label margin-bottom-xxs" for="location">
-                            <x-required-label></x-required-label> Location
+                            Location <x-required-label></x-required-label>
                         </label>
                         <select class="form-control select__input" name="location_id" id="location" required>
                             <option value="">Select location</option>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-6@md">
                     <label class="form-label margin-bottom-xxs" for="manager">
-                        <x-required-label></x-required-label> Manager
+                        Manager  <x-required-label></x-required-label>
                     </label>
                     <input class="form-control width-100% @error('manager') is-error @enderror" type="text"
                         name="manager" id="manager" value="{{ old('manager') }}" required>
@@ -53,7 +53,7 @@
                 <div class="col-6@md">
                     <div class="select">
                         <label class="form-label margin-bottom-xxs" for="designation">
-                            <x-required-label></x-required-label> Designation
+                            Designation <x-required-label></x-required-label>
                         </label>
                         <select class="form-control select__input" name="designation" id="designation" required>
                             <option value="">Select designation</option>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-6@md">
                     <label class="form-label margin-bottom-xxs" for="email">
-                        <x-required-label></x-required-label> Email
+                        Email <x-required-label></x-required-label>
                     </label>
                     <input class="form-control width-100% @error('email') is-error @enderror" type="email"
                         name="email" id="email" value="{{ old('email') }}" required>

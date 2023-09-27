@@ -52,4 +52,29 @@ class CertificateDatatableController extends Controller
         }
         return view('certificate.index');
     }
+
+    public function editCertificateDatatable(Request $request)
+    {
+        if ($request->ajax()) {
+            $certificates = Certificate::with('vessel')->select('certificates.*');
+            return DataTables::of($certificates)
+                ->editColumn('issue_date', function (Certificate $certificate) {
+                    return Carbon::parse($certificate->issue_date)->format('Y M, d');
+                })
+                ->editColumn('expiry_date', function (Certificate $certificate) {
+                    return Carbon::parse($certificate->expiry_date)->format('Y M, d');
+                })
+                ->addColumn('status', function ($certificate) {
+                    if ($certificate->expiry_date <= Carbon::now()) {
+                        return '<a class="btn btn--primary btn--sm" href="certificate/' . $certificate->id . '/edit " title="View">
+                        Edit
+                        </a>';
+                    }
+                })
+                ->addColumn('checkbox', '')
+                ->rawColumns(['status', 'checkbox'])
+                ->make(true);
+        }
+        return view('certificate.manage-certificate');
+    }
 }

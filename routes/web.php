@@ -79,7 +79,6 @@ Route::middleware(['auth', 'web', 'verified', 'force.password.change', 'prevent.
         'location' => LocationController::class,
         'department' => DepartmentController::class,
         'ticket' => TicketController::class,
-        'report' => ReportController::class,
         'permit' => PermitController::class,
         'permissions' => PermissionsController::class,
         'permit-unit' => PermitUnitController::class,
@@ -175,6 +174,8 @@ Route::get('vessels', [VesselDatatableController::class, 'vesselDatatable'])->na
 Route::get('permit-unit', [PermitUnitDatatableController::class, 'permitUnitDatatable'])->name('permitUnitDatatable');
 Route::get('company', [CompanyDatatableController::class, 'companyDatatable'])->name('companyDatatable');
 Route::get('certificate', [CertificateDatatableController::class, 'certificateDatatable'])->name('certificateDatatable');
+Route::get('manage-certificate', [CertificateDatatableController::class, 'editCertificateDatatable'])->name('editCertificateDatatable');
+
 Route::get('category/all', [CategoryDatatableController::class, 'categoryDatatable'])->name('categoryDatatable');
 Route::get('locations', [LocationDatatableController::class, 'locationDatatable'])->name('locationDatatable');
 Route::get('roles', [RoleDatatableController::class, 'roleDatatable'])->name('roleDatatable');

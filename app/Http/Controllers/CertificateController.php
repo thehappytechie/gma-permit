@@ -89,7 +89,7 @@ class CertificateController extends Controller
         $data = $request->validated();
         $certificate->update($data);
         $request->session()->flash('success', 'Certificate updated successfully.');
-        return redirect()->route('certificateDatatable');
+        return redirect()->route('editCertificateDatatable');
     }
 
     /**
