@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
             OptimizedAppCheck::new(),
             DebugModeCheck::new(),
             EnvironmentCheck::new(),
-            SecurityAdvisoriesCheck::new(),
+            //SecurityAdvisoriesCheck::new(),
         ]);
     }
 
