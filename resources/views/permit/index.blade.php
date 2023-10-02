@@ -118,6 +118,11 @@
                             </th>
                             <th>
                                 <div class="flex items-center">
+                                    <span class="font-medium color-contrast-higher">Created at</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="flex items-center">
                                     <span class="font-medium color-contrast-higher">Status</span>
                                 </div>
                             </th>
@@ -234,6 +239,10 @@
                 {
                     data: "expiry_date",
                     name: "expiry_date"
+                },
+                {
+                    data: "created_at",
+                    name: "created_at"
                 },
                 {
                     data: "status",
