@@ -32,13 +32,13 @@ class PermitDatatableController extends Controller
                     }
                 })
                 ->editColumn('issue_date', function (Permit $permit) {
-                    return Carbon::parse($permit->issue_date)->format('d M Y');
+                    return Carbon::parse($permit->issue_date)->format('Y/m/d');
                 })
                 ->editColumn('expiry_date', function (Permit $permit) {
-                    return Carbon::parse($permit->expiry_date)->format('d M Y');
+                    return Carbon::parse($permit->expiry_date)->format('Y/m/d');
                 })
                 ->editColumn('created_at', function (Permit $permit) {
-                    return Carbon::parse($permit->created_at)->format('d M Y');
+                    return Carbon::parse($permit->created_at)->format('Y/m/d');
                 })
                 ->filter(function ($query) use ($request) {
                     if ($request->issueFrom) {

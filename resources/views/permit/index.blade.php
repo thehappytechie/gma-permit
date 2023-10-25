@@ -194,7 +194,7 @@
             processing: true,
             mark: true,
             autoFill: true,
-            scrollY: 400,
+            scrollY: 500,
             responsive: true,
             fixedHeader: true,
             ajax: {

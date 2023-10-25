@@ -33,7 +33,6 @@
         "yajra/laravel-datatables": "^1.5"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.7",
         "enlightn/enlightn": "^2.1",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
