@@ -16,7 +16,6 @@
         "laravolt/avatar": "^4.1",
         "livewire/livewire": "^2.7",
         "maatwebsite/excel": "^3.1",
-        "monarobase/country-list": "^3.3",
         "owen-it/laravel-auditing": "^13.0",
         "pavel-mironchik/laravel-backup-panel": "^2.2",
         "propaganistas/laravel-disposable-email": "^2.1",
