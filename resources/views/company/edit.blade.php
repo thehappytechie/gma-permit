@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h2 class="text-xl font-semibold">Edit - {{ $company->name }}</h2>
+        <h2 class="text-xl font-semibold">Edit - {{ ucwords(strtolower($company->name)) }}</h2>
     </div>
 
     <div class="bg radius-md padding-lg shadow-xs margin-bottom-xl">

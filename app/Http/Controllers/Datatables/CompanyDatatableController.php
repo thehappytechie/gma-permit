@@ -27,7 +27,7 @@ class CompanyDatatableController extends Controller
                 })
                 ->addColumn('checkbox', '')
                 ->editColumn('name', function (Company $company) {
-                    return '<a href="/' . $company->id . '/edit">' . $company->name . '</a>';
+                    return  '<a href="company/' . $company->id . '/edit">' . $company->name . '</a>';
                 })
                 ->rawColumns(['name', 'action', 'checkbox'])
                 ->editColumn('id', 'ID: {{ $id }}')

@@ -1,8 +1,8 @@
 <button class="reset user-menu-control" aria-controls="user-menu" aria-label="Toggle user menu" title="Profile">
-    <img src="https://api.dicebear.com/6.x/big-ears-neutral/svg?seed={{ Auth::user()->name }}" width="25"
+    <img src="https://api.dicebear.com/7.x/initials/svg?seed={{ Auth::user()->name }}" width="25"
         alt="Company profile image" class="radius-full">
     <svg style="position: relative;bottom:10px" class="font-normal icon icon--xxs margin-left-xxxxs" aria-hidden="true"
-        viewBox="0 0 12 12">
+        viewBox="0 0 14 14">
         <polyline points="1 4 6 9 11 4" fill="none" stroke="currentColor" stroke-linecap="round"
             stroke-linejoin="round" stroke-width="2" />
     </svg>
