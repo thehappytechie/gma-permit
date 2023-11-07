@@ -27,7 +27,7 @@ class PermitUnitDatatableController extends Controller
                     </a>';
                 })
                 ->editColumn('name', function (PermitUnit $permitUnit) {
-                    return '<a href="' . $permitUnit->id . '/edit">' . $permitUnit->name . '</a>';
+                    return '<a href="permit-unit/' . $permitUnit->id . '/edit">' . $permitUnit->name . '</a>';
                 })
                 ->rawColumns(['name', 'action', 'checkbox'])
                 ->editColumn('id', 'ID: {{ $id }}')

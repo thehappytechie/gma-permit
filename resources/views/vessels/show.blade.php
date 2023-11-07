@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h2 class="text-xl font-semibold">{{ $vessel->name }}</h2>
+        <h2 class="text-xl font-semibold">{{ ucwords(strtolower($vessel->name)) }}</h2>
     </div>
 
     <div class="bg radius-md padding-lg shadow-xs col-12">
@@ -48,7 +48,7 @@
                     <a href="{{ route('vessels.edit', $vessel->id) }}" class="btn btn--primary btn--sm font-medium">Edit company</a>
                 </div>
             </div>
-            <h2 class="text-base font-semibold padding-top-sm">CERTFICATE HISTORY</h2>
+            <h2 class="text-md font-semibold padding-top-md">Certificate History</h2>
             <table class="tbl__table text-unit-em text-sm border-bottom border-2" aria-label="Table Example">
                 <thead class="tbl__header border-bottom border-2">
                     <tr class="tbl__row">

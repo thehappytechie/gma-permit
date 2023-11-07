@@ -9,13 +9,13 @@
 </button>
 <menu id="user-menu" class="menu js-menu">
     <li role="menuitem">
-        <p class="dropdown__item text-base">Signed in as<br>
+        <p class="dropdown__item text-sm">Signed in as<br>
             <strong class="text-sm font-medium color-contrast-medium">{{ Auth::user()->name }}</strong>
         </p>
     </li>
     <hr class="dropdown__separator" role="separator">
     <li>
-        <a class="dropdown__item text-base" href="{{ route('profile.edit', Auth::user()->id) }}">
+        <a class="dropdown__item text-sm" href="{{ route('profile.edit', Auth::user()->id) }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-person" viewBox="0 0 16 16">
                 <path
@@ -25,7 +25,7 @@
         </a>
     </li>
     <li>
-        <a class="dropdown__item text-base" href="{{ route('changePassword') }}">
+        <a class="dropdown__item text-sm" href="{{ route('changePassword') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-file-lock" viewBox="0 0 16 16">
                 <path
@@ -35,7 +35,7 @@
         </a>
     </li>
     <li>
-        <a class="dropdown__item text-base" href="{{ route('security') }}">
+        <a class="dropdown__item text-sm" href="{{ route('security') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-shield-lock" viewBox="0 0 16 16">
                 <path
@@ -48,7 +48,7 @@
     </li>
     <hr class="dropdown__separator" role="separator">
     <li>
-        <a class="dropdown__item text-base" href="{{ route('ticket.create') }}">
+        <a class="dropdown__item text-sm" href="{{ route('ticket.create') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-question-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
@@ -60,7 +60,7 @@
     </li>
     <hr class="dropdown__separator" role="separator">
     <li>
-        <a class="dropdown__item text-base" href="{{ route('signout') }}">
+        <a class="dropdown__item text-sm" href="{{ route('signout') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e14770"
                 class="bi bi-question-circle" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"

@@ -48,16 +48,6 @@
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span class="font-medium color-contrast-higher">Vessel type</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="flex items-center">
-                                    <span class="font-medium color-contrast-higher">Gross tonnage</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="flex items-center">
                                     <span class="font-medium color-contrast-higher">Action</span>
                                 </div>
                             </th>
@@ -135,14 +125,6 @@
                 }, {
                     data: "name",
                     name: "name"
-                },
-                {
-                    data: "vessel_type",
-                    name: "vessel_type"
-                },
-                {
-                    data: "gross_tonnage",
-                    name: "gross_tonnage"
                 },
                 {
                     data: "action",

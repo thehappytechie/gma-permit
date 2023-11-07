@@ -2,7 +2,7 @@
 
 <x-layout>
     <div class="margin-bottom-md">
-        <h2 class="text-xl font-semibold">{{ucwords(strtolower($company->name))}}</h2>
+        <h2 class="text-xl font-semibold">{{ ucwords(strtolower($company->name)) }}</h2>
     </div>
 
     <div class="bg radius-md padding-lg shadow-xs col-12">
@@ -50,21 +50,16 @@
                     </a>
                 </div>
             </div>
-            <h2 class="text-base font-semibold padding-top-sm">PERMIT HISTORY</h2>
+            <h2 class="text-md font-semibold padding-top-md">Permit History</h2>
             <table class="tbl__table text-unit-em text-sm border-bottom border-2" aria-label="Table Example">
                 <thead class="tbl__header border-bottom border-2">
                     <tr class="tbl__row">
                         <th class="tbl__cell text-left" scope="col">
-                            <span class="text-xs letter-spacing-lg font-semibold">Vessel
-                                name</span>
+                            <span class="text-xs letter-spacing-lg font-semibold">Permit number</span>
                         </th>
 
                         <th class="tbl__cell text-left" scope="col">
                             <span class="text-xs letter-spacing-lg font-semibold">Permit unit</span>
-                        </th>
-
-                        <th class="tbl__cell text-left" scope="col">
-                            <span class="text-xs letter-spacing-lg font-semibold">Gross tonnage</span>
                         </th>
 
                         <th class="tbl__cell text-left" scope="col">
@@ -86,15 +81,12 @@
                             <td class="tbl__cell" role="cell">
                                 <div class="flex items-center">
                                     <div class="line-height-xs">
-                                        <p class="margin-bottom-xxxxs">{{ $permit->vessel_name }}</p>
                                         <p class="color-contrast-medium">{{ $permit->permit_number }}</p>
                                     </div>
                                 </div>
                             </td>
 
                             <td class="tbl__cell" role="cell">{{ $permit->permitUnit->name }}</td>
-
-                            <td class="tbl__cell" role="cell">{{ $permit->gross_tonnage }}</td>
 
                             <td class="tbl__cell" role="cell">
                                 <span

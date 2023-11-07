@@ -45,16 +45,6 @@
                             </th>
                             <th>
                                 <div class="flex items-center">
-                                    <span class="font-medium color-contrast-higher">Contact</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="flex items-center">
-                                    <span class="font-medium color-contrast-higher">Email</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="flex items-center">
                                     <span class="font-medium color-contrast-higher">Action</span>
                                 </div>
                             </th>
@@ -140,14 +130,6 @@
                 {
                     data: "name",
                     name: "name"
-                },
-                {
-                    data: "contact",
-                    name: "contact"
-                },
-                {
-                    data: "email",
-                    name: "email"
                 },
                 {
                     data: "action",
