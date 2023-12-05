@@ -50,7 +50,7 @@ class PageController extends Controller
         return view('pages.privacy');
     }
 
-    public function permits(Request $request)
+    public function permitReport(Request $request)
     {
         if ($request->ajax()) {
             $permits = Permit::with(['company', 'permitUnit'])->select('permits.*');

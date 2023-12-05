@@ -57,8 +57,8 @@ Route::controller(PageController::class)->group(function () {
         ->name('privacy');
     Route::get('terms', 'terms')
         ->name('terms');
-    Route::get('permits', 'permits')
-        ->name('permits');
+    Route::get('reports/permits', 'permitReport')
+        ->name('report.permit');
 });
 
 /*
