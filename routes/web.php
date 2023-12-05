@@ -57,6 +57,8 @@ Route::controller(PageController::class)->group(function () {
         ->name('privacy');
     Route::get('terms', 'terms')
         ->name('terms');
+    Route::get('permits', 'permits')
+        ->name('permits');
 });
 
 /*
@@ -168,7 +170,7 @@ Route::controller(PermitDatatableController::class)->group(function () {
         ->name('operatingPermitDatatable');
     Route::get('safety-permits', 'safetyPermitDatatable')
         ->name('safetyPermitDatatable');
-        Route::get('manage-permit', 'editPermitDatatable')
+    Route::get('manage-permit', 'editPermitDatatable')
         ->name('editPermitDatatable');
 });
 
